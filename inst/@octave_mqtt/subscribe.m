@@ -20,13 +20,17 @@
 ## Subscribe to a topic
 ##
 ## @subsubheading Inputs
-## @var{obj} - A previously created octave_mqtt object
+## @table @code
+## @item obj
+## A previously created octave_mqtt object
+## @item topic
+## String topic to subscribe to.
+## @item propname, propvalue
+## Optional property name / value pairs.
+## @end table
 ##
-## @var{topic} - String topic to subscribe to.
-##
-## @var{propname}, @var{propvalue} - Optional property name / value pairs.
-##
-## @table @asis
+## Known property name / value pairs:
+## @table @code
 ## @item QualityOfService
 ## Numeric QualityOfService [0-2] (default 0)
 ## @item Callback
@@ -34,10 +38,12 @@
 ## @end table
 ##
 ## @subsubheading Outputs
-## @var{subs} - a list of current subscriptions for this client.@*
+## @table @code
+## @item subs
+## a list of current subscriptions for this client.
+## @end table
 ##
 ## @subsubheading Examples
-## Open device 1
 ## @example
 ## @code {
 ## client = mqttclient("tcp://127.0.0.1);

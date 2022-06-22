@@ -20,12 +20,18 @@
 ## Return the most recent message without removing it from the message queue.
 ##
 ## @subsubheading Inputs
-## @var{obj} - A previously created octave_mqtt object
-##
-## @var{topic} - topic to match.
+## @table @code
+## @item obj
+## A previously created octave_mqtt object
+## @item topic
+## topic to match.
+## @end table
 ##
 ## @subsubheading Outputs
-## @var{msg} - The most recent message.
+## @table @code
+## @item msg
+## The most recent message.
+## @end table
 ##
 ## If no topic is specified, the last message from any topic will be returned, otherwise the last
 ## matching the input topic.

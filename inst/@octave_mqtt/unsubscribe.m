@@ -19,15 +19,17 @@
 ## Unsubscribe from @var{topic}
 ##
 ## @subsubheading Inputs
-## @var{obj} - A previously created octave_mqtt object
-##
-## @var{topic} - string topic name.
+## @table @code
+## @item obj
+## A previously created octave_mqtt object
+## @item topic
+## string topic name.
+## @end table
 ##
 ## @subsubheading Outputs
 ## None
 ##
 ## @subsubheading Examples
-## Open device 1
 ## @example
 ## @code {
 ## client = mqttclient("tcp://127.0.0.1);

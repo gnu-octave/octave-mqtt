@@ -19,13 +19,16 @@
 ## Flush a MQTT client connection
 ##
 ## @subsubheading Inputs
-## @var{obj} - A previously created octave_mqtt object
+## @table @code
+## @item obj
+## A previously created octave_mqtt object
+## @end table
 ##
 ## @subsubheading Outputs
 ## None
 ##
 ## @subsubheading Examples
-## Open device 1
+## Open a client and flush the input
 ## @example
 ## @code {
 ## client = mqttclient("tcp://127.0.0.1);

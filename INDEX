@@ -1,4 +1,5 @@
-mqtt >> Octave MQTT Toolkit
+octave-mqtt >> Octave MQTT Toolkit
+MQTT Functions
   mqttclient
   @octave_mqtt/flush
   @octave_mqtt/peek

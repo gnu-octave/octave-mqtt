@@ -20,18 +20,23 @@
 ## Read available messages and remove from message queue. 
 ##
 ## @subsubheading Inputs
-## @var{obj} - A previously created octave_mqtt object
-##
-## @var{topic} - topic to match.
+## @table @code
+## @item obj
+## A previously created octave_mqtt object
+## @item topic
+## topic to match.
+## @end table
 ##
 ## @subsubheading Outputs
-## @var{msgs} - Messages from the message queue
+## @table @code
+## @item msgs
+## Messages from the message queue
+## @end table
 ##
 ## If no topic is specified, messages from any topic will be returned, otherwise from the
 ## matching input topic.
 ##
 ## @subsubheading Examples
-## Open device 1
 ## @example
 ## @code {
 ## client = mqttclient("tcp://127.0.0.1);

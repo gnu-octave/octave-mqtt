@@ -20,12 +20,15 @@
 ## Create a MQTT client connection
 ##
 ## @subsubheading Inputs
-## @var{brokerAddr} - name or ip address with protocol. ie: tcp:127.0.0.1.
-##
-## @var{name}, @var{value} - Optional name / value pairs.
+## @table @code
+## @item brokerAddr
+## name or ip address with protocol. ie: tcp://127.0.0.1.
+## @item name, value
+## Optional name / value pairs.
+## @end table
 ##
 ## Known options are:
-## @table @asis
+## @table @code
 ## @item Port
 ## Numeric port number to connect to (default 1883)
 ## @item Timeout
@@ -41,9 +44,16 @@
 ## @end table
 ##
 ## @subsubheading Outputs
-## @var{client} - a octave_mqtt object
-## with the following properties:
-## @table @asis
+## @table @code
+## @item client
+## a octave_mqtt object
+## @end table
+##
+## @subsubheading Properties
+## A octave_mqtt object has the following properties:
+## @table @code
+## @item BrokerAddress
+## broker url
 ## @item Port
 ## Numeric port number to connect to (default 1883)
 ## @item Timeout

@@ -262,11 +262,12 @@ check: $(install_stamp)
 ## Docs
 ##
 .PHONY: docs
-docs: doc/$(packageprefix)$(package).pdf #doc/$(packageprefix)$(package).qhc
+docs: doc/$(packageprefix)$(package).pdf doc/$(packageprefix)$(package).html #doc/$(packageprefix)$(package).qhc
 
 clean-docs:
 	$(RM) -f doc/$(packageprefix)$(package).info
 	$(RM) -f doc/$(packageprefix)$(package).pdf
+	$(RM) -f doc/$(packageprefix)$(package).html
 	$(RM) -f doc/functions.texi
 	$(RM) -f doc/$(packageprefix)$(package).qhc doc/$(packageprefix)$(package).qch
 
@@ -275,15 +276,17 @@ doc/$(packageprefix)$(package).pdf: doc/$(packageprefix)$(package).texi doc/func
 	# remove temp files
 	cd doc && $(RM) -f $(packageprefix)$(package).aux  $(packageprefix)$(package).cp  $(packageprefix)$(package).cps  $(packageprefix)$(package).fn  $(packageprefix)$(package).fns  $(packageprefix)$(package).log  $(packageprefix)$(package).toc
 
+doc/$(packageprefix)$(package).html: doc/$(packageprefix)$(package).texi doc/functions.texi
+	cd doc && SOURCE_DATE_EPOCH=$(HG_TIMESTAMP) $(MAKEINFO) --html --css-ref=$(packageprefix)$(package).css  --no-split --output=$(packageprefix)${package}.html $(packageprefix)$(package).texi
+
 doc/functions.texi:
 	#cd doc && ./mkfuncdocs.py --allowscan --src-dir=../inst/ --src-dir=../src/ ../INDEX | $(SED) 's/@seealso/@xseealso/g' > functions.texi
 	cd doc && ./mkfuncdocs.py --src-dir=../inst/ ../INDEX | $(SED) 's/@seealso/@xseealso/g' > functions.texi
 
-doc/$(packageprefix)$(package).qhc: doc/$(packageprefix)$(package).texi doc/functions.texi
+doc/$(packageprefix)$(package).qhc: doc/$(packageprefix)$(package).html
 	# try also create qch file if can
-	cd doc && SOURCE_DATE_EPOCH=$(HG_TIMESTAMP) $(MAKEINFO) --html --css-ref=$(packageprefix)$(package).css  --no-split --output=$(packageprefix)${package}.html $(packageprefix)$(package).texi
 	cd doc && ./mkqhcp.py $(packageprefix)$(package) && $(QHELPGENERATOR) $(packageprefix)$(package).qhcp -o $(packageprefix)$(package).qhc
-	cd doc && $(RM) -f $(packageprefix)$(package).html $(packageprefix)$(package).qhcp $(packageprefix)$(package).qhp
+	cd doc && $(packageprefix)$(package).qhcp $(packageprefix)$(package).qhp
 ##
 ## CLEAN
 ##

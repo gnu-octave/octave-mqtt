@@ -20,16 +20,19 @@
 ## Write @var{value} to @var{topic}.
 ##
 ## @subsubheading Inputs
-## @var{obj} - A previously created octave_mqtt object
+## @table @code
+## @item obj
+## A previously created octave_mqtt object
+## @item topic
+## String topic to write to.
+## @item value
+## String value to write to topic.
+## @item propname, propvalue
+## Optional property name / value pairs.
+## @end table
 ##
-## @var{topic} - String topic to write to.
-##
-## @var{value} - String value to write to topic.
-##
-## @var{propname}, @var{propvalue} - Optional property name / value pairs.
-##
-## Known options are:
-## @table @asis
+## Known property options are:
+## @table @code
 ## @item QualityOfService
 ## Numeric QualityOfService [0-2] (default 0)
 ## @item Retain
@@ -37,10 +40,13 @@
 ## @end table
 ##
 ## @subsubheading Outputs
-## @var{client} - a octave_mqtt object.@*
+## @table @code
+## @item client
+## a octave_mqtt object.@*
+## @end table
 ##
 ## @subsubheading Examples
-## Open device 1
+## Open a client connection and write some values.
 ## @example
 ## @code {
 ## client = mqttclient("tcp://127.0.0.1);
