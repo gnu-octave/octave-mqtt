@@ -1,0 +1,205 @@
+#                                               -*- Autoconf -*-
+# Process this file with autoconf to produce a configure script.
+#
+### Copyright (C) 2022 John Donoghue <john.donoghue@ieee.org>
+###
+### This program is free software; you can redistribute it and/or
+### modify it under the terms of the GNU General Public License as
+### published by the Free Software Foundation; either version 3 of the
+### License, or (at your option) any later version.
+###
+### This program is distributed in the hope that it will be useful,
+### but WITHOUT ANY WARRANTY; without even the implied warranty of
+### MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+### General Public License for more details.
+###
+### You should have received a copy of the GNU General Public License
+### along with this program; if not, see
+### <http://www.gnu.org/licenses/>.
+
+AC_PREREQ([2.67])
+AC_INIT([Octave mqtt], [0.4.1])
+AC_CONFIG_HEADERS([config.h])
+AC_CONFIG_MACRO_DIRS([m4])
+AH_TOP([#include "undef-ah-octave.h"])
+
+AC_CANONICAL_HOST
+AC_CANONICAL_TARGET
+
+AC_PROG_SED
+AC_PROG_GREP
+
+AC_PATH_PROG([MKOCTFILE], [mkoctfile])
+if test -z "$MKOCTFILE"; then
+  AC_MSG_ERROR([*** 'mkoctfile' not found.])
+fi
+AC_CHECK_PROG(OCTAVE_CONFIG,octave-config,octave-config)
+test -z "$OCTAVE_CONFIG" && OCTAVE_CONFIG=$MKOCTFILE
+
+AC_PROG_CXX
+AC_PROG_CXXCPP
+AC_LANG(C++)
+
+# check can access std c files
+AC_CHECK_HEADERS([string.h])
+
+## octave API tests
+save_CXX="$CXX"
+save_CXXFLAGS="$CXXFLAGS"
+save_LIBS="$LIBS"
+save_LDFLAGS="$LDFLAGS"
+
+CXX=`${MKOCTFILE} -p CXX`
+OCTINCLUDEDIR=${OCTINCLUDEDIR:-`$MKOCTFILE -p INCFLAGS`}
+OCTLIBDIR=${OCTLIBDIR:-`$MKOCTFILE -p OCTLIBDIR`}
+CXXFLAGS="$OCTINCLUDEDIR $CXXFLAGS"
+LDFLAGS="-L$OCTLIBDIR $LDFLAGS"
+LIBS="-loctinterp $LIBS"
+
+# includes
+AC_CHECK_HEADERS([octave/interpreter.h octave/oct-time.h],
+  [],
+  [],
+  [#include <octave/oct.h>]
+)
+
+# need to use interpreter->get_load_path in dev version of octave,
+# prior to that methods of load_path were static
+AC_CACHE_CHECK(
+  [interpreter get_load_path],
+  [octave_cv_interpreter_get_load_path],
+  [AC_COMPILE_IFELSE(
+    [AC_LANG_PROGRAM([
+      #include <octave/oct.h>
+      #include <octave/octave.h>
+      #include <octave/interpreter.h>
+      #include <octave/load-path.h>
+      ],
+      [
+        octave::load_path &p = octave::interpreter::the_interpreter ()->get_load_path ();
+      ])],
+    [octave_cv_interpreter_get_load_path=yes],
+    [octave_cv_interpreter_get_load_path=no])
+  ])
+if test "$octave_cv_interpreter_get_load_path" = "yes" ; then
+  AC_DEFINE(HAVE_OCTAVE_LOAD_PATH,[1],[Whether we have the interpreter load path])
+fi
+
+OF_OCTAVE_LIST_ALT_SYMS([
+
+[dnl
+  [is_map],
+  [isstruct],
+  [[octave_value ().isstruct ();]],
+  [OV_ISMAP],
+  [],
+  []
+],
+
+[dnl
+  [is_cell],
+  [iscell],
+  [[octave_value ().iscell ();]],
+  [OV_ISCELL],
+  [],
+  []
+],
+
+[dnl
+  [feval],
+  [octave::feval],
+  [[octave::feval ("date");]],
+  [OCTAVE__FEVAL],
+  [[#include <octave/parse.h>]],
+  [[#include <octave/parse.h>]]
+],
+
+[dnl
+  [is_float_type],
+  [isfloat],
+  [[octave_value ().isfloat ();]],
+  [OV_ISFLOAT],
+  [],
+  []
+],
+
+[dnl
+  [is_integer_type],
+  [isinteger],
+  [[octave_value ().isinteger ();]],
+  [OV_ISINTEGER],
+  [],
+  []
+],
+
+[dnl
+  [is_bool_type],
+  [islogical],
+  [[octave_value ().islogical ();]],
+  [OV_ISLOGICAL],
+  [],
+  []
+],
+
+
+[dnl
+  [valid_identifier],
+  [octave::valid_identifier],
+  [[octave::valid_identifier("");]],
+  [OCTAVE__VALID_IDENTIFIER],
+  [],
+  []
+],
+
+[dnl
+  [file_stat],
+  [octave::sys::file_stat],
+  [[octave::sys::file_stat();]],
+  [OCTAVE__FILE_STAT],
+  [#include <octave/file-stat.h>],
+  [#include <octave/file-stat.h>]
+],
+
+[dnl
+  [octave_base_value],
+  [octave_base_dld_value],
+  [[octave_base_dld_value tmp();]],
+  [OCTAVE_BASE_CLASS],
+  [],
+  []
+]
+
+],[oct-alt-includes.h])
+
+CC=$save_CXX
+CXXFLAGS=$save_CXXFLAGS
+LIBS="$save_LIBS"
+LDFLAGS="$save_LDFLAGS"
+
+# look for phaho-mqtt
+save_LDFLAGS=$LDFLAGS
+save_CPPFLAGS=$CPPFLAGS
+
+MQTT_CXXFLAGS=$MQTT_CXXFLAGS
+MQTT_LIBS=$MQTT_LIBS
+AC_SUBST(MQTT_CXXFLAGS)
+AC_SUBST(MQTT_LIBS)
+
+have_mqtt=no
+AC_CHECK_HEADERS([MQTTClient.h],
+  [AC_SEARCH_LIBS([MQTTClient_connect], [paho-mqtt3c], [have_mqtt=-lpaho-mqtt3c], [])], [])
+
+if test "x$have_mqtt" == "xno"; then
+  AC_MSG_ERROR([paho-mqtt is required to install $PACKAGE_NAME])
+else
+  MQTT_LIBS=$have_mqtt
+fi
+
+## restore
+CPPFLAGS=$save_CPPFLAGS
+LDFLAGS=$save_LDFLAGS
+
+AX_PTHREAD([],[AC_MSG_ERROR([thread library is needed to install $PACKAGE_NAME])])
+
+AC_CONFIG_FILES([Makefile])
+AC_OUTPUT

@@ -1,0 +1,13 @@
+Name: mqtt
+Version: 0.0.1
+Date: 2022-06-22
+Author: John Donoghue <john.donoghue@ieee.org>
+Maintainer: John Donoghue <john.donoghue@ieee.org>
+Title: Octave MQTT Toolkit
+Description: Basic Octave implementation of mqtt toolkit
+Categories: MQTT Toolkit
+Depends: octave (>= 4.0.0)
+BuildRequires: paho-mqtt-c-dev
+SystemRequirements: paho-mqtt-c
+License: GPLv3+
+Url: https://octave.sourceforge.io/mqtt/
