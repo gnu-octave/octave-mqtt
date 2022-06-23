@@ -2,7 +2,7 @@
 ## Copyright 2015-2016 Oliver Heimlich
 ## Copyright 2017 Julien Bect <jbect@users.sf.net>
 ## Copyright 2017 Olaf Till <i7tiol@t-online.de>
-## Copyright 2018-2019 John Donoghue <john.donoghue@ieee.org>
+## Copyright 2018-2022 John Donoghue <john.donoghue@ieee.org>
 ##
 ## Copying and distribution of this file, with or without modification,
 ## are permitted in any medium without royalty provided the copyright
@@ -164,10 +164,7 @@ endif
 	cd "$@/src" && ./configure && $(MAKE) prebuild && \
 	  $(MAKE) distclean && $(RM) Makefile
 	$(MAKE) -C "$@" docs
-	#cd "$@" && mv testdata inst/demos
-	#cd "$@" && rm -rf "devel/" && rm -rf "deprecated/" && $(RM) -f doc/mkfuncdocs.py doc/mkqhcp.py
-	cd "$@" && $(RM) -f doc/mkfuncdocs.py #doc/mkqhcp.py
-##
+	cd "$@" && $(RM) -f doc/mkfuncdocs.py doc/mkqhcp.py
 	${FIX_PERMISSIONS} "$@"
 
 run_in_place = $(OCTAVE) --eval ' pkg ("local_list", "$(package_list)"); ' \
@@ -262,7 +259,7 @@ check: $(install_stamp)
 ## Docs
 ##
 .PHONY: docs
-docs: doc/$(packageprefix)$(package).pdf doc/$(packageprefix)$(package).html #doc/$(packageprefix)$(package).qhc
+docs: doc/$(packageprefix)$(package).pdf doc/$(packageprefix)$(package).html doc/$(packageprefix)$(package).qhc
 
 clean-docs:
 	$(RM) -f doc/$(packageprefix)$(package).info
@@ -280,13 +277,12 @@ doc/$(packageprefix)$(package).html: doc/$(packageprefix)$(package).texi doc/fun
 	cd doc && SOURCE_DATE_EPOCH=$(HG_TIMESTAMP) $(MAKEINFO) --html --css-ref=$(packageprefix)$(package).css  --no-split --output=$(packageprefix)${package}.html $(packageprefix)$(package).texi
 
 doc/functions.texi:
-	#cd doc && ./mkfuncdocs.py --allowscan --src-dir=../inst/ --src-dir=../src/ ../INDEX | $(SED) 's/@seealso/@xseealso/g' > functions.texi
 	cd doc && ./mkfuncdocs.py --src-dir=../inst/ ../INDEX | $(SED) 's/@seealso/@xseealso/g' > functions.texi
 
 doc/$(packageprefix)$(package).qhc: doc/$(packageprefix)$(package).html
 	# try also create qch file if can
 	cd doc && ./mkqhcp.py $(packageprefix)$(package) && $(QHELPGENERATOR) $(packageprefix)$(package).qhcp -o $(packageprefix)$(package).qhc
-	cd doc && $(packageprefix)$(package).qhcp $(packageprefix)$(package).qhp
+	cd doc && $(RM) $(packageprefix)$(package).qhcp $(packageprefix)$(package).qhp
 ##
 ## CLEAN
 ##
