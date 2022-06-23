@@ -1,6 +1,6 @@
 \input texinfo @c -*-texinfo-*-
 @c Copyright (c) 2022, John Donoghue <john.donoghue@ieee.org>
-@c Octave MQTT - Basic implmentation of mqtt functions
+@c Octave MQTT - Basic implementation of MQTT functions
 
 @c For manually generating the documentation use
 @c   LANGUAGE=en makeinfo --html --no-split joystick.texi
