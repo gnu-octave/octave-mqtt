@@ -133,6 +133,121 @@ The toolkit must be loaded on each @acronym{GNU} Octave session.
 @chapter Basic Usage Overview
 @cindex Basic Usage Overview
 
+The overview connects to the public broker at HiveMQ (@url{https://www.hivemq.com/public-mqtt-broker/})
+and follows this general flow:
+
+@section Connection to a broker
+@cindex Connection to a broker
+
+Connection to the broker is done using the mqttclient function.
+
+@subsubheading Example
+@example
+@code {
+brokerAddress = "tcp://broker.hivemq.com";
+port = 1883;
+
+client = mqttclient(brokerAddress, "Port", port)
+}
+@kbd {
+client =
+
+  Client with properties
+    BrokerAddress: tcp://broker.hivemq.com
+             Port: 1883
+         ClientID: 
+          Timeout: 5
+KeepAliveDuration: 60
+    Subscriptions: [0x3] table
+        Connected: 1
+}
+@end example
+
+Additional properties can be included for Timeout, Username, Password and more.
+
+@section Subscribe to a Topic
+@cindex Subscribe to a Topic
+
+To get notifications for changes to a topic, subscribe to the topic.
+
+@subsubheading Example
+@example
+@code {
+topic = "octave/test/field1";
+
+subscribe(client, topic)
+}
+@kbd {
+ans =
+
+  scalar structure containing the fields:
+
+    Topic = octave/test/field1
+    QualityOfService = 0
+    Callback =
+}
+@end example
+
+@section Write to a Topic
+@cindex Write to a Topic
+
+To publish data to the broker, use the wrote function.
+
+@subsubheading Example
+@example
+@code {
+write(client, topic, "hello world")
+}
+@end example
+
+@section Read from subscribed Topics
+@cindex Read from subscribed Topics
+
+Reading data from a topic can be done using the peek function (which will not clear the data from the received queue)
+or the read function (that will clear the message from the received queue)
+
+@subsubheading Example
+@example
+@code {
+# see if there is message
+msg = peek(client)
+}
+@kbd {
+msg =
+
+  scalar structure containing the fields:
+
+    Time = 1.6560e+09
+    Topic = octave/test/field1
+    Data = hello world
+}
+@code {
+# read message from queue
+msg = read(client)
+}
+@kbd {
+msg =
+
+  scalar structure containing the fields:
+
+    Time = 1.6560e+09
+    Topic = octave/test/field1
+    Data = hello world
+}
+@end example
+
+@section Close the client
+@cindex Close the client
+
+To close the client and free any resources, use the clear function.
+
+@subsubheading Example
+@example
+@code {
+clear client
+}
+@end example
+
 @c -------------------------------------------------------------------------
 @node Function Reference
 @chapter Function Reference
