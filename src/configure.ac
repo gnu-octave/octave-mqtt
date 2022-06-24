@@ -85,25 +85,8 @@ if test "$octave_cv_interpreter_get_load_path" = "yes" ; then
   AC_DEFINE(HAVE_OCTAVE_LOAD_PATH,[1],[Whether we have the interpreter load path])
 fi
 
+dnl NOTE: most of these are to handle octave < 4.0 so probally not needed
 OF_OCTAVE_LIST_ALT_SYMS([
-
-[dnl
-  [is_map],
-  [isstruct],
-  [[octave_value ().isstruct ();]],
-  [OV_ISMAP],
-  [],
-  []
-],
-
-[dnl
-  [is_cell],
-  [iscell],
-  [[octave_value ().iscell ();]],
-  [OV_ISCELL],
-  [],
-  []
-],
 
 [dnl
   [feval],
@@ -139,25 +122,6 @@ OF_OCTAVE_LIST_ALT_SYMS([
   [OV_ISLOGICAL],
   [],
   []
-],
-
-
-[dnl
-  [valid_identifier],
-  [octave::valid_identifier],
-  [[octave::valid_identifier("");]],
-  [OCTAVE__VALID_IDENTIFIER],
-  [],
-  []
-],
-
-[dnl
-  [file_stat],
-  [octave::sys::file_stat],
-  [[octave::sys::file_stat();]],
-  [OCTAVE__FILE_STAT],
-  [#include <octave/file-stat.h>],
-  [#include <octave/file-stat.h>]
 ],
 
 [dnl
