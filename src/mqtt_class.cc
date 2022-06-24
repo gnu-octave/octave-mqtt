@@ -159,7 +159,7 @@ octave_mqtt::create (const std::string &username, const std::string &password)
   if (username.length() > 0)
     conn_opts.username = username.c_str();
   if (password.length() > 0)
-    conn_opts.username = password.c_str();
+    conn_opts.password = password.c_str();
   int rc;
   if ((rc = MQTTClient_connect(client, &conn_opts)) != MQTTCLIENT_SUCCESS)
     {
