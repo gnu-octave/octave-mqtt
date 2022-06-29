@@ -36,8 +36,16 @@ fi
 AC_CHECK_PROG(OCTAVE_CONFIG,octave-config,octave-config)
 test -z "$OCTAVE_CONFIG" && OCTAVE_CONFIG=$MKOCTFILE
 
+CXX=`${MKOCTFILE} -p CXX`
+save_CXX="$CXX"
 AC_PROG_CXX
 AC_PROG_CXXCPP
+
+AX_CXX_COMPILE_STDCXX(11)
+CXX11_SWITCH=$(echo "$CXX" | $SED "s,^$save_CXX,,")
+AC_SUBST(CXX11_SWITCH)
+CXX="$save_CXX"
+
 AC_LANG(C++)
 
 # check can access std c files
