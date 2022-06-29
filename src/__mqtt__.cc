@@ -21,6 +21,8 @@
 #include <octave/version.h>
 #include <octave/defun-dld.h>
 
+#include "octave/ov-struct.h"
+
 #ifdef HAVE_CONFIG_H
 #  include "./config.h"
 #endif
