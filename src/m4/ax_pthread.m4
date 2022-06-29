@@ -1,266 +1,523 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
-<!-- git web interface version 2.17.1, (C) 2005-2006, Kay Sievers <kay.sievers@vrfy.org>, Christian Gierke -->
-<!-- git core binaries version 2.17.1 -->
-<head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-<meta name="generator" content="gitweb/2.17.1 git/2.17.1"/>
-<meta name="robots" content="index, nofollow"/>
-<title>Savannah Git Hosting - autoconf-archive.git/summary</title>
-<link rel="stylesheet" type="text/css" href="/gitweb/static/gitweb.css"/>
-<link rel="alternate" title="autoconf-archive.git - log - RSS feed" href="/gitweb/?p=autoconf-archive.git;a=rss" type="application/rss+xml" />
-<link rel="alternate" title="autoconf-archive.git - log - RSS feed (no merges)" href="/gitweb/?p=autoconf-archive.git;a=rss;opt=--no-merges" type="application/rss+xml" />
-<link rel="alternate" title="autoconf-archive.git - log - Atom feed" href="/gitweb/?p=autoconf-archive.git;a=atom" type="application/atom+xml" />
-<link rel="alternate" title="autoconf-archive.git - log - Atom feed (no merges)" href="/gitweb/?p=autoconf-archive.git;a=atom;opt=--no-merges" type="application/atom+xml" />
-<link rel="shortcut icon" href="/gitweb/static/git-favicon.png" type="image/png" />
-</head>
-<body>
-<div class="page_header">
-<a href="http://git-scm.com/" title="git homepage"><img alt="git" class="logo" height="27" src="/gitweb/static/git-logo.png" width="72" /></a><a href="/gitweb/">git@sv</a> / <a href="/gitweb/?p=autoconf-archive.git;a=summary">autoconf-archive.git</a> / summary
-</div>
-<form method="get" action="/gitweb/" enctype="multipart/form-data"><div class="search">
-<input name="p" type="hidden" value="autoconf-archive.git" />
-<input name="a" type="hidden" value="search" />
-<input name="h" type="hidden" value="HEAD" />
-<select name="st" >
-<option selected="selected" value="commit">commit</option>
-<option value="grep">grep</option>
-<option value="author">author</option>
-<option value="committer">committer</option>
-<option value="pickaxe">pickaxe</option>
-</select> <a href="/gitweb/?p=autoconf-archive.git;a=search_help" title="search help">?</a> search:
-<input type="text" name="s"  />
-<span title="Extended regular expression"><label><input type="checkbox" name="sr" value="1" />re</label></span></div>
-</form>
-<div class="page_nav">
-summary | <a href="/gitweb/?p=autoconf-archive.git;a=shortlog">shortlog</a> | <a href="/gitweb/?p=autoconf-archive.git;a=log">log</a> | <a href="/gitweb/?p=autoconf-archive.git;a=commit;h=066994d9ac192f8ada9414224aa2ee7e2d38b821">commit</a> | <a href="/gitweb/?p=autoconf-archive.git;a=commitdiff;h=066994d9ac192f8ada9414224aa2ee7e2d38b821">commitdiff</a> | <a href="/gitweb/?p=autoconf-archive.git;a=tree">tree</a><br/>
-<br/>
-</div>
-<div class="title">&nbsp;</div>
-<table class="projects_list">
-<tr id="metadata_desc"><td>description</td><td>GNU Autoconf Archive</td></tr>
-<tr id="metadata_lchange"><td>last change</td><td><span class="datetime">Thu, 9 Jun 2022 14:53:12 +0000</span> (16:53 +0200)</td></tr>
-<tr class="metadata_url"><td>URL</td><td>git://git.savannah.gnu.org/autoconf-archive.git</td></tr>
-<tr class="metadata_url"><td></td><td>https://git.savannah.gnu.org/git/autoconf-archive.git</td></tr>
-<tr class="metadata_url"><td></td><td>ssh:  USER@git.savannah.gnu.org:/srv/git/autoconf-archive.git</td></tr>
-</table>
-<div class="header">
-<a class="title" href="/gitweb/?p=autoconf-archive.git;a=shortlog">shortlog</a>
-</div>
-<table class="shortlog">
-<tr class="dark">
-<td title="2022-06-09"><i>11 days ago</i></td>
-<td class="author"><a class="list" href="/gitweb/?p=autoconf-archive.git;a=search;s=Peter+Simons;st=author" title="Search for commits authored by Peter Simons">Peter Simons</a></td><td><a class="list subject" href="/gitweb/?p=autoconf-archive.git;a=commit;h=066994d9ac192f8ada9414224aa2ee7e2d38b821">Merge pull request #253 from bogdro/asm</a> <span class="refs"> <span class="head" title="heads/master"><a href="/gitweb/?p=autoconf-archive.git;a=shortlog;h=refs/heads/master">master</a></span></span></td>
-<td class="link"><a href="/gitweb/?p=autoconf-archive.git;a=commit;h=066994d9ac192f8ada9414224aa2ee7e2d38b821">commit</a> | <a href="/gitweb/?p=autoconf-archive.git;a=commitdiff;h=066994d9ac192f8ada9414224aa2ee7e2d38b821">commitdiff</a> | <a href="/gitweb/?p=autoconf-archive.git;a=tree;h=066994d9ac192f8ada9414224aa2ee7e2d38b821;hb=066994d9ac192f8ada9414224aa2ee7e2d38b821">tree</a> | <a href="/gitweb/?p=autoconf-archive.git;a=snapshot;h=066994d9ac192f8ada9414224aa2ee7e2d38b821;sf=tgz" title="in format: tar.gz">snapshot</a></td>
-</tr>
-<tr class="light">
-<td title="2022-06-06"><i>13 days ago</i></td>
-<td class="author"><a class="list" href="/gitweb/?p=autoconf-archive.git;a=search;s=Bogdan+Drozdowski;st=author" title="Search for commits authored by Bogdan Drozdowski">Bogdan Drozdowski</a></td><td><a class="list subject" href="/gitweb/?p=autoconf-archive.git;a=commit;h=6af2231b10be0b15efaaa9d4fdad3bd844868f21" title="Make assembler-option macros more portable and exit early if assembler not found">Make assembler-option macros more portable and exit... </a></td>
-<td class="link"><a href="/gitweb/?p=autoconf-archive.git;a=commit;h=6af2231b10be0b15efaaa9d4fdad3bd844868f21">commit</a> | <a href="/gitweb/?p=autoconf-archive.git;a=commitdiff;h=6af2231b10be0b15efaaa9d4fdad3bd844868f21">commitdiff</a> | <a href="/gitweb/?p=autoconf-archive.git;a=tree;h=6af2231b10be0b15efaaa9d4fdad3bd844868f21;hb=6af2231b10be0b15efaaa9d4fdad3bd844868f21">tree</a> | <a href="/gitweb/?p=autoconf-archive.git;a=snapshot;h=6af2231b10be0b15efaaa9d4fdad3bd844868f21;sf=tgz" title="in format: tar.gz">snapshot</a></td>
-</tr>
-<tr class="dark">
-<td title="2022-06-06"><i>13 days ago</i></td>
-<td class="author"><a class="list" href="/gitweb/?p=autoconf-archive.git;a=search;s=Bogdan+Drozdowski;st=author" title="Search for commits authored by Bogdan Drozdowski">Bogdan Drozdowski</a></td><td><a class="list subject" href="/gitweb/?p=autoconf-archive.git;a=commit;h=7f67ff5af4560ea7e74dcee81779b5211f11ca7b">Make assembler-finding macros more portable</a></td>
-<td class="link"><a href="/gitweb/?p=autoconf-archive.git;a=commit;h=7f67ff5af4560ea7e74dcee81779b5211f11ca7b">commit</a> | <a href="/gitweb/?p=autoconf-archive.git;a=commitdiff;h=7f67ff5af4560ea7e74dcee81779b5211f11ca7b">commitdiff</a> | <a href="/gitweb/?p=autoconf-archive.git;a=tree;h=7f67ff5af4560ea7e74dcee81779b5211f11ca7b;hb=7f67ff5af4560ea7e74dcee81779b5211f11ca7b">tree</a> | <a href="/gitweb/?p=autoconf-archive.git;a=snapshot;h=7f67ff5af4560ea7e74dcee81779b5211f11ca7b;sf=tgz" title="in format: tar.gz">snapshot</a></td>
-</tr>
-<tr class="light">
-<td title="7 weeks ago"><i>2022-04-26</i></td>
-<td class="author"><a class="list" href="/gitweb/?p=autoconf-archive.git;a=search;s=Peter+Simons;st=author" title="Search for commits authored by Peter Simons">Peter Simons</a></td><td><a class="list subject" href="/gitweb/?p=autoconf-archive.git;a=commit;h=a2d291eee36723e99235e837562b1047edd41977" title="Merge pull request #252 from oerdnj/fix-ax_prog_cc_for_build-with-cache-file">Merge pull request #252 from oerdnj/fix-ax_prog_cc_for_... </a></td>
-<td class="link"><a href="/gitweb/?p=autoconf-archive.git;a=commit;h=a2d291eee36723e99235e837562b1047edd41977">commit</a> | <a href="/gitweb/?p=autoconf-archive.git;a=commitdiff;h=a2d291eee36723e99235e837562b1047edd41977">commitdiff</a> | <a href="/gitweb/?p=autoconf-archive.git;a=tree;h=a2d291eee36723e99235e837562b1047edd41977;hb=a2d291eee36723e99235e837562b1047edd41977">tree</a> | <a href="/gitweb/?p=autoconf-archive.git;a=snapshot;h=a2d291eee36723e99235e837562b1047edd41977;sf=tgz" title="in format: tar.gz">snapshot</a></td>
-</tr>
-<tr class="dark">
-<td title="7 weeks ago"><i>2022-04-26</i></td>
-<td class="author"><a class="list" href="/gitweb/?p=autoconf-archive.git;a=search;s=Ondr%CC%8Cej+Sury%CC%81;st=author" title="Search for commits authored by Ondřej Surý">Ondřej Surý</a></td><td><a class="list subject" href="/gitweb/?p=autoconf-archive.git;a=commit;h=13018ae91007cfa1b1a3877db8ef5cb233af1ae6">ax_prog_cc_for_build: Properly restore ac_cv_c_compiler_gnu</a></td>
-<td class="link"><a href="/gitweb/?p=autoconf-archive.git;a=commit;h=13018ae91007cfa1b1a3877db8ef5cb233af1ae6">commit</a> | <a href="/gitweb/?p=autoconf-archive.git;a=commitdiff;h=13018ae91007cfa1b1a3877db8ef5cb233af1ae6">commitdiff</a> | <a href="/gitweb/?p=autoconf-archive.git;a=tree;h=13018ae91007cfa1b1a3877db8ef5cb233af1ae6;hb=13018ae91007cfa1b1a3877db8ef5cb233af1ae6">tree</a> | <a href="/gitweb/?p=autoconf-archive.git;a=snapshot;h=13018ae91007cfa1b1a3877db8ef5cb233af1ae6;sf=tgz" title="in format: tar.gz">snapshot</a></td>
-</tr>
-<tr class="light">
-<td title="8 weeks ago"><i>2022-04-25</i></td>
-<td class="author"><a class="list" href="/gitweb/?p=autoconf-archive.git;a=search;s=Peter+Simons;st=author" title="Search for commits authored by Peter Simons">Peter Simons</a></td><td><a class="list subject" href="/gitweb/?p=autoconf-archive.git;a=commit;h=191867ec96ef94dc8adddaaf475b760c4a363325">ax_python_devel: bump serial number after recent changes</a></td>
-<td class="link"><a href="/gitweb/?p=autoconf-archive.git;a=commit;h=191867ec96ef94dc8adddaaf475b760c4a363325">commit</a> | <a href="/gitweb/?p=autoconf-archive.git;a=commitdiff;h=191867ec96ef94dc8adddaaf475b760c4a363325">commitdiff</a> | <a href="/gitweb/?p=autoconf-archive.git;a=tree;h=191867ec96ef94dc8adddaaf475b760c4a363325;hb=191867ec96ef94dc8adddaaf475b760c4a363325">tree</a> | <a href="/gitweb/?p=autoconf-archive.git;a=snapshot;h=191867ec96ef94dc8adddaaf475b760c4a363325;sf=tgz" title="in format: tar.gz">snapshot</a></td>
-</tr>
-<tr class="dark">
-<td title="8 weeks ago"><i>2022-04-25</i></td>
-<td class="author"><a class="list" href="/gitweb/?p=autoconf-archive.git;a=search;s=Peter+Simons;st=author" title="Search for commits authored by Peter Simons">Peter Simons</a></td><td><a class="list subject" href="/gitweb/?p=autoconf-archive.git;a=commit;h=bb8b3c0657408c46e4d7939e34b959c511a5e2ba">Merge pull request #249 from bogdro/ax_prototype</a></td>
-<td class="link"><a href="/gitweb/?p=autoconf-archive.git;a=commit;h=bb8b3c0657408c46e4d7939e34b959c511a5e2ba">commit</a> | <a href="/gitweb/?p=autoconf-archive.git;a=commitdiff;h=bb8b3c0657408c46e4d7939e34b959c511a5e2ba">commitdiff</a> | <a href="/gitweb/?p=autoconf-archive.git;a=tree;h=bb8b3c0657408c46e4d7939e34b959c511a5e2ba;hb=bb8b3c0657408c46e4d7939e34b959c511a5e2ba">tree</a> | <a href="/gitweb/?p=autoconf-archive.git;a=snapshot;h=bb8b3c0657408c46e4d7939e34b959c511a5e2ba;sf=tgz" title="in format: tar.gz">snapshot</a></td>
-</tr>
-<tr class="light">
-<td title="8 weeks ago"><i>2022-04-25</i></td>
-<td class="author"><a class="list" href="/gitweb/?p=autoconf-archive.git;a=search;s=Peter+Simons;st=author" title="Search for commits authored by Peter Simons">Peter Simons</a></td><td><a class="list subject" href="/gitweb/?p=autoconf-archive.git;a=commit;h=7290e0e0bcf1afd212683aedc43d5fe7325437e9" title="Merge pull request #250 from agbuckley/ax_python_devel-safe-pyversion">Merge pull request #250 from agbuckley/ax_python_devel... </a></td>
-<td class="link"><a href="/gitweb/?p=autoconf-archive.git;a=commit;h=7290e0e0bcf1afd212683aedc43d5fe7325437e9">commit</a> | <a href="/gitweb/?p=autoconf-archive.git;a=commitdiff;h=7290e0e0bcf1afd212683aedc43d5fe7325437e9">commitdiff</a> | <a href="/gitweb/?p=autoconf-archive.git;a=tree;h=7290e0e0bcf1afd212683aedc43d5fe7325437e9;hb=7290e0e0bcf1afd212683aedc43d5fe7325437e9">tree</a> | <a href="/gitweb/?p=autoconf-archive.git;a=snapshot;h=7290e0e0bcf1afd212683aedc43d5fe7325437e9;sf=tgz" title="in format: tar.gz">snapshot</a></td>
-</tr>
-<tr class="dark">
-<td title="8 weeks ago"><i>2022-04-25</i></td>
-<td class="author"><a class="list" href="/gitweb/?p=autoconf-archive.git;a=search;s=Peter+Simons;st=author" title="Search for commits authored by Peter Simons">Peter Simons</a></td><td><a class="list subject" href="/gitweb/?p=autoconf-archive.git;a=commit;h=fd3e47042a2b11f98c8093f6f4ba08432f9f1d47">Merge pull request #248 from heitbaum/AX_CC_MAXOPT</a></td>
-<td class="link"><a href="/gitweb/?p=autoconf-archive.git;a=commit;h=fd3e47042a2b11f98c8093f6f4ba08432f9f1d47">commit</a> | <a href="/gitweb/?p=autoconf-archive.git;a=commitdiff;h=fd3e47042a2b11f98c8093f6f4ba08432f9f1d47">commitdiff</a> | <a href="/gitweb/?p=autoconf-archive.git;a=tree;h=fd3e47042a2b11f98c8093f6f4ba08432f9f1d47;hb=fd3e47042a2b11f98c8093f6f4ba08432f9f1d47">tree</a> | <a href="/gitweb/?p=autoconf-archive.git;a=snapshot;h=fd3e47042a2b11f98c8093f6f4ba08432f9f1d47;sf=tgz" title="in format: tar.gz">snapshot</a></td>
-</tr>
-<tr class="light">
-<td title="8 weeks ago"><i>2022-04-25</i></td>
-<td class="author"><a class="list" href="/gitweb/?p=autoconf-archive.git;a=search;s=Peter+Simons;st=author" title="Search for commits authored by Peter Simons">Peter Simons</a></td><td><a class="list subject" href="/gitweb/?p=autoconf-archive.git;a=commit;h=510672bc200e869fb0ad4634407561be819cf093">Merge pull request #251 from rrthomas/master</a></td>
-<td class="link"><a href="/gitweb/?p=autoconf-archive.git;a=commit;h=510672bc200e869fb0ad4634407561be819cf093">commit</a> | <a href="/gitweb/?p=autoconf-archive.git;a=commitdiff;h=510672bc200e869fb0ad4634407561be819cf093">commitdiff</a> | <a href="/gitweb/?p=autoconf-archive.git;a=tree;h=510672bc200e869fb0ad4634407561be819cf093;hb=510672bc200e869fb0ad4634407561be819cf093">tree</a> | <a href="/gitweb/?p=autoconf-archive.git;a=snapshot;h=510672bc200e869fb0ad4634407561be819cf093;sf=tgz" title="in format: tar.gz">snapshot</a></td>
-</tr>
-<tr class="dark">
-<td title="8 weeks ago"><i>2022-04-25</i></td>
-<td class="author"><a class="list" href="/gitweb/?p=autoconf-archive.git;a=search;s=Reuben+Thomas;st=author" title="Search for commits authored by Reuben Thomas">Reuben Thomas</a></td><td><a class="list subject" href="/gitweb/?p=autoconf-archive.git;a=commit;h=c92672b9c59f9011e5d68220e99cfdd70c1b98df">m4/ax_cc_maxopt.m4: add missing ;; to end of case</a></td>
-<td class="link"><a href="/gitweb/?p=autoconf-archive.git;a=commit;h=c92672b9c59f9011e5d68220e99cfdd70c1b98df">commit</a> | <a href="/gitweb/?p=autoconf-archive.git;a=commitdiff;h=c92672b9c59f9011e5d68220e99cfdd70c1b98df">commitdiff</a> | <a href="/gitweb/?p=autoconf-archive.git;a=tree;h=c92672b9c59f9011e5d68220e99cfdd70c1b98df;hb=c92672b9c59f9011e5d68220e99cfdd70c1b98df">tree</a> | <a href="/gitweb/?p=autoconf-archive.git;a=snapshot;h=c92672b9c59f9011e5d68220e99cfdd70c1b98df;sf=tgz" title="in format: tar.gz">snapshot</a></td>
-</tr>
-<tr class="light">
-<td title="2 months ago"><i>2022-04-05</i></td>
-<td class="author"><a class="list" href="/gitweb/?p=autoconf-archive.git;a=search;s=Andy+Buckley;st=author" title="Search for commits authored by Andy Buckley">Andy Buckley</a></td><td><a class="list subject" href="/gitweb/?p=autoconf-archive.git;a=commit;h=df89f6cdaade38f3c1c9987be0c5a57c96fc1730" title="Add a shim class to ax_devel_python.m4 to make the Python version-string comparisons... ">Add a shim class to ax_devel_python.m4 to make the... </a></td>
-<td class="link"><a href="/gitweb/?p=autoconf-archive.git;a=commit;h=df89f6cdaade38f3c1c9987be0c5a57c96fc1730">commit</a> | <a href="/gitweb/?p=autoconf-archive.git;a=commitdiff;h=df89f6cdaade38f3c1c9987be0c5a57c96fc1730">commitdiff</a> | <a href="/gitweb/?p=autoconf-archive.git;a=tree;h=df89f6cdaade38f3c1c9987be0c5a57c96fc1730;hb=df89f6cdaade38f3c1c9987be0c5a57c96fc1730">tree</a> | <a href="/gitweb/?p=autoconf-archive.git;a=snapshot;h=df89f6cdaade38f3c1c9987be0c5a57c96fc1730;sf=tgz" title="in format: tar.gz">snapshot</a></td>
-</tr>
-<tr class="dark">
-<td title="2 months ago"><i>2022-03-30</i></td>
-<td class="author"><a class="list" href="/gitweb/?p=autoconf-archive.git;a=search;s=bogdro;st=author" title="Search for commits authored by bogdro">bogdro</a></td><td><a class="list subject" href="/gitweb/?p=autoconf-archive.git;a=commit;h=1d3b0b9c0705b4698ec0a65fe7b56e2a75d94c4d">Fix deprecated things in ax_prototype.m4</a></td>
-<td class="link"><a href="/gitweb/?p=autoconf-archive.git;a=commit;h=1d3b0b9c0705b4698ec0a65fe7b56e2a75d94c4d">commit</a> | <a href="/gitweb/?p=autoconf-archive.git;a=commitdiff;h=1d3b0b9c0705b4698ec0a65fe7b56e2a75d94c4d">commitdiff</a> | <a href="/gitweb/?p=autoconf-archive.git;a=tree;h=1d3b0b9c0705b4698ec0a65fe7b56e2a75d94c4d;hb=1d3b0b9c0705b4698ec0a65fe7b56e2a75d94c4d">tree</a> | <a href="/gitweb/?p=autoconf-archive.git;a=snapshot;h=1d3b0b9c0705b4698ec0a65fe7b56e2a75d94c4d;sf=tgz" title="in format: tar.gz">snapshot</a></td>
-</tr>
-<tr class="light">
-<td title="3 months ago"><i>2022-02-27</i></td>
-<td class="author"><a class="list" href="/gitweb/?p=autoconf-archive.git;a=search;s=Rudi+Heitbaum;st=author" title="Search for commits authored by Rudi Heitbaum">Rudi Heitbaum</a></td><td><a class="list subject" href="/gitweb/?p=autoconf-archive.git;a=commit;h=ecbf509871f16438d69ae157c690b7d9bedd62f0">AX_CC_MAXOPT: Fix nvhpc case</a></td>
-<td class="link"><a href="/gitweb/?p=autoconf-archive.git;a=commit;h=ecbf509871f16438d69ae157c690b7d9bedd62f0">commit</a> | <a href="/gitweb/?p=autoconf-archive.git;a=commitdiff;h=ecbf509871f16438d69ae157c690b7d9bedd62f0">commitdiff</a> | <a href="/gitweb/?p=autoconf-archive.git;a=tree;h=ecbf509871f16438d69ae157c690b7d9bedd62f0;hb=ecbf509871f16438d69ae157c690b7d9bedd62f0">tree</a> | <a href="/gitweb/?p=autoconf-archive.git;a=snapshot;h=ecbf509871f16438d69ae157c690b7d9bedd62f0;sf=tgz" title="in format: tar.gz">snapshot</a></td>
-</tr>
-<tr class="dark">
-<td title="4 months ago"><i>2022-02-11</i></td>
-<td class="author"><a class="list" href="/gitweb/?p=autoconf-archive.git;a=search;s=Peter+Simons;st=author" title="Search for commits authored by Peter Simons">Peter Simons</a></td><td><a class="list subject" href="/gitweb/?p=autoconf-archive.git;a=commit;h=203f15bb8aac7a9f793074711c1549003f8796cf">maint: post-release administrivia</a></td>
-<td class="link"><a href="/gitweb/?p=autoconf-archive.git;a=commit;h=203f15bb8aac7a9f793074711c1549003f8796cf">commit</a> | <a href="/gitweb/?p=autoconf-archive.git;a=commitdiff;h=203f15bb8aac7a9f793074711c1549003f8796cf">commitdiff</a> | <a href="/gitweb/?p=autoconf-archive.git;a=tree;h=203f15bb8aac7a9f793074711c1549003f8796cf;hb=203f15bb8aac7a9f793074711c1549003f8796cf">tree</a> | <a href="/gitweb/?p=autoconf-archive.git;a=snapshot;h=203f15bb8aac7a9f793074711c1549003f8796cf;sf=tgz" title="in format: tar.gz">snapshot</a></td>
-</tr>
-<tr class="light">
-<td title="4 months ago"><i>2022-02-11</i></td>
-<td class="author"><a class="list" href="/gitweb/?p=autoconf-archive.git;a=search;s=Peter+Simons;st=author" title="Search for commits authored by Peter Simons">Peter Simons</a></td><td><a class="list subject" href="/gitweb/?p=autoconf-archive.git;a=commit;h=1fee5e236c08ccfe6fd06272f494d5c72ac60cc6" title="Update copyright headers and bump version for upcoming release.">Update copyright headers and bump version for upcoming... </a> <span class="refs"> <span class="tag indirect" title="tags/v2022.02.11"><a href="/gitweb/?p=autoconf-archive.git;a=tag;h=refs/tags/v2022.02.11">v2022.02.11</a></span></span></td>
-<td class="link"><a href="/gitweb/?p=autoconf-archive.git;a=commit;h=1fee5e236c08ccfe6fd06272f494d5c72ac60cc6">commit</a> | <a href="/gitweb/?p=autoconf-archive.git;a=commitdiff;h=1fee5e236c08ccfe6fd06272f494d5c72ac60cc6">commitdiff</a> | <a href="/gitweb/?p=autoconf-archive.git;a=tree;h=1fee5e236c08ccfe6fd06272f494d5c72ac60cc6;hb=1fee5e236c08ccfe6fd06272f494d5c72ac60cc6">tree</a> | <a href="/gitweb/?p=autoconf-archive.git;a=snapshot;h=1fee5e236c08ccfe6fd06272f494d5c72ac60cc6;sf=tgz" title="in format: tar.gz">snapshot</a></td>
-</tr>
-<tr>
-<td colspan="4"><a href="/gitweb/?p=autoconf-archive.git;a=shortlog">...</a></td>
-</tr>
-</table>
-<div class="header">
-<a class="title" href="/gitweb/?p=autoconf-archive.git;a=tags">tags</a>
-</div>
-<table class="tags">
-<tr class="dark">
-<td><i>4 months ago</i></td>
-<td><a class="list name" href="/gitweb/?p=autoconf-archive.git;a=commit;h=1fee5e236c08ccfe6fd06272f494d5c72ac60cc6">v2022.02.11</a></td>
-<td><a class="list subject" href="/gitweb/?p=autoconf-archive.git;a=tag;h=9ab283d4ad2111c502aa1e822ba114d6f9514302" title="GNU Autoconf Archive version 2022.02.11">GNU Autoconf Archive version 2022... </a></td>
-<td class="selflink"><a href="/gitweb/?p=autoconf-archive.git;a=tag;h=9ab283d4ad2111c502aa1e822ba114d6f9514302">tag</a></td>
-<td class="link"> | <a href="/gitweb/?p=autoconf-archive.git;a=commit;h=1fee5e236c08ccfe6fd06272f494d5c72ac60cc6">commit</a> | <a href="/gitweb/?p=autoconf-archive.git;a=shortlog;h=refs/tags/v2022.02.11">shortlog</a> | <a href="/gitweb/?p=autoconf-archive.git;a=log;h=refs/tags/v2022.02.11">log</a></td>
-</tr><tr class="light">
-<td><i>15 months ago</i></td>
-<td><a class="list name" href="/gitweb/?p=autoconf-archive.git;a=commit;h=aa40227d6dde572b6ce9f0502572475edd72e855">v2021.02.19</a></td>
-<td><a class="list subject" href="/gitweb/?p=autoconf-archive.git;a=tag;h=490b5bf1698df1049ad522e5434fc609a78241d5">Autoconf Archive Version 2021.02.19</a></td>
-<td class="selflink"><a href="/gitweb/?p=autoconf-archive.git;a=tag;h=490b5bf1698df1049ad522e5434fc609a78241d5">tag</a></td>
-<td class="link"> | <a href="/gitweb/?p=autoconf-archive.git;a=commit;h=aa40227d6dde572b6ce9f0502572475edd72e855">commit</a> | <a href="/gitweb/?p=autoconf-archive.git;a=shortlog;h=refs/tags/v2021.02.19">shortlog</a> | <a href="/gitweb/?p=autoconf-archive.git;a=log;h=refs/tags/v2021.02.19">log</a></td>
-</tr><tr class="dark">
-<td><i>3 years ago</i></td>
-<td><a class="list name" href="/gitweb/?p=autoconf-archive.git;a=commit;h=37e48b795e42c9e9ccb6ce6819e65ed9d9d0fc56">v2019.01.06</a></td>
-<td><a class="list subject" href="/gitweb/?p=autoconf-archive.git;a=tag;h=24358c8c5ca679949ef522964d94e4d1cd1f941a" title="GNU Autoconf Archive version 2019.01.06">GNU Autoconf Archive version 2019... </a></td>
-<td class="selflink"><a href="/gitweb/?p=autoconf-archive.git;a=tag;h=24358c8c5ca679949ef522964d94e4d1cd1f941a">tag</a></td>
-<td class="link"> | <a href="/gitweb/?p=autoconf-archive.git;a=commit;h=37e48b795e42c9e9ccb6ce6819e65ed9d9d0fc56">commit</a> | <a href="/gitweb/?p=autoconf-archive.git;a=shortlog;h=refs/tags/v2019.01.06">shortlog</a> | <a href="/gitweb/?p=autoconf-archive.git;a=log;h=refs/tags/v2019.01.06">log</a></td>
-</tr><tr class="light">
-<td><i>4 years ago</i></td>
-<td><a class="list name" href="/gitweb/?p=autoconf-archive.git;a=commit;h=ab7d6c3b2d2021802d846191939bd0e8bad93318">v2018.03.13</a></td>
-<td><a class="list subject" href="/gitweb/?p=autoconf-archive.git;a=tag;h=cfd0cd6899b6ee213d650000d4f5c2533c147fa2" title="GNU Autoconf Archive version 2018.03.13">GNU Autoconf Archive version 2018... </a></td>
-<td class="selflink"><a href="/gitweb/?p=autoconf-archive.git;a=tag;h=cfd0cd6899b6ee213d650000d4f5c2533c147fa2">tag</a></td>
-<td class="link"> | <a href="/gitweb/?p=autoconf-archive.git;a=commit;h=ab7d6c3b2d2021802d846191939bd0e8bad93318">commit</a> | <a href="/gitweb/?p=autoconf-archive.git;a=shortlog;h=refs/tags/v2018.03.13">shortlog</a> | <a href="/gitweb/?p=autoconf-archive.git;a=log;h=refs/tags/v2018.03.13">log</a></td>
-</tr><tr class="dark">
-<td><i>4 years ago</i></td>
-<td><a class="list name" href="/gitweb/?p=autoconf-archive.git;a=commit;h=cdbb54bfb4489796bfb101aeed5476cb5608a2d6">v2017.09.28</a></td>
-<td><a class="list subject" href="/gitweb/?p=autoconf-archive.git;a=tag;h=dfa311edd9eb1cd120d20ab19b6af68f670ce47a" title="GNU Autoconf Archive version 2017.09.28">GNU Autoconf Archive version 2017... </a></td>
-<td class="selflink"><a href="/gitweb/?p=autoconf-archive.git;a=tag;h=dfa311edd9eb1cd120d20ab19b6af68f670ce47a">tag</a></td>
-<td class="link"> | <a href="/gitweb/?p=autoconf-archive.git;a=commit;h=cdbb54bfb4489796bfb101aeed5476cb5608a2d6">commit</a> | <a href="/gitweb/?p=autoconf-archive.git;a=shortlog;h=refs/tags/v2017.09.28">shortlog</a> | <a href="/gitweb/?p=autoconf-archive.git;a=log;h=refs/tags/v2017.09.28">log</a></td>
-</tr><tr class="light">
-<td><i>5 years ago</i></td>
-<td><a class="list name" href="/gitweb/?p=autoconf-archive.git;a=commit;h=1c8255fd820ec8d6d11372475bacc7b3aa0985b1">v2017.03.21</a></td>
-<td><a class="list subject" href="/gitweb/?p=autoconf-archive.git;a=tag;h=ddb550bad5bace35ab5bde9d5e577792c965f5ef">Autoconf Archive version 2017.03.21</a></td>
-<td class="selflink"><a href="/gitweb/?p=autoconf-archive.git;a=tag;h=ddb550bad5bace35ab5bde9d5e577792c965f5ef">tag</a></td>
-<td class="link"> | <a href="/gitweb/?p=autoconf-archive.git;a=commit;h=1c8255fd820ec8d6d11372475bacc7b3aa0985b1">commit</a> | <a href="/gitweb/?p=autoconf-archive.git;a=shortlog;h=refs/tags/v2017.03.21">shortlog</a> | <a href="/gitweb/?p=autoconf-archive.git;a=log;h=refs/tags/v2017.03.21">log</a></td>
-</tr><tr class="dark">
-<td><i>5 years ago</i></td>
-<td><a class="list name" href="/gitweb/?p=autoconf-archive.git;a=commit;h=d3d6bb4a4fb7df1508d1470d908dbd81b225a962">v2016.09.16</a></td>
-<td><a class="list subject" href="/gitweb/?p=autoconf-archive.git;a=tag;h=7db0dd29b027ced1f2524b656af981f7ab6d53aa">Autoconf Archive version 2016.09.16</a></td>
-<td class="selflink"><a href="/gitweb/?p=autoconf-archive.git;a=tag;h=7db0dd29b027ced1f2524b656af981f7ab6d53aa">tag</a></td>
-<td class="link"> | <a href="/gitweb/?p=autoconf-archive.git;a=commit;h=d3d6bb4a4fb7df1508d1470d908dbd81b225a962">commit</a> | <a href="/gitweb/?p=autoconf-archive.git;a=shortlog;h=refs/tags/v2016.09.16">shortlog</a> | <a href="/gitweb/?p=autoconf-archive.git;a=log;h=refs/tags/v2016.09.16">log</a></td>
-</tr><tr class="light">
-<td><i>6 years ago</i></td>
-<td><a class="list name" href="/gitweb/?p=autoconf-archive.git;a=commit;h=abd51ff8fbb0fa6995e860533cf5e7f60db181eb">v2016.03.20</a></td>
-<td><a class="list subject" href="/gitweb/?p=autoconf-archive.git;a=tag;h=d64e21bddac63cb7c74c7fb501291cffe1656aef">Autoconf Archive version 2016.03.20</a></td>
-<td class="selflink"><a href="/gitweb/?p=autoconf-archive.git;a=tag;h=d64e21bddac63cb7c74c7fb501291cffe1656aef">tag</a></td>
-<td class="link"> | <a href="/gitweb/?p=autoconf-archive.git;a=commit;h=abd51ff8fbb0fa6995e860533cf5e7f60db181eb">commit</a> | <a href="/gitweb/?p=autoconf-archive.git;a=shortlog;h=refs/tags/v2016.03.20">shortlog</a> | <a href="/gitweb/?p=autoconf-archive.git;a=log;h=refs/tags/v2016.03.20">log</a></td>
-</tr><tr class="dark">
-<td><i>6 years ago</i></td>
-<td><a class="list name" href="/gitweb/?p=autoconf-archive.git;a=commit;h=557b34d93d5a03fd66a2d40b02152b8f12eccf4c">v2015.09.25</a></td>
-<td><a class="list subject" href="/gitweb/?p=autoconf-archive.git;a=tag;h=501f40aa459c64f2cb2ccf22b16e56d37d718b57" title="GNU Autoconf Archive Version 2015.09.25">GNU Autoconf Archive Version 2015... </a></td>
-<td class="selflink"><a href="/gitweb/?p=autoconf-archive.git;a=tag;h=501f40aa459c64f2cb2ccf22b16e56d37d718b57">tag</a></td>
-<td class="link"> | <a href="/gitweb/?p=autoconf-archive.git;a=commit;h=557b34d93d5a03fd66a2d40b02152b8f12eccf4c">commit</a> | <a href="/gitweb/?p=autoconf-archive.git;a=shortlog;h=refs/tags/v2015.09.25">shortlog</a> | <a href="/gitweb/?p=autoconf-archive.git;a=log;h=refs/tags/v2015.09.25">log</a></td>
-</tr><tr class="light">
-<td><i>7 years ago</i></td>
-<td><a class="list name" href="/gitweb/?p=autoconf-archive.git;a=commit;h=8c3a792472f405e3b89f9a2a48a700caa67089d8">v2015.02.24</a></td>
-<td><a class="list subject" href="/gitweb/?p=autoconf-archive.git;a=tag;h=927daaca51b7c8a67f5a1f0fbca104b8316e92fd">Autoconf Archive Version 2015.02.24</a></td>
-<td class="selflink"><a href="/gitweb/?p=autoconf-archive.git;a=tag;h=927daaca51b7c8a67f5a1f0fbca104b8316e92fd">tag</a></td>
-<td class="link"> | <a href="/gitweb/?p=autoconf-archive.git;a=commit;h=8c3a792472f405e3b89f9a2a48a700caa67089d8">commit</a> | <a href="/gitweb/?p=autoconf-archive.git;a=shortlog;h=refs/tags/v2015.02.24">shortlog</a> | <a href="/gitweb/?p=autoconf-archive.git;a=log;h=refs/tags/v2015.02.24">log</a></td>
-</tr><tr class="dark">
-<td><i>7 years ago</i></td>
-<td><a class="list name" href="/gitweb/?p=autoconf-archive.git;a=commit;h=6ddf085ffd6c699070fe61cdc09e76743a49875f">v2015.02.04</a></td>
-<td><a class="list subject" href="/gitweb/?p=autoconf-archive.git;a=tag;h=06ab78be731e434efe39c11a91a70df7b527c386">Autoconf Archive Version 2015.02.04</a></td>
-<td class="selflink"><a href="/gitweb/?p=autoconf-archive.git;a=tag;h=06ab78be731e434efe39c11a91a70df7b527c386">tag</a></td>
-<td class="link"> | <a href="/gitweb/?p=autoconf-archive.git;a=commit;h=6ddf085ffd6c699070fe61cdc09e76743a49875f">commit</a> | <a href="/gitweb/?p=autoconf-archive.git;a=shortlog;h=refs/tags/v2015.02.04">shortlog</a> | <a href="/gitweb/?p=autoconf-archive.git;a=log;h=refs/tags/v2015.02.04">log</a></td>
-</tr><tr class="light">
-<td><i>7 years ago</i></td>
-<td><a class="list name" href="/gitweb/?p=autoconf-archive.git;a=commit;h=7f56aaabdac6dc45ee083c6f3afdfc412a600124">v2014.10.15</a></td>
-<td><a class="list subject" href="/gitweb/?p=autoconf-archive.git;a=tag;h=34f91518355f1f2cba082678c60008a1ed8d009a">Autoconf Archive Version 2014.10.15</a></td>
-<td class="selflink"><a href="/gitweb/?p=autoconf-archive.git;a=tag;h=34f91518355f1f2cba082678c60008a1ed8d009a">tag</a></td>
-<td class="link"> | <a href="/gitweb/?p=autoconf-archive.git;a=commit;h=7f56aaabdac6dc45ee083c6f3afdfc412a600124">commit</a> | <a href="/gitweb/?p=autoconf-archive.git;a=shortlog;h=refs/tags/v2014.10.15">shortlog</a> | <a href="/gitweb/?p=autoconf-archive.git;a=log;h=refs/tags/v2014.10.15">log</a></td>
-</tr><tr class="dark">
-<td><i>8 years ago</i></td>
-<td><a class="list name" href="/gitweb/?p=autoconf-archive.git;a=commit;h=8935e464cac3a8eb584c093b35863ba08690471b">v2014.02.28</a></td>
-<td><a class="list subject" href="/gitweb/?p=autoconf-archive.git;a=tag;h=42b15b27650f65c19a707bee7db2f987ce69a0dd" title="GNU Autoconf Archive Version 2014.02.28">GNU Autoconf Archive Version 2014... </a></td>
-<td class="selflink"><a href="/gitweb/?p=autoconf-archive.git;a=tag;h=42b15b27650f65c19a707bee7db2f987ce69a0dd">tag</a></td>
-<td class="link"> | <a href="/gitweb/?p=autoconf-archive.git;a=commit;h=8935e464cac3a8eb584c093b35863ba08690471b">commit</a> | <a href="/gitweb/?p=autoconf-archive.git;a=shortlog;h=refs/tags/v2014.02.28">shortlog</a> | <a href="/gitweb/?p=autoconf-archive.git;a=log;h=refs/tags/v2014.02.28">log</a></td>
-</tr><tr class="light">
-<td><i>8 years ago</i></td>
-<td><a class="list name" href="/gitweb/?p=autoconf-archive.git;a=commit;h=dca0d5c7de9729a45ebb8934db114912dc04e37b">v2013.11.01</a></td>
-<td><a class="list subject" href="/gitweb/?p=autoconf-archive.git;a=tag;h=7c9026664523434623f3cc26d9e82dee00686e86" title="GNU Autoconf Archive Version 2013.11.01">GNU Autoconf Archive Version 2013... </a></td>
-<td class="selflink"><a href="/gitweb/?p=autoconf-archive.git;a=tag;h=7c9026664523434623f3cc26d9e82dee00686e86">tag</a></td>
-<td class="link"> | <a href="/gitweb/?p=autoconf-archive.git;a=commit;h=dca0d5c7de9729a45ebb8934db114912dc04e37b">commit</a> | <a href="/gitweb/?p=autoconf-archive.git;a=shortlog;h=refs/tags/v2013.11.01">shortlog</a> | <a href="/gitweb/?p=autoconf-archive.git;a=log;h=refs/tags/v2013.11.01">log</a></td>
-</tr><tr class="dark">
-<td><i>9 years ago</i></td>
-<td><a class="list name" href="/gitweb/?p=autoconf-archive.git;a=commit;h=f5f6d113d94f121210370e10f41045491581bdc2">v2013.06.09</a></td>
-<td><a class="list subject" href="/gitweb/?p=autoconf-archive.git;a=tag;h=7167a25793d36ad25d7068c2625d4cad78a83b26" title="GNU Autoconf Archive Version 2013.06.09">GNU Autoconf Archive Version 2013... </a></td>
-<td class="selflink"><a href="/gitweb/?p=autoconf-archive.git;a=tag;h=7167a25793d36ad25d7068c2625d4cad78a83b26">tag</a></td>
-<td class="link"> | <a href="/gitweb/?p=autoconf-archive.git;a=commit;h=f5f6d113d94f121210370e10f41045491581bdc2">commit</a> | <a href="/gitweb/?p=autoconf-archive.git;a=shortlog;h=refs/tags/v2013.06.09">shortlog</a> | <a href="/gitweb/?p=autoconf-archive.git;a=log;h=refs/tags/v2013.06.09">log</a></td>
-</tr><tr class="light">
-<td><i>9 years ago</i></td>
-<td><a class="list name" href="/gitweb/?p=autoconf-archive.git;a=commit;h=60e854d960fb96105bbe59449b21aa6a9d196de3">v2013.04.06</a></td>
-<td><a class="list subject" href="/gitweb/?p=autoconf-archive.git;a=tag;h=1d216b9587c50f9d6e59ad3bec8f8b0efd9242c5" title="GNU Autoconf Archive Version 2013.04.06">GNU Autoconf Archive Version 2013... </a></td>
-<td class="selflink"><a href="/gitweb/?p=autoconf-archive.git;a=tag;h=1d216b9587c50f9d6e59ad3bec8f8b0efd9242c5">tag</a></td>
-<td class="link"> | <a href="/gitweb/?p=autoconf-archive.git;a=commit;h=60e854d960fb96105bbe59449b21aa6a9d196de3">commit</a> | <a href="/gitweb/?p=autoconf-archive.git;a=shortlog;h=refs/tags/v2013.04.06">shortlog</a> | <a href="/gitweb/?p=autoconf-archive.git;a=log;h=refs/tags/v2013.04.06">log</a></td>
-</tr><tr>
-<td colspan="5"><a href="/gitweb/?p=autoconf-archive.git;a=tags">...</a></td>
-</tr>
-</table>
-<div class="header">
-<a class="title" href="/gitweb/?p=autoconf-archive.git;a=heads">heads</a>
-</div>
-<table class="heads">
-<tr class="dark">
-<td><i>11 days ago</i></td>
-<td class="current_head"><a class="list name" href="/gitweb/?p=autoconf-archive.git;a=shortlog;h=refs/heads/master">master</a></td>
-<td class="link"><a href="/gitweb/?p=autoconf-archive.git;a=shortlog;h=refs/heads/master">shortlog</a> | <a href="/gitweb/?p=autoconf-archive.git;a=log;h=refs/heads/master">log</a> | <a href="/gitweb/?p=autoconf-archive.git;a=tree;h=refs/heads/master;hb=refs/heads/master">tree</a></td>
-</tr><tr class="light">
-<td><i>13 years ago</i></td>
-<td><a class="list name" href="/gitweb/?p=autoconf-archive.git;a=shortlog;h=refs/heads/pre-savannah-history">pre-savannah-history</a></td>
-<td class="link"><a href="/gitweb/?p=autoconf-archive.git;a=shortlog;h=refs/heads/pre-savannah-history">shortlog</a> | <a href="/gitweb/?p=autoconf-archive.git;a=log;h=refs/heads/pre-savannah-history">log</a> | <a href="/gitweb/?p=autoconf-archive.git;a=tree;h=refs/heads/pre-savannah-history;hb=refs/heads/pre-savannah-history">tree</a></td>
-</tr></table>
-<div class="page_footer">
-<div class="page_footer_text">GNU Autoconf Archive</div>
-<a class="rss_logo" href="/gitweb/?p=autoconf-archive.git;a=rss" title="log RSS feed">RSS</a>
-<a class="rss_logo" href="/gitweb/?p=autoconf-archive.git;a=atom" title="log Atom feed">Atom</a>
-</div>
-<script type="text/javascript" src="/gitweb/static/gitweb.js"></script>
-<script type="text/javascript">
-window.onload = function () {
-	var tz_cookie = { name: 'gitweb_tz', expires: 14, path: '/' };
-	onloadTZSetup('local', tz_cookie, 'datetime');
-};
-</script>
-</body>
-</html>
+# ===========================================================================
+#        https://www.gnu.org/software/autoconf-archive/ax_pthread.html
+# ===========================================================================
+#
+# SYNOPSIS
+#
+#   AX_PTHREAD([ACTION-IF-FOUND[, ACTION-IF-NOT-FOUND]])
+#
+# DESCRIPTION
+#
+#   This macro figures out how to build C programs using POSIX threads. It
+#   sets the PTHREAD_LIBS output variable to the threads library and linker
+#   flags, and the PTHREAD_CFLAGS output variable to any special C compiler
+#   flags that are needed. (The user can also force certain compiler
+#   flags/libs to be tested by setting these environment variables.)
+#
+#   Also sets PTHREAD_CC and PTHREAD_CXX to any special C compiler that is
+#   needed for multi-threaded programs (defaults to the value of CC
+#   respectively CXX otherwise). (This is necessary on e.g. AIX to use the
+#   special cc_r/CC_r compiler alias.)
+#
+#   NOTE: You are assumed to not only compile your program with these flags,
+#   but also to link with them as well. For example, you might link with
+#   $PTHREAD_CC $CFLAGS $PTHREAD_CFLAGS $LDFLAGS ... $PTHREAD_LIBS $LIBS
+#   $PTHREAD_CXX $CXXFLAGS $PTHREAD_CFLAGS $LDFLAGS ... $PTHREAD_LIBS $LIBS
+#
+#   If you are only building threaded programs, you may wish to use these
+#   variables in your default LIBS, CFLAGS, and CC:
+#
+#     LIBS="$PTHREAD_LIBS $LIBS"
+#     CFLAGS="$CFLAGS $PTHREAD_CFLAGS"
+#     CXXFLAGS="$CXXFLAGS $PTHREAD_CFLAGS"
+#     CC="$PTHREAD_CC"
+#     CXX="$PTHREAD_CXX"
+#
+#   In addition, if the PTHREAD_CREATE_JOINABLE thread-attribute constant
+#   has a nonstandard name, this macro defines PTHREAD_CREATE_JOINABLE to
+#   that name (e.g. PTHREAD_CREATE_UNDETACHED on AIX).
+#
+#   Also HAVE_PTHREAD_PRIO_INHERIT is defined if pthread is found and the
+#   PTHREAD_PRIO_INHERIT symbol is defined when compiling with
+#   PTHREAD_CFLAGS.
+#
+#   ACTION-IF-FOUND is a list of shell commands to run if a threads library
+#   is found, and ACTION-IF-NOT-FOUND is a list of commands to run it if it
+#   is not found. If ACTION-IF-FOUND is not specified, the default action
+#   will define HAVE_PTHREAD.
+#
+#   Please let the authors know if this macro fails on any platform, or if
+#   you have any other suggestions or comments. This macro was based on work
+#   by SGJ on autoconf scripts for FFTW (http://www.fftw.org/) (with help
+#   from M. Frigo), as well as ac_pthread and hb_pthread macros posted by
+#   Alejandro Forero Cuervo to the autoconf macro repository. We are also
+#   grateful for the helpful feedback of numerous users.
+#
+#   Updated for Autoconf 2.68 by Daniel Richard G.
+#
+# LICENSE
+#
+#   Copyright (c) 2008 Steven G. Johnson <stevenj@alum.mit.edu>
+#   Copyright (c) 2011 Daniel Richard G. <skunk@iSKUNK.ORG>
+#   Copyright (c) 2019 Marc Stevens <marc.stevens@cwi.nl>
+#
+#   This program is free software: you can redistribute it and/or modify it
+#   under the terms of the GNU General Public License as published by the
+#   Free Software Foundation, either version 3 of the License, or (at your
+#   option) any later version.
+#
+#   This program is distributed in the hope that it will be useful, but
+#   WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+#   Public License for more details.
+#
+#   You should have received a copy of the GNU General Public License along
+#   with this program. If not, see <https://www.gnu.org/licenses/>.
+#
+#   As a special exception, the respective Autoconf Macro's copyright owner
+#   gives unlimited permission to copy, distribute and modify the configure
+#   scripts that are the output of Autoconf when processing the Macro. You
+#   need not follow the terms of the GNU General Public License when using
+#   or distributing such scripts, even though portions of the text of the
+#   Macro appear in them. The GNU General Public License (GPL) does govern
+#   all other use of the material that constitutes the Autoconf Macro.
+#
+#   This special exception to the GPL applies to versions of the Autoconf
+#   Macro released by the Autoconf Archive. When you make and distribute a
+#   modified version of the Autoconf Macro, you may extend this special
+#   exception to the GPL to apply to your modified version as well.
+
+#serial 31
+
+AU_ALIAS([ACX_PTHREAD], [AX_PTHREAD])
+AC_DEFUN([AX_PTHREAD], [
+AC_REQUIRE([AC_CANONICAL_HOST])
+AC_REQUIRE([AC_PROG_CC])
+AC_REQUIRE([AC_PROG_SED])
+AC_LANG_PUSH([C])
+ax_pthread_ok=no
+
+# We used to check for pthread.h first, but this fails if pthread.h
+# requires special compiler flags (e.g. on Tru64 or Sequent).
+# It gets checked for in the link test anyway.
+
+# First of all, check if the user has set any of the PTHREAD_LIBS,
+# etcetera environment variables, and if threads linking works using
+# them:
+if test "x$PTHREAD_CFLAGS$PTHREAD_LIBS" != "x"; then
+        ax_pthread_save_CC="$CC"
+        ax_pthread_save_CFLAGS="$CFLAGS"
+        ax_pthread_save_LIBS="$LIBS"
+        AS_IF([test "x$PTHREAD_CC" != "x"], [CC="$PTHREAD_CC"])
+        AS_IF([test "x$PTHREAD_CXX" != "x"], [CXX="$PTHREAD_CXX"])
+        CFLAGS="$CFLAGS $PTHREAD_CFLAGS"
+        LIBS="$PTHREAD_LIBS $LIBS"
+        AC_MSG_CHECKING([for pthread_join using $CC $PTHREAD_CFLAGS $PTHREAD_LIBS])
+        AC_LINK_IFELSE([AC_LANG_CALL([], [pthread_join])], [ax_pthread_ok=yes])
+        AC_MSG_RESULT([$ax_pthread_ok])
+        if test "x$ax_pthread_ok" = "xno"; then
+                PTHREAD_LIBS=""
+                PTHREAD_CFLAGS=""
+        fi
+        CC="$ax_pthread_save_CC"
+        CFLAGS="$ax_pthread_save_CFLAGS"
+        LIBS="$ax_pthread_save_LIBS"
+fi
+
+# We must check for the threads library under a number of different
+# names; the ordering is very important because some systems
+# (e.g. DEC) have both -lpthread and -lpthreads, where one of the
+# libraries is broken (non-POSIX).
+
+# Create a list of thread flags to try. Items with a "," contain both
+# C compiler flags (before ",") and linker flags (after ","). Other items
+# starting with a "-" are C compiler flags, and remaining items are
+# library names, except for "none" which indicates that we try without
+# any flags at all, and "pthread-config" which is a program returning
+# the flags for the Pth emulation library.
+
+ax_pthread_flags="pthreads none -Kthread -pthread -pthreads -mthreads pthread --thread-safe -mt pthread-config"
+
+# The ordering *is* (sometimes) important.  Some notes on the
+# individual items follow:
+
+# pthreads: AIX (must check this before -lpthread)
+# none: in case threads are in libc; should be tried before -Kthread and
+#       other compiler flags to prevent continual compiler warnings
+# -Kthread: Sequent (threads in libc, but -Kthread needed for pthread.h)
+# -pthread: Linux/gcc (kernel threads), BSD/gcc (userland threads), Tru64
+#           (Note: HP C rejects this with "bad form for `-t' option")
+# -pthreads: Solaris/gcc (Note: HP C also rejects)
+# -mt: Sun Workshop C (may only link SunOS threads [-lthread], but it
+#      doesn't hurt to check since this sometimes defines pthreads and
+#      -D_REENTRANT too), HP C (must be checked before -lpthread, which
+#      is present but should not be used directly; and before -mthreads,
+#      because the compiler interprets this as "-mt" + "-hreads")
+# -mthreads: Mingw32/gcc, Lynx/gcc
+# pthread: Linux, etcetera
+# --thread-safe: KAI C++
+# pthread-config: use pthread-config program (for GNU Pth library)
+
+case $host_os in
+
+        freebsd*)
+
+        # -kthread: FreeBSD kernel threads (preferred to -pthread since SMP-able)
+        # lthread: LinuxThreads port on FreeBSD (also preferred to -pthread)
+
+        ax_pthread_flags="-kthread lthread $ax_pthread_flags"
+        ;;
+
+        hpux*)
+
+        # From the cc(1) man page: "[-mt] Sets various -D flags to enable
+        # multi-threading and also sets -lpthread."
+
+        ax_pthread_flags="-mt -pthread pthread $ax_pthread_flags"
+        ;;
+
+        openedition*)
+
+        # IBM z/OS requires a feature-test macro to be defined in order to
+        # enable POSIX threads at all, so give the user a hint if this is
+        # not set. (We don't define these ourselves, as they can affect
+        # other portions of the system API in unpredictable ways.)
+
+        AC_EGREP_CPP([AX_PTHREAD_ZOS_MISSING],
+            [
+#            if !defined(_OPEN_THREADS) && !defined(_UNIX03_THREADS)
+             AX_PTHREAD_ZOS_MISSING
+#            endif
+            ],
+            [AC_MSG_WARN([IBM z/OS requires -D_OPEN_THREADS or -D_UNIX03_THREADS to enable pthreads support.])])
+        ;;
+
+        solaris*)
+
+        # On Solaris (at least, for some versions), libc contains stubbed
+        # (non-functional) versions of the pthreads routines, so link-based
+        # tests will erroneously succeed. (N.B.: The stubs are missing
+        # pthread_cleanup_push, or rather a function called by this macro,
+        # so we could check for that, but who knows whether they'll stub
+        # that too in a future libc.)  So we'll check first for the
+        # standard Solaris way of linking pthreads (-mt -lpthread).
+
+        ax_pthread_flags="-mt,-lpthread pthread $ax_pthread_flags"
+        ;;
+esac
+
+# Are we compiling with Clang?
+
+AC_CACHE_CHECK([whether $CC is Clang],
+    [ax_cv_PTHREAD_CLANG],
+    [ax_cv_PTHREAD_CLANG=no
+     # Note that Autoconf sets GCC=yes for Clang as well as GCC
+     if test "x$GCC" = "xyes"; then
+        AC_EGREP_CPP([AX_PTHREAD_CC_IS_CLANG],
+            [/* Note: Clang 2.7 lacks __clang_[a-z]+__ */
+#            if defined(__clang__) && defined(__llvm__)
+             AX_PTHREAD_CC_IS_CLANG
+#            endif
+            ],
+            [ax_cv_PTHREAD_CLANG=yes])
+     fi
+    ])
+ax_pthread_clang="$ax_cv_PTHREAD_CLANG"
+
+
+# GCC generally uses -pthread, or -pthreads on some platforms (e.g. SPARC)
+
+# Note that for GCC and Clang -pthread generally implies -lpthread,
+# except when -nostdlib is passed.
+# This is problematic using libtool to build C++ shared libraries with pthread:
+# [1] https://gcc.gnu.org/bugzilla/show_bug.cgi?id=25460
+# [2] https://bugzilla.redhat.com/show_bug.cgi?id=661333
+# [3] https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=468555
+# To solve this, first try -pthread together with -lpthread for GCC
+
+AS_IF([test "x$GCC" = "xyes"],
+      [ax_pthread_flags="-pthread,-lpthread -pthread -pthreads $ax_pthread_flags"])
+
+# Clang takes -pthread (never supported any other flag), but we'll try with -lpthread first
+
+AS_IF([test "x$ax_pthread_clang" = "xyes"],
+      [ax_pthread_flags="-pthread,-lpthread -pthread"])
+
+
+# The presence of a feature test macro requesting re-entrant function
+# definitions is, on some systems, a strong hint that pthreads support is
+# correctly enabled
+
+case $host_os in
+        darwin* | hpux* | linux* | osf* | solaris*)
+        ax_pthread_check_macro="_REENTRANT"
+        ;;
+
+        aix*)
+        ax_pthread_check_macro="_THREAD_SAFE"
+        ;;
+
+        *)
+        ax_pthread_check_macro="--"
+        ;;
+esac
+AS_IF([test "x$ax_pthread_check_macro" = "x--"],
+      [ax_pthread_check_cond=0],
+      [ax_pthread_check_cond="!defined($ax_pthread_check_macro)"])
+
+
+if test "x$ax_pthread_ok" = "xno"; then
+for ax_pthread_try_flag in $ax_pthread_flags; do
+
+        case $ax_pthread_try_flag in
+                none)
+                AC_MSG_CHECKING([whether pthreads work without any flags])
+                ;;
+
+                *,*)
+                PTHREAD_CFLAGS=`echo $ax_pthread_try_flag | sed "s/^\(.*\),\(.*\)$/\1/"`
+                PTHREAD_LIBS=`echo $ax_pthread_try_flag | sed "s/^\(.*\),\(.*\)$/\2/"`
+                AC_MSG_CHECKING([whether pthreads work with "$PTHREAD_CFLAGS" and "$PTHREAD_LIBS"])
+                ;;
+
+                -*)
+                AC_MSG_CHECKING([whether pthreads work with $ax_pthread_try_flag])
+                PTHREAD_CFLAGS="$ax_pthread_try_flag"
+                ;;
+
+                pthread-config)
+                AC_CHECK_PROG([ax_pthread_config], [pthread-config], [yes], [no])
+                AS_IF([test "x$ax_pthread_config" = "xno"], [continue])
+                PTHREAD_CFLAGS="`pthread-config --cflags`"
+                PTHREAD_LIBS="`pthread-config --ldflags` `pthread-config --libs`"
+                ;;
+
+                *)
+                AC_MSG_CHECKING([for the pthreads library -l$ax_pthread_try_flag])
+                PTHREAD_LIBS="-l$ax_pthread_try_flag"
+                ;;
+        esac
+
+        ax_pthread_save_CFLAGS="$CFLAGS"
+        ax_pthread_save_LIBS="$LIBS"
+        CFLAGS="$CFLAGS $PTHREAD_CFLAGS"
+        LIBS="$PTHREAD_LIBS $LIBS"
+
+        # Check for various functions.  We must include pthread.h,
+        # since some functions may be macros.  (On the Sequent, we
+        # need a special flag -Kthread to make this header compile.)
+        # We check for pthread_join because it is in -lpthread on IRIX
+        # while pthread_create is in libc.  We check for pthread_attr_init
+        # due to DEC craziness with -lpthreads.  We check for
+        # pthread_cleanup_push because it is one of the few pthread
+        # functions on Solaris that doesn't have a non-functional libc stub.
+        # We try pthread_create on general principles.
+
+        AC_LINK_IFELSE([AC_LANG_PROGRAM([#include <pthread.h>
+#                       if $ax_pthread_check_cond
+#                        error "$ax_pthread_check_macro must be defined"
+#                       endif
+                        static void *some_global = NULL;
+                        static void routine(void *a)
+                          {
+                             /* To avoid any unused-parameter or
+                                unused-but-set-parameter warning.  */
+                             some_global = a;
+                          }
+                        static void *start_routine(void *a) { return a; }],
+                       [pthread_t th; pthread_attr_t attr;
+                        pthread_create(&th, 0, start_routine, 0);
+                        pthread_join(th, 0);
+                        pthread_attr_init(&attr);
+                        pthread_cleanup_push(routine, 0);
+                        pthread_cleanup_pop(0) /* ; */])],
+            [ax_pthread_ok=yes],
+            [])
+
+        CFLAGS="$ax_pthread_save_CFLAGS"
+        LIBS="$ax_pthread_save_LIBS"
+
+        AC_MSG_RESULT([$ax_pthread_ok])
+        AS_IF([test "x$ax_pthread_ok" = "xyes"], [break])
+
+        PTHREAD_LIBS=""
+        PTHREAD_CFLAGS=""
+done
+fi
+
+
+# Clang needs special handling, because older versions handle the -pthread
+# option in a rather... idiosyncratic way
+
+if test "x$ax_pthread_clang" = "xyes"; then
+
+        # Clang takes -pthread; it has never supported any other flag
+
+        # (Note 1: This will need to be revisited if a system that Clang
+        # supports has POSIX threads in a separate library.  This tends not
+        # to be the way of modern systems, but it's conceivable.)
+
+        # (Note 2: On some systems, notably Darwin, -pthread is not needed
+        # to get POSIX threads support; the API is always present and
+        # active.  We could reasonably leave PTHREAD_CFLAGS empty.  But
+        # -pthread does define _REENTRANT, and while the Darwin headers
+        # ignore this macro, third-party headers might not.)
+
+        # However, older versions of Clang make a point of warning the user
+        # that, in an invocation where only linking and no compilation is
+        # taking place, the -pthread option has no effect ("argument unused
+        # during compilation").  They expect -pthread to be passed in only
+        # when source code is being compiled.
+        #
+        # Problem is, this is at odds with the way Automake and most other
+        # C build frameworks function, which is that the same flags used in
+        # compilation (CFLAGS) are also used in linking.  Many systems
+        # supported by AX_PTHREAD require exactly this for POSIX threads
+        # support, and in fact it is often not straightforward to specify a
+        # flag that is used only in the compilation phase and not in
+        # linking.  Such a scenario is extremely rare in practice.
+        #
+        # Even though use of the -pthread flag in linking would only print
+        # a warning, this can be a nuisance for well-run software projects
+        # that build with -Werror.  So if the active version of Clang has
+        # this misfeature, we search for an option to squash it.
+
+        AC_CACHE_CHECK([whether Clang needs flag to prevent "argument unused" warning when linking with -pthread],
+            [ax_cv_PTHREAD_CLANG_NO_WARN_FLAG],
+            [ax_cv_PTHREAD_CLANG_NO_WARN_FLAG=unknown
+             # Create an alternate version of $ac_link that compiles and
+             # links in two steps (.c -> .o, .o -> exe) instead of one
+             # (.c -> exe), because the warning occurs only in the second
+             # step
+             ax_pthread_save_ac_link="$ac_link"
+             ax_pthread_sed='s/conftest\.\$ac_ext/conftest.$ac_objext/g'
+             ax_pthread_link_step=`AS_ECHO(["$ac_link"]) | sed "$ax_pthread_sed"`
+             ax_pthread_2step_ac_link="($ac_compile) && (echo ==== >&5) && ($ax_pthread_link_step)"
+             ax_pthread_save_CFLAGS="$CFLAGS"
+             for ax_pthread_try in '' -Qunused-arguments -Wno-unused-command-line-argument unknown; do
+                AS_IF([test "x$ax_pthread_try" = "xunknown"], [break])
+                CFLAGS="-Werror -Wunknown-warning-option $ax_pthread_try -pthread $ax_pthread_save_CFLAGS"
+                ac_link="$ax_pthread_save_ac_link"
+                AC_LINK_IFELSE([AC_LANG_SOURCE([[int main(void){return 0;}]])],
+                    [ac_link="$ax_pthread_2step_ac_link"
+                     AC_LINK_IFELSE([AC_LANG_SOURCE([[int main(void){return 0;}]])],
+                         [break])
+                    ])
+             done
+             ac_link="$ax_pthread_save_ac_link"
+             CFLAGS="$ax_pthread_save_CFLAGS"
+             AS_IF([test "x$ax_pthread_try" = "x"], [ax_pthread_try=no])
+             ax_cv_PTHREAD_CLANG_NO_WARN_FLAG="$ax_pthread_try"
+            ])
+
+        case "$ax_cv_PTHREAD_CLANG_NO_WARN_FLAG" in
+                no | unknown) ;;
+                *) PTHREAD_CFLAGS="$ax_cv_PTHREAD_CLANG_NO_WARN_FLAG $PTHREAD_CFLAGS" ;;
+        esac
+
+fi # $ax_pthread_clang = yes
+
+
+
+# Various other checks:
+if test "x$ax_pthread_ok" = "xyes"; then
+        ax_pthread_save_CFLAGS="$CFLAGS"
+        ax_pthread_save_LIBS="$LIBS"
+        CFLAGS="$CFLAGS $PTHREAD_CFLAGS"
+        LIBS="$PTHREAD_LIBS $LIBS"
+
+        # Detect AIX lossage: JOINABLE attribute is called UNDETACHED.
+        AC_CACHE_CHECK([for joinable pthread attribute],
+            [ax_cv_PTHREAD_JOINABLE_ATTR],
+            [ax_cv_PTHREAD_JOINABLE_ATTR=unknown
+             for ax_pthread_attr in PTHREAD_CREATE_JOINABLE PTHREAD_CREATE_UNDETACHED; do
+                 AC_LINK_IFELSE([AC_LANG_PROGRAM([#include <pthread.h>],
+                                                 [int attr = $ax_pthread_attr; return attr /* ; */])],
+                                [ax_cv_PTHREAD_JOINABLE_ATTR=$ax_pthread_attr; break],
+                                [])
+             done
+            ])
+        AS_IF([test "x$ax_cv_PTHREAD_JOINABLE_ATTR" != "xunknown" && \
+               test "x$ax_cv_PTHREAD_JOINABLE_ATTR" != "xPTHREAD_CREATE_JOINABLE" && \
+               test "x$ax_pthread_joinable_attr_defined" != "xyes"],
+              [AC_DEFINE_UNQUOTED([PTHREAD_CREATE_JOINABLE],
+                                  [$ax_cv_PTHREAD_JOINABLE_ATTR],
+                                  [Define to necessary symbol if this constant
+                                   uses a non-standard name on your system.])
+               ax_pthread_joinable_attr_defined=yes
+              ])
+
+        AC_CACHE_CHECK([whether more special flags are required for pthreads],
+            [ax_cv_PTHREAD_SPECIAL_FLAGS],
+            [ax_cv_PTHREAD_SPECIAL_FLAGS=no
+             case $host_os in
+             solaris*)
+             ax_cv_PTHREAD_SPECIAL_FLAGS="-D_POSIX_PTHREAD_SEMANTICS"
+             ;;
+             esac
+            ])
+        AS_IF([test "x$ax_cv_PTHREAD_SPECIAL_FLAGS" != "xno" && \
+               test "x$ax_pthread_special_flags_added" != "xyes"],
+              [PTHREAD_CFLAGS="$ax_cv_PTHREAD_SPECIAL_FLAGS $PTHREAD_CFLAGS"
+               ax_pthread_special_flags_added=yes])
+
+        AC_CACHE_CHECK([for PTHREAD_PRIO_INHERIT],
+            [ax_cv_PTHREAD_PRIO_INHERIT],
+            [AC_LINK_IFELSE([AC_LANG_PROGRAM([[#include <pthread.h>]],
+                                             [[int i = PTHREAD_PRIO_INHERIT;
+                                               return i;]])],
+                            [ax_cv_PTHREAD_PRIO_INHERIT=yes],
+                            [ax_cv_PTHREAD_PRIO_INHERIT=no])
+            ])
+        AS_IF([test "x$ax_cv_PTHREAD_PRIO_INHERIT" = "xyes" && \
+               test "x$ax_pthread_prio_inherit_defined" != "xyes"],
+              [AC_DEFINE([HAVE_PTHREAD_PRIO_INHERIT], [1], [Have PTHREAD_PRIO_INHERIT.])
+               ax_pthread_prio_inherit_defined=yes
+              ])
+
+        CFLAGS="$ax_pthread_save_CFLAGS"
+        LIBS="$ax_pthread_save_LIBS"
+
+        # More AIX lossage: compile with *_r variant
+        if test "x$GCC" != "xyes"; then
+            case $host_os in
+                aix*)
+                AS_CASE(["x/$CC"],
+                    [x*/c89|x*/c89_128|x*/c99|x*/c99_128|x*/cc|x*/cc128|x*/xlc|x*/xlc_v6|x*/xlc128|x*/xlc128_v6],
+                    [#handle absolute path differently from PATH based program lookup
+                     AS_CASE(["x$CC"],
+                         [x/*],
+                         [
+			   AS_IF([AS_EXECUTABLE_P([${CC}_r])],[PTHREAD_CC="${CC}_r"])
+			   AS_IF([test "x${CXX}" != "x"], [AS_IF([AS_EXECUTABLE_P([${CXX}_r])],[PTHREAD_CXX="${CXX}_r"])])
+			 ],
+                         [
+			   AC_CHECK_PROGS([PTHREAD_CC],[${CC}_r],[$CC])
+			   AS_IF([test "x${CXX}" != "x"], [AC_CHECK_PROGS([PTHREAD_CXX],[${CXX}_r],[$CXX])])
+			 ]
+                     )
+                    ])
+                ;;
+            esac
+        fi
+fi
+
+test -n "$PTHREAD_CC" || PTHREAD_CC="$CC"
+test -n "$PTHREAD_CXX" || PTHREAD_CXX="$CXX"
+
+AC_SUBST([PTHREAD_LIBS])
+AC_SUBST([PTHREAD_CFLAGS])
+AC_SUBST([PTHREAD_CC])
+AC_SUBST([PTHREAD_CXX])
+
+# Finally, execute ACTION-IF-FOUND/ACTION-IF-NOT-FOUND:
+if test "x$ax_pthread_ok" = "xyes"; then
+        ifelse([$1],,[AC_DEFINE([HAVE_PTHREAD],[1],[Define if you have POSIX threads libraries and header files.])],[$1])
+        :
+else
+        ax_pthread_ok=no
+        $2
+fi
+AC_LANG_POP
+])dnl AX_PTHREAD
+

@@ -43,6 +43,8 @@ AC_LANG(C++)
 # check can access std c files
 AC_CHECK_HEADERS([string.h])
 
+AX_PTHREAD([],[AC_MSG_ERROR([thread library is needed to install $PACKAGE_NAME])])
+
 ## octave API tests
 save_CXX="$CXX"
 save_CXXFLAGS="$CXXFLAGS"
@@ -162,8 +164,6 @@ fi
 ## restore
 CPPFLAGS=$save_CPPFLAGS
 LDFLAGS=$save_LDFLAGS
-
-AX_PTHREAD([],[AC_MSG_ERROR([thread library is needed to install $PACKAGE_NAME])])
 
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT

@@ -23,6 +23,7 @@
 #include "mqtt_class.h"
 #include <octave/oct-map.h>
 
+#include <pthread.h>
 pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 
 class Locker
@@ -296,6 +297,7 @@ octave_mqtt::subsasgn (const std::string& type, const std::list<octave_value_lis
       error ("octave_mqtt object cannot be indexed with %c", type[0]);
       break;
 /*
+    All properies are readonly
     case '.':
       if (type.length () == 1)
         {
