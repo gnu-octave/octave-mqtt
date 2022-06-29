@@ -43,10 +43,9 @@ class msg_info
 public:
   std::string topic;
   std::string data;
-  //time_t ts;
-  octave::sys::time ts;
+  OCTAVE__TIME ts;
 
-  msg_info(const std::string &tp="",const std::string &d="", octave::sys::time t = 0.0)
+  msg_info(const std::string &tp="",const std::string &d="", OCTAVE__TIME t = 0.0)
   {
     topic = tp;
     data = d;

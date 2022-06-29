@@ -51,7 +51,7 @@ static int
 msgarrvd(void *context, char *topicName, int topicLen, MQTTClient_message *message)
 {
     octave_mqtt *client = (octave_mqtt *)context;
-    octave::sys::time ts;
+    OCTAVE__TIME ts;
     std::string topic = "";
     if(topicLen == 0)
       topic = topicName;

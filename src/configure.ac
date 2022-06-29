@@ -100,6 +100,16 @@ OF_OCTAVE_LIST_ALT_SYMS([
 ],
 
 [dnl
+  [octave_time],
+  [octave::sys::time],
+  [[octave::sys::time t;]],
+  [OCTAVE__TIME],
+  [[#include <octave/oct-time.h>]],
+  [[#include <octave/oct-time.h>]]
+],
+
+
+[dnl
   [is_float_type],
   [isfloat],
   [[octave_value ().isfloat ();]],
