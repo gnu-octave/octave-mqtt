@@ -21,7 +21,7 @@ To install, run the octave package manager:
 
 1. To install from source forge:
 
-    `pkg install -forge octave-mqtt`
+    `pkg install https://sourceforge.net/projects/octave-mqtt/files/vXXXXXXX/octave-mqtt-XXXXXXX.tar.gz/download`
 
 2. To install from a local tarball.
 
@@ -35,6 +35,10 @@ Usage:
 1. Load the octave-mqtt package.
    
     `pkg load mqtt`
+
+2. Connect to a server using the mqttclient function
+
+3. Use the subscribe, read and write commands to read and write data
 
 
 Known limitations and bugs
