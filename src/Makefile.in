@@ -68,8 +68,9 @@ clean:
 
 distclean: clean
 	$(RM) -rf autom4te.cache
-	$(RM) -f Makefile config.status config.log config.h
-	$(RM) -r oct-alt-includes.h
+	$(RM) -f config.status config.log config.h
+	$(RM) -f oct-alt-includes.h
+	$(RM) Makefile
 
 extraclean: distclean
 	$(RM) -r config.h.in
