@@ -78,7 +78,6 @@ function subs = subscribe(obj, topic, varargin)
     propvalue = varargin{i+1};
 
     if strcmp (propname, "callback")
-      class(propvalue)
       if strcmp(class(propvalue), "function_handle")
         callback = func2str(propvalue);
       elseif ischar (propvalue)
