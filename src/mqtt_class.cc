@@ -23,6 +23,8 @@
 #include "mqtt_class.h"
 #include <octave/oct-map.h>
 
+#include <octave/quit.h>
+
 #include <pthread.h>
 pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 
@@ -409,7 +411,14 @@ octave_mqtt::push_message(const msg_info &m)
 
       if (s.callback.length() > 0)
         {
-          octave_value_list ret = OCTAVE__FEVAL (s.callback, ovl (m.topic, m.data), 0);
+          try
+            {
+              octave_value_list ret = OCTAVE__FEVAL (s.callback, ovl (m.topic, m.data), 0);
+            }
+          catch (const octave::execution_exception &e)
+            {
+              warning("mqttcallback: %s", e.message().c_str());
+            }
         }
     }
 }
