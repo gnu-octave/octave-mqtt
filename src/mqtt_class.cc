@@ -415,9 +415,13 @@ octave_mqtt::push_message(const msg_info &m)
             {
               octave_value_list ret = OCTAVE__FEVAL (s.callback, ovl (m.topic, m.data), 0);
             }
-          catch (const octave::execution_exception &e)
+          catch (const OCTAVE_EXECUTION_EXCEPTION &e)
             {
-              warning("mqttcallback: %s", e.message().c_str());
+#ifdef HAS_OCTAVE_EXCEPTION_MESSAGE
+              warning("mqttcallback: %s", e.OCTAVE_EXCEPTION_MESSAGE().c_str());
+#else
+              warning("mqttcallback: execution exception occured");
+#endif
             }
         }
     }
