@@ -1,4 +1,4 @@
-#!/usr/bin/python2
+#!/usr/bin/python3
 
 ## Copyright 2022 John Donoghue
 ##
@@ -68,7 +68,7 @@ def process(name):
       f.write('  <virtualFolder>doc</virtualFolder>\n')
       f.write('  <filterSection>\n')
       f.write('    <toc>\n')
-      f.write('      <section title="{}" ref="{}.html">\n'.format(title, name))
+      f.write('      <section title="{} Manual" ref="{}.html">\n'.format(title, name))
       # chapters here
       for line in fin:
           line = line.strip()
@@ -133,7 +133,7 @@ def process(name):
 
 
 def show_usage():
-  print sys.argv[0], "projname"
+  print (sys.argv[0], "projname")
 
 if __name__ == "__main__":
   if len(sys.argv) > 1:
