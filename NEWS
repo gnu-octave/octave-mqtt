@@ -1,3 +1,10 @@
+Summary of important user-visible changes for octave-mqtt 0.0.2:
+-------------------------------------------------------------------
+
+  ** catch any errors in callback feval
+
+  ** minor code cleanup
+
 Summary of important user-visible changes for octave-mqtt 0.0.1:
 -------------------------------------------------------------------
 
