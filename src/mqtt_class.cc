@@ -430,9 +430,6 @@ octave_mqtt::push_message(const msg_info &m)
 msg_info
 octave_mqtt::peek(const std::string &topic)
 {
-  bool ok = false;
-  int rc;
-
   Locker lock(mutex);
   for (auto it = msgs.rbegin(); it != msgs.rend(); ++it)
     {
@@ -450,8 +447,8 @@ octave_mqtt::write(const std::string &topic, const std::string &msg, int qos, in
   char m[1024];
   int len = msg.length();
 
-  if (len > sizeof(m))
-    len = sizeof(m);
+  if (len > (int)sizeof(m))
+    len = (int)sizeof(m);
 
   memcpy(m, msg.c_str(), len);
 

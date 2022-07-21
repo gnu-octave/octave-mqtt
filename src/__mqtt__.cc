@@ -54,7 +54,7 @@ Private function\n \
   std::string username = "";
   std::string password = "";
 
-  if (args.length() > 1 && !(args.length() & 1)  == 1)
+  if (args.length() > 1 && !((args.length() & 1)  == 1))
     {
       error ("Expected property name/value pairs");
       return octave_value ();
@@ -336,13 +336,13 @@ Private function\n \
   Cell topics(dim_vector (1,messages.size()));
   Cell data(dim_vector (1,messages.size()));
 
-  for(int i=0;i<messages.size();i++)
+  int i=0;
+  for(auto m : messages)
     {
-      m = messages[i];
-
       times(i) = m.ts;
       topics(i) = m.topic;
       data(i) = m.data;
+      i++;
     }
 
   map.setfield("Time", times);
