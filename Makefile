@@ -170,7 +170,9 @@ endif
 run_in_place = $(OCTAVE) --eval ' pkg ("local_list", "$(package_list)"); ' \
                          --eval ' pkg ("load", "$(package)"); '
 
-html_options = --eval 'options = get_html_options ("octave-forge");'
+html_options = --eval 'options = get_html_options ("octave-forge");' \
+               --eval 'options.package_doc = "$(packageprefix)$(package).texi";' \
+	       --eval 'options.package_doc_options = [options.package_doc_options " --css-include=$(packageprefix)$(package).css"];'
 $(html_dir): $(install_stamp)
 	$(RM) -r "$@";
 	$(run_in_place)                    \
