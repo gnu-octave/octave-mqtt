@@ -151,10 +151,20 @@ octave_mqtt::create (const std::string &username, const std::string &password)
 
   std::string addr = broker_address + ":" + std::to_string(port);
 
-  MQTTClient_create(&client, addr.c_str(), client_id.c_str(),
-    MQTTCLIENT_PERSISTENCE_NONE, NULL);
+  int rc;
+  if ((rc = MQTTClient_create(&client, addr.c_str(), client_id.c_str(),
+    MQTTCLIENT_PERSISTENCE_NONE, NULL)) != MQTTCLIENT_SUCCESS)
+    {
+      error("Failed to create - %s", error_string(rc).c_str());
+      return false;
+    }
 
-  MQTTClient_setCallbacks(client, this, connlost, msgarrvd, delivered);
+  if ((rc = MQTTClient_setCallbacks(client, this, connlost, msgarrvd, delivered))
+    != MQTTCLIENT_SUCCESS)
+    {
+      error("Failed to set callbacks - %s", error_string(rc).c_str());
+      return false;
+    }
 
   MQTTClient_connectOptions conn_opts = MQTTClient_connectOptions_initializer;
   conn_opts.keepAliveInterval = 20;
@@ -163,7 +173,7 @@ octave_mqtt::create (const std::string &username, const std::string &password)
     conn_opts.username = username.c_str();
   if (password.length() > 0)
     conn_opts.password = password.c_str();
-  int rc;
+
   if ((rc = MQTTClient_connect(client, &conn_opts)) != MQTTCLIENT_SUCCESS)
     {
       error("Failed to connect - %s", error_string(rc).c_str());
@@ -225,10 +235,10 @@ octave_mqtt::print_raw (std::ostream& os, bool pr_as_read_syntax) const
 
 bool octave_mqtt::get_connected() 
 {
-  if(client)
-      return MQTTClient_isConnected(client);
+  if (client)
+    return MQTTClient_isConnected(client);
   else
-	  return false;
+    return false;
 }
 
 octave_value_list
@@ -349,7 +359,7 @@ octave_mqtt::subscribe(const std::string &topic, int qos, std::string callback)
     {
       error("Already subscribed to %s", topic.c_str());
     }
-  else if ((rc = MQTTClient_subscribe(client, topic.c_str(), qos)) != 0)
+  else if ((rc = MQTTClient_subscribe(client, topic.c_str(), qos)) != MQTTCLIENT_SUCCESS)
     {
       error("Failed to subscribe - %s", error_string(rc).c_str());
     }
@@ -376,7 +386,7 @@ octave_mqtt::unsubscribe(const std::string &topic)
     {
       error("Not subscribed to %s", topic.c_str());
     }
-  else if ((rc = MQTTClient_unsubscribe(client, topic.c_str())) != 0)
+  else if ((rc = MQTTClient_unsubscribe(client, topic.c_str())) != MQTTCLIENT_SUCCESS)
     {
       error("Failed to unsubscribe - %s", error_string(rc).c_str());
     }
@@ -450,6 +460,9 @@ octave_mqtt::write(const std::string &topic, const std::string &msg, int qos, in
   if (len > (int)sizeof(m))
     len = (int)sizeof(m);
 
+  if(!client)
+    error ("No client");
+
   memcpy(m, msg.c_str(), len);
 
   MQTTClient_message pubmsg = MQTTClient_message_initializer;
@@ -459,7 +472,14 @@ octave_mqtt::write(const std::string &topic, const std::string &msg, int qos, in
   pubmsg.qos = qos;
   pubmsg.retained = retained;
 
-  MQTTClient_publishMessage(client, topic.c_str(), &pubmsg, &token);
+  int rc = MQTTClient_publishMessage(client, topic.c_str(), &pubmsg, &token);
+
+  if (rc != MQTTCLIENT_SUCCESS)
+    {
+      error("Failed to publishMessage - %s", error_string(rc).c_str());
+      return false;
+    }
+
   return true;
 }
 

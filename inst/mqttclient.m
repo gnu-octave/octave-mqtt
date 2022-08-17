@@ -112,6 +112,8 @@ endfunction
 
 %!error <Invalid call to mqttclient> mqttclient ();
 
+%!error <Failed to create> mqttclient ("http://broker.hivemq.com");
+
 %!test
 %! client = mqttclient("tcp://broker.hivemq.com");
 %! assert(client.BrokerAddress, "tcp://broker.hivemq.com");
