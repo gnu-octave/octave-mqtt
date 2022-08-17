@@ -47,7 +47,7 @@
 ## @example
 ## @code {
 ## client = mqttclient("tcp://127.0.0.1);
-## subs = subscribe(client', "Test");
+## subs = subscribe(client, "Test");
 ## }
 ## @end example
 ##
