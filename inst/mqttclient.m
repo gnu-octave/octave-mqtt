@@ -62,6 +62,14 @@
 ## Numeric keep alive value in seconds (default 60)
 ## @item ClientID
 ## String client Id 
+## @item CARootCertificate
+## String full file path to a root certificate file when using a secure connection
+## @item ClientCertificate
+## String full file path to a client certificate file when using a secure connection
+## @item ClientKey
+## String full file path to a private client key file when using a secure connection
+## @item SSLPassword
+## String Password to decrypt the clirnt key file
 ## @end table
 ##
 ## @subsubheading Examples
@@ -97,6 +105,10 @@ function obj = mqttclient(varargin)
     p.addParameter('ClientID', "", @ischar);
     p.addParameter('Username', "", @ischar);
     p.addParameter('Password', "", @ischar);
+    p.addParameter('CARootCertificate', "", @ischar);
+    p.addParameter('ClientCertificate', "", @ischar);
+    p.addParameter('ClientKey', "", @ischar);
+    p.addParameter('SSLPassword', "", @ischar);
   else
     p.addParamValue('Port', 1883, @isnumeric);
     p.addParamValue('Timeout', 5, @isnumeric);
@@ -104,6 +116,10 @@ function obj = mqttclient(varargin)
     p.addParamValue('ClientID', "", @ischar);
     p.addParamValue('Username', "", @ischar);
     p.addParamValue('Password', "", @ischar);
+    p.addParamValue('CARootCertificate', "", @ischar);
+    p.addParamValue('ClientCertificate', "", @ischar);
+    p.addParamValue('ClientKey', "", @ischar);
+    p.addParamValue('SSLPassword', "", @ischar);
   endif
   p.parse(varargin{:});
 

@@ -53,6 +53,11 @@ Private function\n \
   std::string clientid = "";
   std::string username = "";
   std::string password = "";
+  // ssl options
+  std::string rootcert = "";
+  std::string clientcert = "";
+  std::string clientkey = "";
+  std::string sslpassword = "";
 
   if (args.length() > 1 && !((args.length() & 1)  == 1))
     {
@@ -144,6 +149,46 @@ Private function\n \
                   return octave_value();
                 }
             }
+          else if (name == "carootcertificate")
+            {
+              if (val.is_string ())
+                rootcert = val.string_value ();
+              else
+                {
+                  error ("carootcertificate must be a string");
+                  return octave_value();
+                }
+            }
+          else if (name == "clientcertificate")
+            {
+              if (val.is_string ())
+                clientcert = val.string_value ();
+              else
+                {
+                  error ("clientcertificate must be a string");
+                  return octave_value();
+                }
+            }
+          else if (name == "clientkey")
+            {
+              if (val.is_string ())
+                clientkey = val.string_value ();
+              else
+                {
+                  error ("clientkey must be a string");
+                  return octave_value();
+                }
+            }
+          else if (name == "sslpassword")
+            {
+              if (val.is_string ())
+                sslpassword = val.string_value ();
+              else
+                {
+                  error ("sslpassword must be a string");
+                  return octave_value();
+                }
+            }
  
           else
             {
@@ -161,6 +206,10 @@ Private function\n \
   retvalue->set_timeout(timeout);
   retvalue->set_keep_alive_duration(keepalive);
   retvalue->set_client_id(clientid);
+  retvalue->set_rootcert(rootcert);
+  retvalue->set_clientcert(clientcert);
+  retvalue->set_clientkey(clientkey);
+  retvalue->set_sslpassword(sslpassword);
 
   if ( retvalue->create (username, password) == false )
     {

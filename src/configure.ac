@@ -199,6 +199,7 @@ LDFLAGS="$save_LDFLAGS"
 # look for phaho-mqtt
 save_LDFLAGS=$LDFLAGS
 save_CPPFLAGS=$CPPFLAGS
+save_LIBS=$LIBS
 
 MQTT_CXXFLAGS=$MQTT_CXXFLAGS
 MQTT_LIBS=$MQTT_LIBS
@@ -207,7 +208,7 @@ AC_SUBST(MQTT_LIBS)
 
 have_mqtt=no
 AC_CHECK_HEADERS([MQTTClient.h],
-  [AC_SEARCH_LIBS([MQTTClient_connect], [paho-mqtt3c], [have_mqtt=-lpaho-mqtt3c], [])], [])
+  [AC_SEARCH_LIBS([MQTTClient_connect], [paho-mqtt3cs paho-mqtt3c], [have_mqtt=$ac_cv_search_MQTTClient_connect], [])], [])
 
 if test "x$have_mqtt" == "xno"; then
   AC_MSG_ERROR([paho-mqtt is required to install $PACKAGE_NAME])
@@ -218,6 +219,7 @@ fi
 ## restore
 CPPFLAGS=$save_CPPFLAGS
 LDFLAGS=$save_LDFLAGS
+LIBS="$save_LIBS"
 
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT

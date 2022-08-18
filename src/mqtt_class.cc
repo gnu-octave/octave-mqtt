@@ -174,6 +174,28 @@ octave_mqtt::create (const std::string &username, const std::string &password)
   if (password.length() > 0)
     conn_opts.password = password.c_str();
 
+  std::string ssloptstr = rootcert + clientcert + clientkey + sslpassword;
+
+  MQTTClient_SSLOptions sslopts = MQTTClient_SSLOptions_initializer;
+  if (ssloptstr.length() > 0)
+    {
+
+      if (rootcert.length() > 0)
+        sslopts.trustStore = rootcert.c_str();
+      if (clientcert.length() > 0)
+        sslopts.keyStore = clientcert.c_str();
+      if (clientkey.length() > 0)
+        sslopts.privateKey = clientkey.c_str();
+      if (sslpassword.length() > 0)
+        sslopts.privateKeyPassword = sslpassword.c_str();
+
+#ifdef MQTTVERSION_3_1
+      if (sslopts.struct_version >= MQTTVERSION_3_1)
+	sslopts.verify = 1;
+#endif
+      conn_opts.ssl = &sslopts;
+    }
+
   if ((rc = MQTTClient_connect(client, &conn_opts)) != MQTTCLIENT_SUCCESS)
     {
       error("Failed to connect - %s", error_string(rc).c_str());

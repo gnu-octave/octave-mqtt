@@ -97,6 +97,12 @@ public:
 
   bool get_connected();
 
+  // SSL options
+  void set_rootcert(const std::string &value) { rootcert=value; }
+  void set_clientcert(const std::string &value) { clientcert=value; }
+  void set_clientkey(const std::string &value) { clientkey=value; }
+  void set_sslpassword(const std::string &value) { sslpassword=value; }
+
   std::map<std::string, sub_info> subscriptions() const { return subs; }
 
   msg_info read(const std::string &topic="");
@@ -159,6 +165,11 @@ private:
   int keep_alive_duration;
   std::map<std::string, sub_info> subs;
   std::vector<msg_info> msgs;
+
+  std::string rootcert;
+  std::string clientcert;
+  std::string clientkey;
+  std::string sslpassword;
 
   string_vector fieldnames;
 #ifdef DECLARE_OCTAVE_ALLOCATOR
