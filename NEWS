@@ -1,9 +1,12 @@
-Summary of important user-visible changes for octave-mqtt 0.0.2+:
+Summary of important user-visible changes for octave-mqtt 0.0.3:
 -------------------------------------------------------------------
 
   ** Better checking of paho function fails
 
   ** minor documentation updates
+
+  ** mqttclient:
+     - added CARootCertificate, ClientCertificate, ClientKey, SSLPassword inputs
 
 Summary of important user-visible changes for octave-mqtt 0.0.2:
 -------------------------------------------------------------------

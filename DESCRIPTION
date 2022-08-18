@@ -1,6 +1,6 @@
 Name: mqtt
-Version: 0.0.2
-Date: 2022-07-21
+Version: 0.0.3
+Date: 2022-08-18
 Author: John Donoghue <john.donoghue@ieee.org>
 Maintainer: John Donoghue <john.donoghue@ieee.org>
 Title: Octave MQTT Toolkit
