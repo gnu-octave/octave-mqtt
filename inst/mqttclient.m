@@ -41,6 +41,14 @@
 ## String username
 ## @item Password
 ## String password
+## @item CARootCertificate
+## String full file path to a root certificate file when using a secure connection
+## @item ClientCertificate
+## String full file path to a client certificate file when using a secure connection
+## @item ClientKey
+## String full file path to a private client key file when using a secure connection
+## @item SSLPassword
+## String Password to decrypt the client key file
 ## @end table
 ##
 ## @subsubheading Outputs
@@ -62,14 +70,6 @@
 ## Numeric keep alive value in seconds (default 60)
 ## @item ClientID
 ## String client Id 
-## @item CARootCertificate
-## String full file path to a root certificate file when using a secure connection
-## @item ClientCertificate
-## String full file path to a client certificate file when using a secure connection
-## @item ClientKey
-## String full file path to a private client key file when using a secure connection
-## @item SSLPassword
-## String Password to decrypt the clirnt key file
 ## @end table
 ##
 ## @subsubheading Examples
