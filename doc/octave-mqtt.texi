@@ -3,7 +3,7 @@
 @c Octave MQTT - Basic implementation of MQTT functions
 
 @c For manually generating the documentation use
-@c   LANGUAGE=en makeinfo --html --no-split joystick.texi
+@c   LANGUAGE=en makeinfo --html --no-split octave-mqtt.texi
 
 @c %*** Start of HEADER
 @setfilename octave-mqtt.info
@@ -20,7 +20,7 @@
 
 @c %*** Start of TITLEPAGE
 @titlepage
-@c @center @image{joystick-logo}
+@c @center @image{octave-mqtt-logo}
 @vskip 0pt plus 1filll
 @title Octave MQTT Toolkit @value{VERSION}
 @subtitle MQTT functions for @acronym{GNU} Octave.
@@ -47,13 +47,13 @@ The @acronym{GNU} Octave MQTT package is @dfn{free} software.
 Free software is a matter of the users' freedom to run, copy, distribute,
 study, change and improve the software.
 This means that everyone is free to use it and free to redistribute it
-on certain conditions.  The @acronym{GNU} Octave Joystick package
+on certain conditions.  The @acronym{GNU} Octave MQTT package
 is not, however, in the public domain.  It is copyrighted and there are
 restrictions on its distribution, but the restrictions are designed to
 ensure that others will have the same freedom to use and redistribute
 Octave that you have.  The precise conditions can be found in the
 @acronym{GNU} General Public License that comes with the @acronym{GNU}
-Octave Joystick package and that also appears in @ref{Copying}.
+Octave MQTT package and that also appears in @ref{Copying}.
 
 To download a copy of the @acronym{GNU} Octave MQTT package, please visit
 @url{https://sourceforge.net/projects/octave-mqtt/}.
@@ -119,7 +119,7 @@ pkg install octave-mqtt-@value{VERSION}.tar.gz
 
 @section Loading
 @cindex Loading
-Regardless of the method of installing the Joystick toolkit, in order to use its functions,
+Regardless of the method of installing the toolkit, in order to use its functions,
 the toolkit must be loaded using the pkg load command:
 
 @example
