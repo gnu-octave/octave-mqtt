@@ -161,10 +161,14 @@ ifneq (,$(wildcard src/bootstrap))
 endif
 ## Uncomment this if your src/Makefile.in has these targets for
 ## pre-building something for the release (e.g. documentation).
+ifneq (,$(wildcard src/configure))
 	cd "$@/src" && ./configure && $(MAKE) prebuild && \
 	  $(MAKE) distclean && $(RM) Makefile
+endif
+ifneq (,$(wildcard doc/mkfuncdocs.py))
 	$(MAKE) -C "$@" docs
 	cd "$@" && $(RM) -f doc/mkfuncdocs.py doc/mkqhcp.py
+endif
 	${FIX_PERMISSIONS} "$@"
 
 run_in_place = $(OCTAVE) --eval ' pkg ("local_list", "$(package_list)"); ' \
