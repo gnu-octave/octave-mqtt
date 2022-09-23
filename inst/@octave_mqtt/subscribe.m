@@ -35,6 +35,8 @@
 ## Numeric QualityOfService [0-2] (default 0)
 ## @item Callback
 ## Callback function name or handle (default "")
+##
+## The callback if provided will be passed the topic name and value.
 ## @end table
 ##
 ## @subsubheading Outputs
