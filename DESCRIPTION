@@ -10,4 +10,4 @@ Depends: octave (>= 4.0.0)
 BuildRequires: paho-mqtt-c-dev
 SystemRequirements: paho-mqtt-c
 License: GPLv3+
-Url: https://octave.sourceforge.io/mqtt/
+Url: https://sourceforge.net/projects/octave-mqtt/
