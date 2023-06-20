@@ -1,9 +1,0 @@
-octave-mqtt >> Octave MQTT Toolkit
-MQTT Functions
-  mqttclient
-  @octave_mqtt/flush
-  @octave_mqtt/peek
-  @octave_mqtt/read
-  @octave_mqtt/subscribe
-  @octave_mqtt/unsubscribe
-  @octave_mqtt/write
