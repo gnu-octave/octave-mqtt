@@ -1,17 +1,17 @@
 \input texinfo @c -*-texinfo-*-
 @c Copyright (c) 2022, John Donoghue <john.donoghue@ieee.org>
-@c Octave MQTT - Basic implementation of MQTT functions
+@c Octave MQTT - Implementation of MQTT functions
 
 @c For manually generating the documentation use
 @c   LANGUAGE=en makeinfo --html --no-split octave-mqtt.texi
 
 @c %*** Start of HEADER
 @setfilename octave-mqtt.info
-@settitle Octave MQTT - Basic implementation of MQTT for GNU Octave
+@settitle Octave MQTT - Implementation of MQTT for GNU Octave
 @afourpaper
 @paragraphindent 0
 @finalout
-@set COPYRIGHT_DATE 2022
+@set COPYRIGHT_DATE 2022-2023
 @c @afourwide
 @c %*** End of the HEADER
 
