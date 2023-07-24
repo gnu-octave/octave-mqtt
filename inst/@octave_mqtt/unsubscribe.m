@@ -32,7 +32,7 @@
 ## @subsubheading Examples
 ## @example
 ## @code {
-## client = mqttclient("tcp://127.0.0.1);
+## client = mqttclient("tcp://127.0.0.1");
 ## subscribe(client, "test1");
 ## unsubscribe(client, "test1");
 ## }

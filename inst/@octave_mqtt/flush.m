@@ -31,7 +31,7 @@
 ## Open a client and flush the input
 ## @example
 ## @code {
-## client = mqttclient("tcp://127.0.0.1);
+## client = mqttclient("tcp://127.0.0.1");
 ## flush(client);
 ## }
 ## @end example

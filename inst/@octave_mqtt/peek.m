@@ -24,7 +24,7 @@
 ## @item obj
 ## A previously created octave_mqtt object
 ## @item topic
-## topic to match.
+## Topic value to match.
 ## @end table
 ##
 ## @subsubheading Outputs
@@ -39,7 +39,7 @@
 ## @subsubheading Examples
 ## @example
 ## @code {
-## client = mqttclient("tcp://127.0.0.1);
+## client = mqttclient("tcp://127.0.0.1");
 ## msg = peek(client);
 ## }
 ## @end example

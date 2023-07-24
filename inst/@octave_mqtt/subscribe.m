@@ -36,7 +36,8 @@
 ## @item Callback
 ## Callback function name or handle (default "")
 ##
-## The callback if provided will be passed the topic name and value.
+## If provided, the callbaclk will be called with the topic name and 
+## message as arguments.
 ## @end table
 ##
 ## @subsubheading Outputs
@@ -46,10 +47,22 @@
 ## @end table
 ##
 ## @subsubheading Examples
+## Subscribe to topic 'Test':
 ## @example
 ## @code {
-## client = mqttclient("tcp://127.0.0.1);
+## client = mqttclient("tcp://127.0.0.1");
 ## subs = subscribe(client, "Test");
+## }
+## @end example
+##
+## Subscribe to topic 'Test' and display any changed via callback:
+## @example
+## @code {
+## # define simple function to show callback data
+## function showmessage(t,v), printf("Topic: %s Message: %s\n", t, v); endfunction
+##
+## client = mqttclient("tcp://127.0.0.1");
+## subs = subscribe(client, "Test", "Callback", @@showmessage);
 ## }
 ## @end example
 ##

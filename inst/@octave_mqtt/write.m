@@ -36,20 +36,20 @@
 ## @item QualityOfService
 ## Numeric QualityOfService [0-2] (default 0)
 ## @item Retain
-## boolean flag value for retaining message (default false)
+## Boolean flag value for retaining message (default false)
 ## @end table
 ##
 ## @subsubheading Outputs
 ## @table @code
 ## @item client
-## a octave_mqtt object.@*
+## A octave_mqtt object.@*
 ## @end table
 ##
 ## @subsubheading Examples
 ## Open a client connection and write some values.
 ## @example
 ## @code {
-## client = mqttclient("tcp://127.0.0.1);
+## client = mqttclient("tcp://127.0.0.1");
 ## write(client, "mytopic", "test1");
 ## write(client, "mytopic", "test1", "QualityOfService", 1);
 ## }

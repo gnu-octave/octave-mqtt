@@ -22,7 +22,7 @@
 ## @subsubheading Inputs
 ## @table @code
 ## @item brokerAddr
-## name or ip address with protocol. ie: tcp://127.0.0.1.
+## Name or IP address with protocol. ie: tcp://127.0.0.1.
 ## @item name, value
 ## Optional name / value pairs.
 ## @end table
@@ -61,7 +61,7 @@
 ## A octave_mqtt object has the following properties:
 ## @table @code
 ## @item BrokerAddress
-## broker url
+## Broker url
 ## @item Port
 ## Numeric port number to connect to (default 1883)
 ## @item Timeout
@@ -76,7 +76,7 @@
 ## Create a new mqttclient
 ## @example
 ## @code {
-## client = mqttclient("tcp://127.0.0.1);
+## client = mqttclient("tcp://127.0.0.1");
 ## }
 ## @end example
 ##
