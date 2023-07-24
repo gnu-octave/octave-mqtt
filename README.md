@@ -19,9 +19,9 @@ Installing
 
 To install, run the octave package manager:
 
-1. To install from source forge:
+1. To install from online:
 
-    `pkg install https://sourceforge.net/projects/octave-mqtt/files/vXXXXXXX/octave-mqtt-XXXXXXX.tar.gz/download`
+    `pkg install -forge mqtt`
 
 2. To install from a local tarball.
 

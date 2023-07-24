@@ -56,7 +56,7 @@ Octave that you have.  The precise conditions can be found in the
 Octave MQTT package and that also appears in @ref{Copying}.
 
 To download a copy of the @acronym{GNU} Octave MQTT package, please visit
-@url{https://sourceforge.net/projects/octave-mqtt/}.
+@url{https://gnu-octave.github.io/octave-mqtt/}.
 
 @end titlepage
 @c %*** End of TITLEPAGE
@@ -103,15 +103,17 @@ With an internet connection available, the octave mqtt package can be installed 
 the octave-mqtt website using the following command within @acronym{GNU} Octave:
 
 @example
-pkg install https://sourceforge.net/projects/octave-mqtt/files/v@value{VERSION}/octave-mqtt-@value{VERSION}.tar.gz/download
+pkg install -forge mqtt
 @end example
 
 The latest released version of the toolkit will be downloaded and installed.
 
 @section Off-line install
 @cindex Off-line install
-With the toolkit package already downloaded, and in the current directory when running
-@acronym{GNU} Octave, the package can be installed using the following command within @acronym{GNU} Octave:
+With the toolkit package already downloaded
+(@url{https://github.com/gnu-octave/octave-mqtt/releases/download/release-0.0.3/octave-mqtt-@value{VERSION}.tar.gz}),
+and in the current directory when running @acronym{GNU} Octave, the package can be installed using the following command
+within @acronym{GNU} Octave:
 
 @example
 pkg install octave-mqtt-@value{VERSION}.tar.gz
