@@ -2,8 +2,8 @@
 layout: "default"
 permalink: "/functions/@octave_mqtt/18_octavemqttflush/"
 pkg_name: "mqtt"
-pkg_version: "0.0.3"
-pkg_description: "Basic Octave implementation of mqtt toolkit"
+pkg_version: "0.0.4"
+pkg_description: "Octave implementation of the MQTT toolkit"
 title: "Mqtt Toolkit - @octave_mqtt/flush"
 category: "MQTT Functions"
 func_name: "@octave_mqtt/flush"
@@ -24,29 +24,29 @@ navigation:
   name: "Manual"
   url: "/manual"
 ---
-<dl class="def">
-<dt id="index-flush"><span class="category">: </span><span><em></em> <strong>flush</strong> <em>(<var>obj</var>)</em><a href='#index-flush' class='copiable-anchor'></a></span></dt>
+<dl class="first-deftypefn">
+<dt class="deftypefn" id="index-flush"><span class="category-def">: </span><span><strong class="def-name">flush</strong> <code class="def-code-arguments">(<var class="var">obj</var>)</code><a class="copiable-link" href='#index-flush'></a></span></dt>
 <dd><p>Flush a MQTT client connection
 </p>
-<span id="Inputs"></span><h4 class="subsubheading">Inputs</h4>
-<dl compact="compact">
-<dt><span><code>obj</code></span></dt>
+<h4 class="subsubheading" id="Inputs">Inputs</h4>
+<dl class="table">
+<dt><code class="code">obj</code></dt>
 <dd><p>A previously created octave_mqtt object
  </p></dd>
 </dl>
 
-<span id="Outputs"></span><h4 class="subsubheading">Outputs</h4>
+<h4 class="subsubheading" id="Outputs">Outputs</h4>
 <p>None
 </p>
-<span id="Examples"></span><h4 class="subsubheading">Examples</h4>
+<h4 class="subsubheading" id="Examples">Examples</h4>
 <p>Open a client and flush the input
  </p><div class="example">
-<pre class="example"> <code>
- client = mqttclient(&quot;tcp://127.0.0.1);
+<pre class="example-preformatted"> <code class="code">
+ client = mqttclient(&quot;tcp://127.0.0.1&quot;);
  flush(client);
  </code>
  </pre></div>
 
 
-<p><strong>See also:</strong> mqttclient.
+<p><strong class="strong">See also:</strong> mqttclient.
  </p></dd></dl>

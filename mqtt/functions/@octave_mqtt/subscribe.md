@@ -2,8 +2,8 @@
 layout: "default"
 permalink: "/functions/@octave_mqtt/22_octavemqttsubscribe/"
 pkg_name: "mqtt"
-pkg_version: "0.0.3"
-pkg_description: "Basic Octave implementation of mqtt toolkit"
+pkg_version: "0.0.4"
+pkg_description: "Octave implementation of the MQTT toolkit"
 title: "Mqtt Toolkit - @octave_mqtt/subscribe"
 category: "MQTT Functions"
 func_name: "@octave_mqtt/subscribe"
@@ -24,51 +24,64 @@ navigation:
   name: "Manual"
   url: "/manual"
 ---
-<dl class="def">
-<dt id="index-subscribe"><span class="category">: </span><span><em><var>subs</var> =</em> <strong>subscribe</strong> <em>(<var>obj</var>, <var>topic</var>)</em><a href='#index-subscribe' class='copiable-anchor'></a></span></dt>
-<dt id="index-subscribe-1"><span class="category">: </span><span><em><var>subs</var> =</em> <strong>subscribe</strong> <em>(<var>obj</var>, <var>topic</var>, [<var>propname</var>, <var>propvalue</var> ....])</em><a href='#index-subscribe-1' class='copiable-anchor'></a></span></dt>
+<dl class="first-deftypefn">
+<dt class="deftypefn" id="index-subscribe"><span class="category-def">: </span><span><code class="def-type"><var class="var">subs</var> =</code> <strong class="def-name">subscribe</strong> <code class="def-code-arguments">(<var class="var">obj</var>, <var class="var">topic</var>)</code><a class="copiable-link" href='#index-subscribe'></a></span></dt>
+<dt class="deftypefnx def-cmd-deftypefn" id="index-subscribe-1"><span class="category-def">: </span><span><code class="def-type"><var class="var">subs</var> =</code> <strong class="def-name">subscribe</strong> <code class="def-code-arguments">(<var class="var">obj</var>, <var class="var">topic</var>, [<var class="var">propname</var>, <var class="var">propvalue</var> ....])</code><a class="copiable-link" href='#index-subscribe-1'></a></span></dt>
 <dd><p>Subscribe to a topic
 </p>
-<span id="Inputs"></span><h4 class="subsubheading">Inputs</h4>
-<dl compact="compact">
-<dt><span><code>obj</code></span></dt>
+<h4 class="subsubheading" id="Inputs">Inputs</h4>
+<dl class="table">
+<dt><code class="code">obj</code></dt>
 <dd><p>A previously created octave_mqtt object
  </p></dd>
-<dt><span><code>topic</code></span></dt>
+<dt><code class="code">topic</code></dt>
 <dd><p>String topic to subscribe to.
  </p></dd>
-<dt><span><code>propname, propvalue</code></span></dt>
+<dt><code class="code">propname, propvalue</code></dt>
 <dd><p>Optional property name / value pairs.
  </p></dd>
 </dl>
 
 <p>Known property name / value pairs:
- </p><dl compact="compact">
-<dt><span><code>QualityOfService</code></span></dt>
+ </p><dl class="table">
+<dt><code class="code">QualityOfService</code></dt>
 <dd><p>Numeric QualityOfService [0-2] (default 0)
  </p></dd>
-<dt><span><code>Callback</code></span></dt>
+<dt><code class="code">Callback</code></dt>
 <dd><p>Callback function name or handle (default &quot;&quot;)
 </p>
-<p>The callback if provided will be passed the topic name and value.
+<p>If provided, the callbaclk will be called with the topic name and 
+ message as arguments.
  </p></dd>
 </dl>
 
-<span id="Outputs"></span><h4 class="subsubheading">Outputs</h4>
-<dl compact="compact">
-<dt><span><code>subs</code></span></dt>
+<h4 class="subsubheading" id="Outputs">Outputs</h4>
+<dl class="table">
+<dt><code class="code">subs</code></dt>
 <dd><p>a list of current subscriptions for this client.
  </p></dd>
 </dl>
 
-<span id="Examples"></span><h4 class="subsubheading">Examples</h4>
-<div class="example">
-<pre class="example"> <code>
- client = mqttclient(&quot;tcp://127.0.0.1);
+<h4 class="subsubheading" id="Examples">Examples</h4>
+<p>Subscribe to topic &rsquo;Test&rsquo;:
+ </p><div class="example">
+<pre class="example-preformatted"> <code class="code">
+ client = mqttclient(&quot;tcp://127.0.0.1&quot;);
  subs = subscribe(client, &quot;Test&quot;);
  </code>
  </pre></div>
 
+<p>Subscribe to topic &rsquo;Test&rsquo; and display any changed via callback:
+ </p><div class="example">
+<pre class="example-preformatted"> <code class="code">
+ # define simple function to show callback data
+ function showmessage(t,v), printf(&quot;Topic: %s Message: %s\n&quot;, t, v); endfunction
 
-<p><strong>See also:</strong> mqttclient, unsubscribe.
+ client = mqttclient(&quot;tcp://127.0.0.1&quot;);
+ subs = subscribe(client, &quot;Test&quot;, &quot;Callback&quot;, @showmessage);
+ </code>
+ </pre></div>
+
+
+<p><strong class="strong">See also:</strong> mqttclient, unsubscribe.
  </p></dd></dl>
