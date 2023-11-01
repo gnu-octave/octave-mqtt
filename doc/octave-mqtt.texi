@@ -111,7 +111,7 @@ The latest released version of the toolkit will be downloaded and installed.
 @section Off-line install
 @cindex Off-line install
 With the toolkit package already downloaded
-(@url{https://github.com/gnu-octave/octave-mqtt/releases/download/release-0.0.3/octave-mqtt-@value{VERSION}.tar.gz}),
+(@url{https://github.com/gnu-octave/octave-mqtt/releases/download/release-@value{VERSION}/octave-mqtt-@value{VERSION}.tar.gz}),
 and in the current directory when running @acronym{GNU} Octave, the package can be installed using the following command
 within @acronym{GNU} Octave:
 
