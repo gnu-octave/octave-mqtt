@@ -61,7 +61,7 @@
 ## A octave_mqtt object has the following properties:
 ## @table @code
 ## @item BrokerAddress
-## Broker url
+## Broker URL
 ## @item Port
 ## Numeric port number to connect to (default 1883)
 ## @item Timeout

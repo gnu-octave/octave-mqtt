@@ -36,7 +36,7 @@
 ## @item Callback
 ## Callback function name or handle (default "")
 ##
-## If provided, the callbaclk will be called with the topic name and 
+## If provided, the callback will be called with the topic name and 
 ## message as arguments.
 ## @end table
 ##
