@@ -3,7 +3,7 @@ layout: "default"
 permalink: "/news/"
 title: "Mqtt Toolkit - News"
 pkg_name: "mqtt"
-version: "0.0.4"
+version: "0.0.5"
 description: "Octave implementation of the MQTT toolkit"
 navigation:
 - id: "overview"
@@ -19,6 +19,13 @@ navigation:
   url: "/manual"
 ---
 <pre>
+Summary of important user-visible changes for octave-mqtt 0.0.5:
+-------------------------------------------------------------------
+
+  ** minor documentation updates
+
+  ** provide handling windows paths with spaces
+
 Summary of important user-visible changes for octave-mqtt 0.0.4:
 -------------------------------------------------------------------
 

@@ -2,7 +2,7 @@
 layout: "default"
 permalink: "/functions/@octave_mqtt/17_octavemqttpeek/"
 pkg_name: "mqtt"
-pkg_version: "0.0.4"
+pkg_version: "0.0.5"
 pkg_description: "Octave implementation of the MQTT toolkit"
 title: "Mqtt Toolkit - @octave_mqtt/peek"
 category: "MQTT Functions"

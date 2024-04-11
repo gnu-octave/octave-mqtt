@@ -2,7 +2,7 @@
 layout: "default"
 permalink: "/functions/10_mqttclient/"
 pkg_name: "mqtt"
-pkg_version: "0.0.4"
+pkg_version: "0.0.5"
 pkg_description: "Octave implementation of the MQTT toolkit"
 title: "Mqtt Toolkit - mqttclient"
 category: "MQTT Functions"
@@ -84,7 +84,7 @@ navigation:
 <p>A octave_mqtt object has the following properties:
  </p><dl class="table">
 <dt><code class="code">BrokerAddress</code></dt>
-<dd><p>Broker url
+<dd><p>Broker URL
  </p></dd>
 <dt><code class="code">Port</code></dt>
 <dd><p>Numeric port number to connect to (default 1883)
@@ -97,6 +97,12 @@ navigation:
  </p></dd>
 <dt><code class="code">ClientID</code></dt>
 <dd><p>String client Id 
+ </p></dd>
+<dt><code class="code">Connected</code></dt>
+<dd><p>logical 0|1 for connection status
+ </p></dd>
+<dt><code class="code">Subscriptions</code></dt>
+<dd><p>List of topics currently subscribed to
  </p></dd>
 </dl>
 

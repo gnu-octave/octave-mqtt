@@ -3,7 +3,7 @@ layout: "function_list"
 permalink: "/functions/"
 title: "Mqtt Toolkit - Functions"
 pkg_name: "mqtt"
-version: "0.0.4"
+version: "0.0.5"
 description: "Octave implementation of the MQTT toolkit"
 categories:
 - id: "14_MQTTFunctions"

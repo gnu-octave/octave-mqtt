@@ -3,7 +3,7 @@ layout: "default"
 permalink: "/manual/"
 title: "Mqtt Toolkit - Manual"
 pkg_name: "mqtt"
-version: "0.0.4"
+version: "0.0.5"
 description: "Octave implementation of the MQTT toolkit"
 navigation:
 - id: "overview"
@@ -110,12 +110,12 @@ the octave-mqtt website using the following command within <abbr class="acronym"
 <h3 class="section">1.2 Off-line install</h3>
 <a class="index-entry-id" id="index-Off_002dline-install"></a>
 <p>With the toolkit package already downloaded
-(<a class="url" href="https://github.com/gnu-octave/octave-mqtt/releases/download/release-0.0.3/octave-mqtt-0.0.4.tar.gz">https://github.com/gnu-octave/octave-mqtt/releases/download/release-0.0.3/octave-mqtt-0.0.4.tar.gz</a>),
+(<a class="url" href="https://github.com/gnu-octave/octave-mqtt/releases/download/release-0.0.5/octave-mqtt-0.0.5.tar.gz">https://github.com/gnu-octave/octave-mqtt/releases/download/release-0.0.5/octave-mqtt-0.0.5.tar.gz</a>),
 and in the current directory when running <abbr class="acronym">GNU</abbr> Octave, the package can be installed using the following command
 within <abbr class="acronym">GNU</abbr> Octave:
 </p>
 <div class="example">
-<pre class="example-preformatted">pkg install octave-mqtt-0.0.4.tar.gz
+<pre class="example-preformatted">pkg install octave-mqtt-0.0.5.tar.gz
 </pre></div>
 </div>
 <div class="section-level-extent" id="Loading">
@@ -408,7 +408,7 @@ Up: <a href="#Function-Reference" accesskey="u" rel="up">Function Reference</a> 
 <dt><code class="code">Callback</code></dt>
 <dd><p>Callback function name or handle (default &quot;&quot;)
 </p>
-<p>If provided, the callbaclk will be called with the topic name and
+<p>If provided, the callback will be called with the topic name and
  message as arguments.
 </p></dd>
 </dl>
@@ -578,7 +578,7 @@ Up: <a href="#Function-Reference" accesskey="u" rel="up">Function Reference</a> 
 <p>A octave_mqtt object has the following properties:
 </p><dl class="table">
 <dt><code class="code">BrokerAddress</code></dt>
-<dd><p>Broker url
+<dd><p>Broker URL
 </p></dd>
 <dt><code class="code">Port</code></dt>
 <dd><p>Numeric port number to connect to (default 1883)
@@ -591,6 +591,12 @@ Up: <a href="#Function-Reference" accesskey="u" rel="up">Function Reference</a> 
 </p></dd>
 <dt><code class="code">ClientID</code></dt>
 <dd><p>String client Id
+</p></dd>
+<dt><code class="code">Connected</code></dt>
+<dd><p>logical 0|1 for connection status
+</p></dd>
+<dt><code class="code">Subscriptions</code></dt>
+<dd><p>List of topics currently subscribed to
 </p></dd>
 </dl>
 <h4 class="subsubheading" id="Examples-6">Examples</h4>

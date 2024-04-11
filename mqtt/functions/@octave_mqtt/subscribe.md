@@ -2,7 +2,7 @@
 layout: "default"
 permalink: "/functions/@octave_mqtt/22_octavemqttsubscribe/"
 pkg_name: "mqtt"
-pkg_version: "0.0.4"
+pkg_version: "0.0.5"
 pkg_description: "Octave implementation of the MQTT toolkit"
 title: "Mqtt Toolkit - @octave_mqtt/subscribe"
 category: "MQTT Functions"
@@ -50,7 +50,7 @@ navigation:
 <dt><code class="code">Callback</code></dt>
 <dd><p>Callback function name or handle (default &quot;&quot;)
 </p>
-<p>If provided, the callbaclk will be called with the topic name and 
+<p>If provided, the callback will be called with the topic name and 
  message as arguments.
  </p></dd>
 </dl>
