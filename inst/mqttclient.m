@@ -70,6 +70,10 @@
 ## Numeric keep alive value in seconds (default 60)
 ## @item ClientID
 ## String client Id 
+## @item Connected
+## logical 0|1 for connection status
+## @item Subscriptions
+## List of topics currently subscribed to
 ## @end table
 ##
 ## @subsubheading Examples
