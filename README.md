@@ -14,6 +14,10 @@ Requirements
 The toolkit requires the [paho-c](https://www.eclipse.org/paho/) library. 
 the board.
 
+In fedora:
+
+dnf install paho-c-devel
+
 Installing
 ==========
 
