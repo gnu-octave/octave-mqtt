@@ -12,16 +12,19 @@ Requirements
 ============
 
 The toolkit requires the [paho-c](https://www.eclipse.org/paho/) library. 
-the board.
 
-In fedora:
+In Fedora:
 
 dnf install paho-c-devel
+
+In Ubuntu:
+
+apt install libpaho-mqtt-dev
 
 Installing
 ==========
 
-To install, run the octave package manager:
+To install, run the Octave package manager:
 
 1. To install from online:
 
