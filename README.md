@@ -15,11 +15,11 @@ The toolkit requires the [paho-c](https://www.eclipse.org/paho/) library.
 
 In Fedora:
 
-dnf install paho-c-devel
+    dnf install paho-c-devel
 
 In Ubuntu:
 
-apt install libpaho-mqtt-dev
+    apt install libpaho-mqtt-dev
 
 Installing
 ==========
