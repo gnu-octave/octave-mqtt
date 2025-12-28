@@ -289,38 +289,38 @@ octave_mqtt::subsref (const std::string& type, const std::list<octave_value_list
       {
         std::string prop = (idx.front ()) (0).string_value();
 	if (prop == "Subscriptions")
-	{
-          Cell topic(dim_vector (1, subs.size()));
-          Cell qos(dim_vector (1, subs.size()));
-          Cell callback(dim_vector (1, subs.size()));
-	  int idx = 0;
-          for(auto i : subs) 
-	  {
-	    topic(idx) = i.first;
-	    qos(idx) = i.second.qos;
-	    callback(idx) = i.second.callback;
-	    idx++;
-	  }
-          octave_map map;
-	  map.setfield("Topic", topic);
-	  map.setfield("QualityOfService", qos);
-	  map.setfield("Callback", callback);
-	  retval(0) = map;
-	}
-	else if (prop == "BrokerAddress")
-	  retval(0) = get_broker_address();
-	else if (prop == "Port")
-	  retval(0) = octave_value(get_port());
-	else if (prop == "Timeout")
-	  retval(0) = octave_value(get_timeout());
-	else if (prop == "Connected")
-	  retval(0) = octave_value(get_connected());
-	else if (prop == "KeepAliveDuration")
-	  retval(0) = octave_value(get_keep_alive_duration());
-	else if (prop == "ClientID")
-	  retval(0) = get_client_id();
-	else
-	  error ("Unkown property '%s'", prop.c_str());
+          {
+            Cell topic(dim_vector (1, subs.size()));
+            Cell qos(dim_vector (1, subs.size()));
+            Cell callback(dim_vector (1, subs.size()));
+            int idx = 0;
+            for(auto i : subs)
+              {
+                topic(idx) = i.first;
+                qos(idx) = i.second.qos;
+                callback(idx) = i.second.callback;
+                idx++;
+              }
+            octave_map map;
+            map.setfield("Topic", topic);
+            map.setfield("QualityOfService", qos);
+            map.setfield("Callback", callback);
+            retval(0) = map;
+          }
+        else if (prop == "BrokerAddress")
+          retval(0) = get_broker_address();
+        else if (prop == "Port")
+          retval(0) = octave_value(get_port());
+        else if (prop == "Timeout")
+          retval(0) = octave_value(get_timeout());
+        else if (prop == "Connected")
+          retval(0) = octave_value(get_connected());
+        else if (prop == "KeepAliveDuration")
+          retval(0) = octave_value(get_keep_alive_duration());
+        else if (prop == "ClientID")
+          retval(0) = get_client_id();
+        else
+          error ("Unknown property '%s'", prop.c_str());
       }
       break;
     }
