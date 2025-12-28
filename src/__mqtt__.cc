@@ -58,6 +58,11 @@ Private function\n \
   std::string clientcert = "";
   std::string clientkey = "";
   std::string sslpassword = "";
+  // lasttwill options
+  std::string lastwilltopic = "";
+  std::string lastwillmessage = "";
+  int lastwillqos = 0;
+  int lastwillretain = 0;
 
   if (args.length() > 1 && !((args.length() & 1)  == 1))
     {
@@ -189,7 +194,46 @@ Private function\n \
                   return octave_value();
                 }
             }
- 
+          else if (name == "lastwilltopic")
+            {
+              if (val.is_string ())
+                lastwilltopic = val.string_value ();
+              else
+                {
+                  error ("lastwilltopic must be a string");
+                  return octave_value();
+                }
+            }
+          else if (name == "lastwillmessage")
+            {
+              if (val.is_string ())
+                lastwillmessage = val.string_value ();
+              else
+                {
+                  error ("lastwillmessage must be a string");
+                  return octave_value();
+                }
+            }
+          else if (name == "lastwillqos")
+            {
+              if (val.OV_ISINTEGER () || val.OV_ISFLOAT ())
+                lastwillqos = val.int_value ();
+              else
+                {
+                  error ("lastwillqos must be an integer");
+                  return octave_value();
+                }
+            }
+          else if (name == "lastwillretain")
+            {
+              if (val.OV_ISINTEGER () || val.OV_ISLOGICAL ())
+                lastwillretain = val.int_value ();
+              else
+                {
+                  error ("lastwillretain must be logical");
+                  return octave_value();
+                }
+            }
           else
             {
               error ("unknown property '%s'", name.c_str());
@@ -210,6 +254,10 @@ Private function\n \
   retvalue->set_clientcert(clientcert);
   retvalue->set_clientkey(clientkey);
   retvalue->set_sslpassword(sslpassword);
+  retvalue->set_lastwilltopic(lastwilltopic);
+  retvalue->set_lastwillmessage(lastwillmessage);
+  retvalue->set_lastwillqos(lastwillqos);
+  retvalue->set_lastwillretain(lastwillretain);
 
   if ( retvalue->create (username, password) == false )
     {

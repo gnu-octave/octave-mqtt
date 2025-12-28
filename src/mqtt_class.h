@@ -103,6 +103,12 @@ public:
   void set_clientkey(const std::string &value) { clientkey=value; }
   void set_sslpassword(const std::string &value) { sslpassword=value; }
 
+  // Last Will Options
+  void set_lastwilltopic(const std::string &value) { lastwilltopic=value; }
+  void set_lastwillmessage(const std::string &value) { lastwillmessage=value; }
+  void set_lastwillqos(int value) { lastwillqos=value; }
+  void set_lastwillretain(int value) { lastwillretain=value; }
+
   std::map<std::string, sub_info> subscriptions() const { return subs; }
 
   msg_info read(const std::string &topic="");
@@ -170,6 +176,11 @@ private:
   std::string clientcert;
   std::string clientkey;
   std::string sslpassword;
+
+  std::string lastwilltopic;
+  std::string lastwillmessage;
+  int lastwillqos;
+  int lastwillretain;
 
   string_vector fieldnames;
 #ifdef DECLARE_OCTAVE_ALLOCATOR

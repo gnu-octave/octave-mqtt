@@ -49,6 +49,14 @@
 ## String full file path to a private client key file when using a secure connection
 ## @item SSLPassword
 ## String Password to decrypt the client key file
+## @item LastWillTopic
+## String Last Will Topic. Must be set to a non empty string to enable LastWill.
+## @item LastWillMessage
+## String Last Will Message. (Default  "")
+## @item LastWillQOS
+## Numeric 0|1|2 Last Will QOS Value (Default 0)
+## @item LastWillRetain
+## Logical  0|1 Last Will Retain Value (Default 0)
 ## @end table
 ##
 ## @subsubheading Outputs
@@ -102,6 +110,10 @@ function obj = mqttclient(varargin)
   p.FunctionName = 'mqttclient';
   p.KeepUnmatched = false;
   p.addRequired('brokerAddress', @ischar);
+
+  validateQOS = @(x) assert(isnumeric(x) && isscalar(x) ...
+    && (x >= 0) && (x<=2),errorMsg);
+
   if has_add_param
     p.addParameter('Port', 1883, @isnumeric);
     p.addParameter('Timeout', 5, @isnumeric);
@@ -113,6 +125,10 @@ function obj = mqttclient(varargin)
     p.addParameter('ClientCertificate', "", @ischar);
     p.addParameter('ClientKey', "", @ischar);
     p.addParameter('SSLPassword', "", @ischar);
+    p.addParameter('LastWillTopic', "", @ischar);
+    p.addParameter('LastWillMessage', "", @ischar);
+    p.addParameter('LastWillQOS', 0, validateQOS);
+    p.addParameter('LastWillRetain', 0, @islogical);
   else
     p.addParamValue('Port', 1883, @isnumeric);
     p.addParamValue('Timeout', 5, @isnumeric);
@@ -124,6 +140,10 @@ function obj = mqttclient(varargin)
     p.addParamValue('ClientCertificate', "", @ischar);
     p.addParamValue('ClientKey', "", @ischar);
     p.addParamValue('SSLPassword', "", @ischar);
+    p.addParamValue('LastWillTopic', "", @ischar);
+    p.addParamValue('LastWillMessage', "", @ischar);
+    p.addParamValue('LastWillQOS', 0, validateQOS);
+    p.addParamValue('LastWillRetain', 0, @islogical);
   endif
   p.parse(varargin{:});
 
@@ -151,5 +171,11 @@ endfunction
 %! assert(client.Timeout, 10);
 %! assert(client.KeepAliveDuration, 30);
 %! assert(client.ClientID, "octave");
+%! assert(client.Connected, true);
+%! clear client
+
+%!test
+%! client = mqttclient("tcp://broker.hivemq.com", "Port", 1883, "Timeout", 10, "ClientID", "octave", "LastWillTopic", "Octave", "LastWillMessage", "Disconnected");
+%! assert(client.BrokerAddress, "tcp://broker.hivemq.com");
 %! assert(client.Connected, true);
 %! clear client

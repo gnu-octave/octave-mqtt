@@ -196,6 +196,17 @@ octave_mqtt::create (const std::string &username, const std::string &password)
       conn_opts.ssl = &sslopts;
     }
 
+  MQTTClient_willOptions willopts = MQTTClient_willOptions_initializer;
+  if (lastwilltopic.length() > 0)
+    {
+      willopts.topicName = lastwilltopic.c_str();
+      willopts.message = lastwillmessage.c_str();
+      willopts.qos = lastwillqos;
+      willopts.retained = lastwillretain;
+
+      conn_opts.will = &willopts;
+    }
+
   if ((rc = MQTTClient_connect(client, &conn_opts)) != MQTTCLIENT_SUCCESS)
     {
       error("Failed to connect - %s", error_string(rc).c_str());
