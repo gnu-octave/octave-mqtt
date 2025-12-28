@@ -433,10 +433,21 @@ octave_mqtt::unsubscribe(const std::string &topic)
 }
 
 void
-octave_mqtt::flush()
+octave_mqtt::flush(const std::string &topic)
 {
   Locker lock(mutex);
-  msgs.erase(msgs.begin(), msgs.end());
+  if (topic.length() == 0)
+    // remove all
+    msgs.erase(msgs.begin(), msgs.end());
+  else
+    // remove only those that match
+    for (auto it = msgs.begin(); it != msgs.end(); ++it)
+      {
+        if ((*it).topic == topic)
+          {
+            msgs.erase(it);
+           }
+      }
 }
 
 void

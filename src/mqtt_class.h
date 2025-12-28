@@ -114,7 +114,7 @@ public:
   msg_info read(const std::string &topic="");
   bool write(const std::string &topic, const std::string &msg, int qos, int retained);
   msg_info peek(const std::string &topic="");
-  void flush();
+  void flush(const std::string &topic);
   int poll(int t);
 
   void push_message(const msg_info &inf);

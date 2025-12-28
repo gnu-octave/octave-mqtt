@@ -16,12 +16,15 @@
 
 ## -*- texinfo -*- 
 ## @deftypefn {} {} flush (@var{obj})
+## @deftypefnx {} {} flush (@var{obj}, @var{topic})
 ## Flush a MQTT client connection
 ##
 ## @subsubheading Inputs
 ## @table @code
 ## @item obj
 ## A previously created octave_mqtt object
+## @item topic
+## Optional topic to clear from queue.
 ## @end table
 ##
 ## @subsubheading Outputs
@@ -36,15 +39,23 @@
 ## }
 ## @end example
 ##
+## Open a client and flush the input of only 'test' topics
+## @example
+## @code {
+## client = mqttclient("tcp://127.0.0.1");
+## flush(client, "test");
+## }
+## @end example
+##
 ## @seealso{mqttclient}
 ## @end deftypefn
 
-function flush(obj)
-  if nargin != 1
-    error ("Expected 1 arguments.");
+function flush(obj, topic="")
+  if nargin < 0 || nargin > 2
+    error ("Expected 1 or 2 arguments.");
   endif
 
-  __mqtt_flush__(obj);
+  __mqtt_flush__(obj, topic);
  
 endfunction
 
@@ -52,4 +63,5 @@ endfunction
 %! client = mqttclient("tcp://broker.hivemq.com");
 %! flush(client)
 %! assert(isempty(peek(client)));
+%! flush(client, "test")
 %! clear client

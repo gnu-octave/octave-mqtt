@@ -513,11 +513,22 @@ Private function.\n \
 {
   init_types ();
 
-  if (args.length () != 1 || 
+  if (args.length () < 1 || 
       args(0).type_id () != octave_mqtt::static_type_id ())
     {
       print_usage ();
       return octave_value (false);  
+    }
+
+  std::string topic = "";
+  if ( args.length() > 1)
+    {
+      if (!args (1).is_string ())
+        {
+          error ("Expected flush topic as a string");
+          return octave_value (false);
+	}
+      topic - args(1).string_value();
     }
 
   octave_mqtt * client = NULL;
@@ -526,7 +537,7 @@ Private function.\n \
 
   client = &((octave_mqtt &)rep);
 
-  client->flush();
+  client->flush(topic);
 
   bool ret = true;
 
