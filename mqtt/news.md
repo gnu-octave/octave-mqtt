@@ -3,7 +3,7 @@ layout: "default"
 permalink: "/news/"
 title: "Mqtt Toolkit - News"
 pkg_name: "mqtt"
-version: "0.0.5"
+version: "0.0.6"
 description: "Octave implementation of the MQTT toolkit"
 navigation:
 - id: "overview"
@@ -19,6 +19,15 @@ navigation:
   url: "/manual"
 ---
 <pre>
+Summary of important user-visible changes for octave-mqtt 0.0.6:
+-------------------------------------------------------------------
+
+  ** minor documentation updates
+
+  ** mqttclient: add last will options
+
+  ** flush: add flush by topic
+
 Summary of important user-visible changes for octave-mqtt 0.0.5:
 -------------------------------------------------------------------
 

@@ -3,7 +3,7 @@ layout: "function_list"
 permalink: "/functions/"
 title: "Mqtt Toolkit - Functions"
 pkg_name: "mqtt"
-version: "0.0.5"
+version: "0.0.6"
 description: "Octave implementation of the MQTT toolkit"
 categories:
 - id: "14_MQTTFunctions"
@@ -37,6 +37,7 @@ categories:
     name: "@octave_mqtt/write"
     description: "Write VALUE to TOPIC."
     url: "/functions/@octave_mqtt/18_octavemqttwrite/"
+  groups:
 navigation:
 - id: "overview"
   name: "Overview"
@@ -46,6 +47,7 @@ navigation:
 - id: "14_MQTTFunctions"
   name: "&nbsp;&nbsp;MQTT Functions"
   url: "/functions/#14_MQTTFunctions"
+  subitems:
 - id: "news"
   name: "News"
   url: "/news"

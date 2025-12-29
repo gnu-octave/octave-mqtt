@@ -2,7 +2,7 @@
 layout: "default"
 permalink: "/functions/10_mqttclient/"
 pkg_name: "mqtt"
-pkg_version: "0.0.5"
+pkg_version: "0.0.6"
 pkg_description: "Octave implementation of the MQTT toolkit"
 title: "Mqtt Toolkit - mqttclient"
 category: "MQTT Functions"
@@ -17,6 +17,7 @@ navigation:
 - id: "14_MQTTFunctions"
   name: "&nbsp;&nbsp;MQTT Functions"
   url: "/functions/#14_MQTTFunctions"
+  subitems:
 - id: "news"
   name: "News"
   url: "/news"
@@ -24,12 +25,12 @@ navigation:
   name: "Manual"
   url: "/manual"
 ---
-<dl class="first-deftypefn">
-<dt class="deftypefn" id="index-mqttclient"><span class="category-def">: </span><span><code class="def-type"><var class="var">client</var> =</code> <strong class="def-name">mqttclient</strong> <code class="def-code-arguments">(<var class="var">brokerAddr</var>)</code><a class="copiable-link" href='#index-mqttclient'></a></span></dt>
-<dt class="deftypefnx def-cmd-deftypefn" id="index-mqttclient-1"><span class="category-def">: </span><span><code class="def-type"><var class="var">client</var> =</code> <strong class="def-name">mqttclient</strong> <code class="def-code-arguments">(<var class="var">brokerAddr</var>, [<var class="var">name</var>, <var class="var">value</var> ....])</code><a class="copiable-link" href='#index-mqttclient-1'></a></span></dt>
+<dl class="first-deftypefn def-block">
+<dt class="deftypefn def-line" id="index-mqttclient"><span class="category-def">: </span><span><code class="def-type"><var class="var">client</var> =</code> <strong class="def-name">mqttclient</strong> <code class="def-code-arguments">(<var class="var">brokerAddr</var>)</code><a class="copiable-link" href="#index-mqttclient"></a></span></dt>
+<dt class="deftypefnx def-cmd-deftypefn def-line" id="index-mqttclient-1"><span class="category-def">: </span><span><code class="def-type"><var class="var">client</var> =</code> <strong class="def-name">mqttclient</strong> <code class="def-code-arguments">(<var class="var">brokerAddr</var>, [<var class="var">name</var>, <var class="var">value</var> ....])</code><a class="copiable-link" href="#index-mqttclient-1"></a></span></dt>
 <dd><p>Create a MQTT client connection
 </p>
-<h4 class="subsubheading" id="Inputs">Inputs</h4>
+<h4 class="subsubheading" id="Inputs"><span>Inputs<a class="copiable-link" href="#Inputs"></a></span></h4>
 <dl class="table">
 <dt><code class="code">brokerAddr</code></dt>
 <dd><p>Name or IP address with protocol. ie: tcp://127.0.0.1.
@@ -71,16 +72,28 @@ navigation:
 <dt><code class="code">SSLPassword</code></dt>
 <dd><p>String Password to decrypt the client key file
  </p></dd>
+<dt><code class="code">LastWillTopic</code></dt>
+<dd><p>String Last Will Topic. Must be set to a non empty string to enable LastWill.
+ </p></dd>
+<dt><code class="code">LastWillMessage</code></dt>
+<dd><p>String Last Will Message. (Default  &quot;&quot;)
+ </p></dd>
+<dt><code class="code">LastWillQOS</code></dt>
+<dd><p>Numeric 0|1|2 Last Will QOS Value (Default 0)
+ </p></dd>
+<dt><code class="code">LastWillRetain</code></dt>
+<dd><p>Logical  0|1 Last Will Retain Value (Default 0)
+ </p></dd>
 </dl>
 
-<h4 class="subsubheading" id="Outputs">Outputs</h4>
+<h4 class="subsubheading" id="Outputs"><span>Outputs<a class="copiable-link" href="#Outputs"></a></span></h4>
 <dl class="table">
 <dt><code class="code">client</code></dt>
 <dd><p>a octave_mqtt object
  </p></dd>
 </dl>
 
-<h4 class="subsubheading" id="Properties">Properties</h4>
+<h4 class="subsubheading" id="Properties"><span>Properties<a class="copiable-link" href="#Properties"></a></span></h4>
 <p>A octave_mqtt object has the following properties:
  </p><dl class="table">
 <dt><code class="code">BrokerAddress</code></dt>
@@ -106,7 +119,7 @@ navigation:
  </p></dd>
 </dl>
 
-<h4 class="subsubheading" id="Examples">Examples</h4>
+<h4 class="subsubheading" id="Examples"><span>Examples<a class="copiable-link" href="#Examples"></a></span></h4>
 <p>Create a new mqttclient
  </p><div class="example">
 <pre class="example-preformatted"> <code class="code">

@@ -3,7 +3,7 @@ layout: "default"
 permalink: "/manual/"
 title: "Mqtt Toolkit - Manual"
 pkg_name: "mqtt"
-version: "0.0.5"
+version: "0.0.6"
 description: "Octave implementation of the MQTT toolkit"
 navigation:
 - id: "overview"
@@ -28,24 +28,20 @@ navigation:
   url: "/manual/#Function-Reference-1"
 ---
 <div class="top-level-extent" id="Top">
-<div class="nav-panel">
-<p>
-Next: <a href="#Installing-and-loading" accesskey="n" rel="next">Installing and loading</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Index" title="Index" rel="index">Index</a>]</p>
-</div>
 <h1 class="top" id="Introduction">Introduction</h1>
 <p>The Octave MQTT toolkit is a set of MQTT routines for GNU Octave
 </p>
-<div class="element-contents" id="SEC_Contents">
+<div class="region-contents" id="SEC_Contents">
 <h2 class="contents-heading">Table of Contents</h2>
 <div class="contents">
 <ul class="toc-numbered-mark">
-  <li><a id="toc-Installing-and-loading-1" href="#Installing-and-loading">1 Installing and loading</a>
+  <li><a id="toc-Installing-and-loading" href="#Installing-and-loading">1 Installing and loading</a>
   <ul class="toc-numbered-mark">
     <li><a id="toc-Online-Direct-install" href="#Online-Direct-install">1.1 Online Direct install</a></li>
     <li><a id="toc-Off_002dline-install" href="#Off_002dline-install">1.2 Off-line install</a></li>
     <li><a id="toc-Loading" href="#Loading">1.3 Loading</a></li>
   </ul></li>
-  <li><a id="toc-Basic-Usage-Overview-1" href="#Basic-Usage-Overview">2 Basic Usage Overview</a>
+  <li><a id="toc-Basic-Usage-Overview" href="#Basic-Usage-Overview">2 Basic Usage Overview</a>
   <ul class="toc-numbered-mark">
     <li><a id="toc-Connection-to-a-broker" href="#Connection-to-a-broker">2.1 Connection to a broker</a></li>
     <li><a id="toc-Subscribe-to-a-Topic" href="#Subscribe-to-a-Topic">2.2 Subscribe to a Topic</a></li>
@@ -53,9 +49,9 @@ Next: <a href="#Installing-and-loading" accesskey="n" rel="next">Installing and 
     <li><a id="toc-Read-from-subscribed-Topics" href="#Read-from-subscribed-Topics">2.4 Read from subscribed Topics</a></li>
     <li><a id="toc-Close-the-client" href="#Close-the-client">2.5 Close the client</a></li>
   </ul></li>
-  <li><a id="toc-Function-Reference-1" href="#Function-Reference">3 Function Reference</a>
+  <li><a id="toc-Function-Reference" href="#Function-Reference">3 Function Reference</a>
   <ul class="toc-numbered-mark">
-    <li><a id="toc-MQTT-Functions-1" href="#MQTT-Functions">3.1 MQTT Functions</a>
+    <li><a id="toc-MQTT-Functions" href="#MQTT-Functions">3.1 MQTT Functions</a>
     <ul class="toc-numbered-mark">
       <li><a id="toc-_0040octave_005fmqtt_002fflush" href="#g_t_0040octave_005fmqtt_002fflush">3.1.1 @octave_mqtt/flush</a></li>
       <li><a id="toc-_0040octave_005fmqtt_002fpeek" href="#g_t_0040octave_005fmqtt_002fpeek">3.1.2 @octave_mqtt/peek</a></li>
@@ -67,16 +63,12 @@ Next: <a href="#Installing-and-loading" accesskey="n" rel="next">Installing and 
     </ul></li>
   </ul></li>
   <li><a id="toc-GNU-General-Public-License" href="#Copying">Appendix A GNU General Public License</a></li>
-  <li><a id="toc-Index-1" href="#Index" rel="index">Index</a></li>
+  <li><a id="toc-Index" href="#Index" rel="index">Index</a></li>
 </ul>
 </div>
 </div>
 <hr>
 <div class="chapter-level-extent" id="Installing-and-loading">
-<div class="nav-panel">
-<p>
-Next: <a href="#Basic-Usage-Overview" accesskey="n" rel="next">Basic Usage Overview</a>, Previous: <a href="#Top" accesskey="p" rel="prev">Introduction</a>, Up: <a href="#Top" accesskey="u" rel="up">Introduction</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Index" title="Index" rel="index">Index</a>]</p>
-</div>
 <h2 class="chapter" id="Installing-and-loading-1">1 Installing and loading</h2>
 <a class="index-entry-id" id="index-Installing-and-loading"></a>
 <p>The toolkit must be installed and then loaded to be used.
@@ -89,11 +81,6 @@ to successfully install the toolkit.
 </p>
 <p>The toolkit must be then be loaded once per each <abbr class="acronym">GNU</abbr> Octave session in order to use its functionality.
 </p>
-<ul class="mini-toc">
-<li><a href="#Online-Direct-install" accesskey="1">Online Direct install</a></li>
-<li><a href="#Off_002dline-install" accesskey="2">Off-line install</a></li>
-<li><a href="#Loading" accesskey="3">Loading</a></li>
-</ul>
 <div class="section-level-extent" id="Online-Direct-install">
 <h3 class="section">1.1 Online Direct install</h3>
 <a class="index-entry-id" id="index-Online-install"></a>
@@ -110,12 +97,12 @@ the octave-mqtt website using the following command within <abbr class="acronym"
 <h3 class="section">1.2 Off-line install</h3>
 <a class="index-entry-id" id="index-Off_002dline-install"></a>
 <p>With the toolkit package already downloaded
-(<a class="url" href="https://github.com/gnu-octave/octave-mqtt/releases/download/release-0.0.5/octave-mqtt-0.0.5.tar.gz">https://github.com/gnu-octave/octave-mqtt/releases/download/release-0.0.5/octave-mqtt-0.0.5.tar.gz</a>),
+(<a class="url" href="https://github.com/gnu-octave/octave-mqtt/releases/download/release-0.0.6/octave-mqtt-0.0.6.tar.gz">https://github.com/gnu-octave/octave-mqtt/releases/download/release-0.0.6/octave-mqtt-0.0.6.tar.gz</a>),
 and in the current directory when running <abbr class="acronym">GNU</abbr> Octave, the package can be installed using the following command
 within <abbr class="acronym">GNU</abbr> Octave:
 </p>
 <div class="example">
-<pre class="example-preformatted">pkg install octave-mqtt-0.0.5.tar.gz
+<pre class="example-preformatted">pkg install octave-mqtt-0.0.6.tar.gz
 </pre></div>
 </div>
 <div class="section-level-extent" id="Loading">
@@ -133,22 +120,11 @@ the toolkit must be loaded using the pkg load command:
 </div>
 </div>
 <div class="chapter-level-extent" id="Basic-Usage-Overview">
-<div class="nav-panel">
-<p>
-Next: <a href="#Function-Reference" accesskey="n" rel="next">Function Reference</a>, Previous: <a href="#Installing-and-loading" accesskey="p" rel="prev">Installing and loading</a>, Up: <a href="#Top" accesskey="u" rel="up">Introduction</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Index" title="Index" rel="index">Index</a>]</p>
-</div>
 <h2 class="chapter" id="Basic-Usage-Overview-1">2 Basic Usage Overview</h2>
 <a class="index-entry-id" id="index-Basic-Usage-Overview"></a>
 <p>The overview connects to the public broker at HiveMQ (<a class="url" href="https://www.hivemq.com/public-mqtt-broker/">https://www.hivemq.com/public-mqtt-broker/</a>)
 and follows this general flow:
 </p>
-<ul class="mini-toc">
-<li><a href="#Connection-to-a-broker" accesskey="1">Connection to a broker</a></li>
-<li><a href="#Subscribe-to-a-Topic" accesskey="2">Subscribe to a Topic</a></li>
-<li><a href="#Write-to-a-Topic" accesskey="3">Write to a Topic</a></li>
-<li><a href="#Read-from-subscribed-Topics" accesskey="4">Read from subscribed Topics</a></li>
-<li><a href="#Close-the-client" accesskey="5">Close the client</a></li>
-</ul>
 <div class="section-level-extent" id="Connection-to-a-broker">
 <h3 class="section">2.1 Connection to a broker</h3>
 <a class="index-entry-id" id="index-Connection-to-a-broker"></a>
@@ -255,45 +231,29 @@ clear client
 </div>
 </div>
 <div class="chapter-level-extent" id="Function-Reference">
-<div class="nav-panel">
-<p>
-Next: <a href="#Copying" accesskey="n" rel="next">GNU General Public License</a>, Previous: <a href="#Basic-Usage-Overview" accesskey="p" rel="prev">Basic Usage Overview</a>, Up: <a href="#Top" accesskey="u" rel="up">Introduction</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Index" title="Index" rel="index">Index</a>]</p>
-</div>
 <h2 class="chapter" id="Function-Reference-1">3 Function Reference</h2>
 <a class="index-entry-id" id="index-Function-Reference"></a>
 <p>The functions currently available in the toolkit are described below;
 </p>
-<ul class="mini-toc">
-<li><a href="#MQTT-Functions" accesskey="1">MQTT Functions</a></li>
-</ul>
 <hr>
 <div class="section-level-extent" id="MQTT-Functions">
-<div class="nav-panel">
-<p>
-Up: <a href="#Function-Reference" accesskey="u" rel="up">Function Reference</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Index" title="Index" rel="index">Index</a>]</p>
-</div>
 <h3 class="section" id="MQTT-Functions-1">3.1 MQTT Functions</h3>
 <a class="index-entry-id" id="index-MQTT-Functions"></a>
-<ul class="mini-toc">
-<li><a href="#g_t_0040octave_005fmqtt_002fflush" accesskey="1">@octave_mqtt/flush</a></li>
-<li><a href="#g_t_0040octave_005fmqtt_002fpeek" accesskey="2">@octave_mqtt/peek</a></li>
-<li><a href="#g_t_0040octave_005fmqtt_002fread" accesskey="3">@octave_mqtt/read</a></li>
-<li><a href="#g_t_0040octave_005fmqtt_002fsubscribe" accesskey="4">@octave_mqtt/subscribe</a></li>
-<li><a href="#g_t_0040octave_005fmqtt_002funsubscribe" accesskey="5">@octave_mqtt/unsubscribe</a></li>
-<li><a href="#g_t_0040octave_005fmqtt_002fwrite" accesskey="6">@octave_mqtt/write</a></li>
-<li><a href="#mqttclient" accesskey="7">mqttclient</a></li>
-</ul>
 <div class="subsection-level-extent" id="g_t_0040octave_005fmqtt_002fflush">
 <h4 class="subsection">3.1.1 @octave_mqtt/flush</h4>
 <a class="index-entry-id" id="index-flush"></a>
-<dl class="first-deftypefn">
-<dt class="deftypefn" id="index-flush-1"><span class="category-def">: </span><span><strong class="def-name">flush</strong> <code class="def-code-arguments">(<var class="var">obj</var>)</code><a class="copiable-link" href='#index-flush-1'></a></span></dt>
+<dl class="first-deftypefn def-block">
+<dt class="deftypefn def-line" id="index-flush-1"><span class="category-def">: </span><strong class="def-name">flush</strong> <code class="def-code-arguments">(<var class="var">obj</var>)</code></dt>
+<dt class="deftypefnx def-cmd-deftypefn def-line" id="index-flush-2"><span class="category-def">: </span><strong class="def-name">flush</strong> <code class="def-code-arguments">(<var class="var">obj</var>, <var class="var">topic</var>)</code></dt>
 <dd><p>Flush a MQTT client connection
 </p>
 <h4 class="subsubheading" id="Inputs">Inputs</h4>
 <dl class="table">
 <dt><code class="code">obj</code></dt>
 <dd><p>A previously created octave_mqtt object
+</p></dd>
+<dt><code class="code">topic</code></dt>
+<dd><p>Optional topic to clear from queue.
 </p></dd>
 </dl>
 <h4 class="subsubheading" id="Outputs">Outputs</h4>
@@ -307,15 +267,22 @@ Up: <a href="#Function-Reference" accesskey="u" rel="up">Function Reference</a> 
  flush(client);
  </code>
 </pre></div>
+<p>Open a client and flush the input of only &rsquo;test&rsquo; topics
+</p><div class="example">
+<pre class="example-preformatted"><code class="code">
+ client = mqttclient(&quot;tcp://127.0.0.1&quot;);
+ flush(client, &quot;test&quot;);
+ </code>
+</pre></div>
 <p><strong class="strong">See also:</strong> mqttclient.
 </p></dd></dl>
 </div>
 <div class="subsection-level-extent" id="g_t_0040octave_005fmqtt_002fpeek">
 <h4 class="subsection">3.1.2 @octave_mqtt/peek</h4>
 <a class="index-entry-id" id="index-peek"></a>
-<dl class="first-deftypefn">
-<dt class="deftypefn" id="index-peek-1"><span class="category-def">: </span><span><code class="def-type"><var class="var">msg</var> =</code> <strong class="def-name">peek</strong> <code class="def-code-arguments">(<var class="var">obj</var>)</code><a class="copiable-link" href='#index-peek-1'></a></span></dt>
-<dt class="deftypefnx def-cmd-deftypefn" id="index-peek-2"><span class="category-def">: </span><span><code class="def-type"><var class="var">msg</var> =</code> <strong class="def-name">peek</strong> <code class="def-code-arguments">(<var class="var">obj</var>, <var class="var">topic</var>)</code><a class="copiable-link" href='#index-peek-2'></a></span></dt>
+<dl class="first-deftypefn def-block">
+<dt class="deftypefn def-line" id="index-peek-1"><span class="category-def">: </span><code class="def-type"><var class="var">msg</var> =</code> <strong class="def-name">peek</strong> <code class="def-code-arguments">(<var class="var">obj</var>)</code></dt>
+<dt class="deftypefnx def-cmd-deftypefn def-line" id="index-peek-2"><span class="category-def">: </span><code class="def-type"><var class="var">msg</var> =</code> <strong class="def-name">peek</strong> <code class="def-code-arguments">(<var class="var">obj</var>, <var class="var">topic</var>)</code></dt>
 <dd><p>Return the most recent message without removing it from the message queue.
 </p>
 <h4 class="subsubheading" id="Inputs-1">Inputs</h4>
@@ -348,9 +315,9 @@ Up: <a href="#Function-Reference" accesskey="u" rel="up">Function Reference</a> 
 <div class="subsection-level-extent" id="g_t_0040octave_005fmqtt_002fread">
 <h4 class="subsection">3.1.3 @octave_mqtt/read</h4>
 <a class="index-entry-id" id="index-read"></a>
-<dl class="first-deftypefn">
-<dt class="deftypefn" id="index-read-1"><span class="category-def">: </span><span><code class="def-type"><var class="var">msgs</var> =</code> <strong class="def-name">read</strong> <code class="def-code-arguments">(<var class="var">obj</var>)</code><a class="copiable-link" href='#index-read-1'></a></span></dt>
-<dt class="deftypefnx def-cmd-deftypefn" id="index-read-2"><span class="category-def">: </span><span><code class="def-type"><var class="var">msgs</var> =</code> <strong class="def-name">read</strong> <code class="def-code-arguments">(<var class="var">obj</var>, <var class="var">topic</var>)</code><a class="copiable-link" href='#index-read-2'></a></span></dt>
+<dl class="first-deftypefn def-block">
+<dt class="deftypefn def-line" id="index-read-1"><span class="category-def">: </span><code class="def-type"><var class="var">msgs</var> =</code> <strong class="def-name">read</strong> <code class="def-code-arguments">(<var class="var">obj</var>)</code></dt>
+<dt class="deftypefnx def-cmd-deftypefn def-line" id="index-read-2"><span class="category-def">: </span><code class="def-type"><var class="var">msgs</var> =</code> <strong class="def-name">read</strong> <code class="def-code-arguments">(<var class="var">obj</var>, <var class="var">topic</var>)</code></dt>
 <dd><p>Read available messages and remove from message queue.
 </p>
 <h4 class="subsubheading" id="Inputs-2">Inputs</h4>
@@ -383,9 +350,9 @@ Up: <a href="#Function-Reference" accesskey="u" rel="up">Function Reference</a> 
 <div class="subsection-level-extent" id="g_t_0040octave_005fmqtt_002fsubscribe">
 <h4 class="subsection">3.1.4 @octave_mqtt/subscribe</h4>
 <a class="index-entry-id" id="index-subscribe"></a>
-<dl class="first-deftypefn">
-<dt class="deftypefn" id="index-subscribe-1"><span class="category-def">: </span><span><code class="def-type"><var class="var">subs</var> =</code> <strong class="def-name">subscribe</strong> <code class="def-code-arguments">(<var class="var">obj</var>, <var class="var">topic</var>)</code><a class="copiable-link" href='#index-subscribe-1'></a></span></dt>
-<dt class="deftypefnx def-cmd-deftypefn" id="index-subscribe-2"><span class="category-def">: </span><span><code class="def-type"><var class="var">subs</var> =</code> <strong class="def-name">subscribe</strong> <code class="def-code-arguments">(<var class="var">obj</var>, <var class="var">topic</var>, [<var class="var">propname</var>, <var class="var">propvalue</var> ....])</code><a class="copiable-link" href='#index-subscribe-2'></a></span></dt>
+<dl class="first-deftypefn def-block">
+<dt class="deftypefn def-line" id="index-subscribe-1"><span class="category-def">: </span><code class="def-type"><var class="var">subs</var> =</code> <strong class="def-name">subscribe</strong> <code class="def-code-arguments">(<var class="var">obj</var>, <var class="var">topic</var>)</code></dt>
+<dt class="deftypefnx def-cmd-deftypefn def-line" id="index-subscribe-2"><span class="category-def">: </span><code class="def-type"><var class="var">subs</var> =</code> <strong class="def-name">subscribe</strong> <code class="def-code-arguments">(<var class="var">obj</var>, <var class="var">topic</var>, [<var class="var">propname</var>, <var class="var">propvalue</var> ....])</code></dt>
 <dd><p>Subscribe to a topic
 </p>
 <h4 class="subsubheading" id="Inputs-3">Inputs</h4>
@@ -441,8 +408,8 @@ Up: <a href="#Function-Reference" accesskey="u" rel="up">Function Reference</a> 
 <div class="subsection-level-extent" id="g_t_0040octave_005fmqtt_002funsubscribe">
 <h4 class="subsection">3.1.5 @octave_mqtt/unsubscribe</h4>
 <a class="index-entry-id" id="index-unsubscribe"></a>
-<dl class="first-deftypefn">
-<dt class="deftypefn" id="index-unsubscribe-1"><span class="category-def">: </span><span><strong class="def-name">unsubscribe</strong> <code class="def-code-arguments">(<var class="var">obj</var>, <var class="var">topic</var>)</code><a class="copiable-link" href='#index-unsubscribe-1'></a></span></dt>
+<dl class="first-deftypefn def-block">
+<dt class="deftypefn def-line" id="index-unsubscribe-1"><span class="category-def">: </span><strong class="def-name">unsubscribe</strong> <code class="def-code-arguments">(<var class="var">obj</var>, <var class="var">topic</var>)</code></dt>
 <dd><p>Unsubscribe from <var class="var">topic</var>
 </p>
 <h4 class="subsubheading" id="Inputs-4">Inputs</h4>
@@ -471,9 +438,9 @@ Up: <a href="#Function-Reference" accesskey="u" rel="up">Function Reference</a> 
 <div class="subsection-level-extent" id="g_t_0040octave_005fmqtt_002fwrite">
 <h4 class="subsection">3.1.6 @octave_mqtt/write</h4>
 <a class="index-entry-id" id="index-write"></a>
-<dl class="first-deftypefn">
-<dt class="deftypefn" id="index-write-1"><span class="category-def">: </span><span><strong class="def-name">write</strong> <code class="def-code-arguments">(<var class="var">obj</var>, <var class="var">topic</var>, <var class="var">value</var>)</code><a class="copiable-link" href='#index-write-1'></a></span></dt>
-<dt class="deftypefnx def-cmd-deftypefn" id="index-write-2"><span class="category-def">: </span><span><strong class="def-name">write</strong> <code class="def-code-arguments">(<var class="var">obj</var>, <var class="var">topic</var>, <var class="var">value</var>, [<var class="var">propname</var>, <var class="var">propvalue</var> ....])</code><a class="copiable-link" href='#index-write-2'></a></span></dt>
+<dl class="first-deftypefn def-block">
+<dt class="deftypefn def-line" id="index-write-1"><span class="category-def">: </span><strong class="def-name">write</strong> <code class="def-code-arguments">(<var class="var">obj</var>, <var class="var">topic</var>, <var class="var">value</var>)</code></dt>
+<dt class="deftypefnx def-cmd-deftypefn def-line" id="index-write-2"><span class="category-def">: </span><strong class="def-name">write</strong> <code class="def-code-arguments">(<var class="var">obj</var>, <var class="var">topic</var>, <var class="var">value</var>, [<var class="var">propname</var>, <var class="var">propvalue</var> ....])</code></dt>
 <dd><p>Write <var class="var">value</var> to <var class="var">topic</var>.
 </p>
 <h4 class="subsubheading" id="Inputs-5">Inputs</h4>
@@ -521,9 +488,9 @@ Up: <a href="#Function-Reference" accesskey="u" rel="up">Function Reference</a> 
 <div class="subsection-level-extent" id="mqttclient">
 <h4 class="subsection">3.1.7 mqttclient</h4>
 <a class="index-entry-id" id="index-mqttclient"></a>
-<dl class="first-deftypefn">
-<dt class="deftypefn" id="index-mqttclient-1"><span class="category-def">: </span><span><code class="def-type"><var class="var">client</var> =</code> <strong class="def-name">mqttclient</strong> <code class="def-code-arguments">(<var class="var">brokerAddr</var>)</code><a class="copiable-link" href='#index-mqttclient-1'></a></span></dt>
-<dt class="deftypefnx def-cmd-deftypefn" id="index-mqttclient-2"><span class="category-def">: </span><span><code class="def-type"><var class="var">client</var> =</code> <strong class="def-name">mqttclient</strong> <code class="def-code-arguments">(<var class="var">brokerAddr</var>, [<var class="var">name</var>, <var class="var">value</var> ....])</code><a class="copiable-link" href='#index-mqttclient-2'></a></span></dt>
+<dl class="first-deftypefn def-block">
+<dt class="deftypefn def-line" id="index-mqttclient-1"><span class="category-def">: </span><code class="def-type"><var class="var">client</var> =</code> <strong class="def-name">mqttclient</strong> <code class="def-code-arguments">(<var class="var">brokerAddr</var>)</code></dt>
+<dt class="deftypefnx def-cmd-deftypefn def-line" id="index-mqttclient-2"><span class="category-def">: </span><code class="def-type"><var class="var">client</var> =</code> <strong class="def-name">mqttclient</strong> <code class="def-code-arguments">(<var class="var">brokerAddr</var>, [<var class="var">name</var>, <var class="var">value</var> ....])</code></dt>
 <dd><p>Create a MQTT client connection
 </p>
 <h4 class="subsubheading" id="Inputs-6">Inputs</h4>
@@ -566,6 +533,18 @@ Up: <a href="#Function-Reference" accesskey="u" rel="up">Function Reference</a> 
 </p></dd>
 <dt><code class="code">SSLPassword</code></dt>
 <dd><p>String Password to decrypt the client key file
+</p></dd>
+<dt><code class="code">LastWillTopic</code></dt>
+<dd><p>String Last Will Topic. Must be set to a non empty string to enable LastWill.
+</p></dd>
+<dt><code class="code">LastWillMessage</code></dt>
+<dd><p>String Last Will Message. (Default  &quot;&quot;)
+</p></dd>
+<dt><code class="code">LastWillQOS</code></dt>
+<dd><p>Numeric 0|1|2 Last Will QOS Value (Default 0)
+</p></dd>
+<dt><code class="code">LastWillRetain</code></dt>
+<dd><p>Logical  0|1 Last Will Retain Value (Default 0)
 </p></dd>
 </dl>
 <h4 class="subsubheading" id="Outputs-6">Outputs</h4>
@@ -612,10 +591,6 @@ Up: <a href="#Function-Reference" accesskey="u" rel="up">Function Reference</a> 
 </div>
 </div>
 <div class="appendix-level-extent" id="Copying">
-<div class="nav-panel">
-<p>
-Next: <a href="#Index" accesskey="n" rel="next">Index</a>, Previous: <a href="#Function-Reference" accesskey="p" rel="prev">Function Reference</a>, Up: <a href="#Top" accesskey="u" rel="up">Introduction</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Index" title="Index" rel="index">Index</a>]</p>
-</div>
 <h2 class="appendix" id="GNU-General-Public-License">Appendix A GNU General Public License</h2>
 <a class="index-entry-id" id="index-warranty"></a>
 <a class="index-entry-id" id="index-copyright"></a>
@@ -1275,10 +1250,6 @@ first, please read <a class="url" href="http://www.gnu.org/philosophy/why-not-lg
 <hr>
 </div>
 <div class="unnumbered-level-extent" id="Index">
-<div class="nav-panel">
-<p>
-Previous: <a href="#Copying" accesskey="p" rel="prev">GNU General Public License</a>, Up: <a href="#Top" accesskey="u" rel="up">Introduction</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Index" title="Index" rel="index">Index</a>]</p>
-</div>
 <h2 class="unnumbered" id="Index-1">Index</h2>
  
 <div class="printindex cp-printindex">
@@ -1307,54 +1278,54 @@ Previous: <a href="#Copying" accesskey="p" rel="prev">GNU General Public License
 <a class="summary-letter-printindex" href="#Index_cp_letter-W"><b>W</b></a>
  &nbsp; 
 </td></tr></table>
-<table class="cp-entries-printindex" border="0">
-<tr><td></td><th class="entries-header-printindex">Index Entry</th><td>&nbsp;</td><th class="sections-header-printindex"> Section</th></tr>
-<tr><td colspan="4"> <hr></td></tr>
-<tr><th id="Index_cp_letter-B">B</th><td></td><td></td></tr>
-<tr><td></td><td class="printindex-index-entry"><a href="#index-Basic-Usage-Overview">Basic Usage Overview</a>:</td><td>&nbsp;</td><td class="printindex-index-section"><a href="#Basic-Usage-Overview">Basic Usage Overview</a></td></tr>
-<tr><td colspan="4"> <hr></td></tr>
-<tr><th id="Index_cp_letter-C">C</th><td></td><td></td></tr>
-<tr><td></td><td class="printindex-index-entry"><a href="#index-Close-the-client">Close the client</a>:</td><td>&nbsp;</td><td class="printindex-index-section"><a href="#Basic-Usage-Overview">Basic Usage Overview</a></td></tr>
-<tr><td></td><td class="printindex-index-entry"><a href="#index-Connection-to-a-broker">Connection to a broker</a>:</td><td>&nbsp;</td><td class="printindex-index-section"><a href="#Basic-Usage-Overview">Basic Usage Overview</a></td></tr>
-<tr><td></td><td class="printindex-index-entry"><a href="#index-copyright">copyright</a>:</td><td>&nbsp;</td><td class="printindex-index-section"><a href="#Copying">Copying</a></td></tr>
-<tr><td colspan="4"> <hr></td></tr>
-<tr><th id="Index_cp_letter-F">F</th><td></td><td></td></tr>
-<tr><td></td><td class="printindex-index-entry"><a href="#index-flush">flush</a>:</td><td>&nbsp;</td><td class="printindex-index-section"><a href="#MQTT-Functions">MQTT Functions</a></td></tr>
-<tr><td></td><td class="printindex-index-entry"><a href="#index-Function-Reference">Function Reference</a>:</td><td>&nbsp;</td><td class="printindex-index-section"><a href="#Function-Reference">Function Reference</a></td></tr>
-<tr><td colspan="4"> <hr></td></tr>
-<tr><th id="Index_cp_letter-I">I</th><td></td><td></td></tr>
-<tr><td></td><td class="printindex-index-entry"><a href="#index-Installing-and-loading">Installing and loading</a>:</td><td>&nbsp;</td><td class="printindex-index-section"><a href="#Installing-and-loading">Installing and loading</a></td></tr>
-<tr><td colspan="4"> <hr></td></tr>
-<tr><th id="Index_cp_letter-L">L</th><td></td><td></td></tr>
-<tr><td></td><td class="printindex-index-entry"><a href="#index-Loading">Loading</a>:</td><td>&nbsp;</td><td class="printindex-index-section"><a href="#Installing-and-loading">Installing and loading</a></td></tr>
-<tr><td colspan="4"> <hr></td></tr>
-<tr><th id="Index_cp_letter-M">M</th><td></td><td></td></tr>
-<tr><td></td><td class="printindex-index-entry"><a href="#index-MQTT-Functions">MQTT Functions</a>:</td><td>&nbsp;</td><td class="printindex-index-section"><a href="#MQTT-Functions">MQTT Functions</a></td></tr>
-<tr><td></td><td class="printindex-index-entry"><a href="#index-mqttclient">mqttclient</a>:</td><td>&nbsp;</td><td class="printindex-index-section"><a href="#MQTT-Functions">MQTT Functions</a></td></tr>
-<tr><td colspan="4"> <hr></td></tr>
-<tr><th id="Index_cp_letter-O">O</th><td></td><td></td></tr>
-<tr><td></td><td class="printindex-index-entry"><a href="#index-Off_002dline-install">Off-line install</a>:</td><td>&nbsp;</td><td class="printindex-index-section"><a href="#Installing-and-loading">Installing and loading</a></td></tr>
-<tr><td></td><td class="printindex-index-entry"><a href="#index-Online-install">Online install</a>:</td><td>&nbsp;</td><td class="printindex-index-section"><a href="#Installing-and-loading">Installing and loading</a></td></tr>
-<tr><td colspan="4"> <hr></td></tr>
-<tr><th id="Index_cp_letter-P">P</th><td></td><td></td></tr>
-<tr><td></td><td class="printindex-index-entry"><a href="#index-peek">peek</a>:</td><td>&nbsp;</td><td class="printindex-index-section"><a href="#MQTT-Functions">MQTT Functions</a></td></tr>
-<tr><td colspan="4"> <hr></td></tr>
-<tr><th id="Index_cp_letter-R">R</th><td></td><td></td></tr>
-<tr><td></td><td class="printindex-index-entry"><a href="#index-read">read</a>:</td><td>&nbsp;</td><td class="printindex-index-section"><a href="#MQTT-Functions">MQTT Functions</a></td></tr>
-<tr><td></td><td class="printindex-index-entry"><a href="#index-Read-from-subscribed-Topics">Read from subscribed Topics</a>:</td><td>&nbsp;</td><td class="printindex-index-section"><a href="#Basic-Usage-Overview">Basic Usage Overview</a></td></tr>
-<tr><td colspan="4"> <hr></td></tr>
-<tr><th id="Index_cp_letter-S">S</th><td></td><td></td></tr>
-<tr><td></td><td class="printindex-index-entry"><a href="#index-subscribe">subscribe</a>:</td><td>&nbsp;</td><td class="printindex-index-section"><a href="#MQTT-Functions">MQTT Functions</a></td></tr>
-<tr><td></td><td class="printindex-index-entry"><a href="#index-Subscribe-to-a-Topic">Subscribe to a Topic</a>:</td><td>&nbsp;</td><td class="printindex-index-section"><a href="#Basic-Usage-Overview">Basic Usage Overview</a></td></tr>
-<tr><td colspan="4"> <hr></td></tr>
-<tr><th id="Index_cp_letter-U">U</th><td></td><td></td></tr>
-<tr><td></td><td class="printindex-index-entry"><a href="#index-unsubscribe">unsubscribe</a>:</td><td>&nbsp;</td><td class="printindex-index-section"><a href="#MQTT-Functions">MQTT Functions</a></td></tr>
-<tr><td colspan="4"> <hr></td></tr>
-<tr><th id="Index_cp_letter-W">W</th><td></td><td></td></tr>
-<tr><td></td><td class="printindex-index-entry"><a href="#index-warranty">warranty</a>:</td><td>&nbsp;</td><td class="printindex-index-section"><a href="#Copying">Copying</a></td></tr>
-<tr><td></td><td class="printindex-index-entry"><a href="#index-write">write</a>:</td><td>&nbsp;</td><td class="printindex-index-section"><a href="#MQTT-Functions">MQTT Functions</a></td></tr>
-<tr><td></td><td class="printindex-index-entry"><a href="#index-Write-to-a-Topic">Write to a Topic</a>:</td><td>&nbsp;</td><td class="printindex-index-section"><a href="#Basic-Usage-Overview">Basic Usage Overview</a></td></tr>
-<tr><td colspan="4"> <hr></td></tr>
+<table class="cp-entries-printindex">
+<tr><td></td><th class="entries-header-printindex">Index Entry</th><th class="sections-header-printindex">Section</th></tr>
+<tr><td colspan="3"><hr></td></tr>
+<tr><th id="Index_cp_letter-B">B</th></tr>
+<tr><td></td><td class="printindex-index-entry"><a href="#index-Basic-Usage-Overview">Basic Usage Overview</a></td><td class="printindex-index-section"><a href="#Basic-Usage-Overview">Basic Usage Overview</a></td></tr>
+<tr><td colspan="3"><hr></td></tr>
+<tr><th id="Index_cp_letter-C">C</th></tr>
+<tr><td></td><td class="printindex-index-entry"><a href="#index-Close-the-client">Close the client</a></td><td class="printindex-index-section"><a href="#Basic-Usage-Overview">Basic Usage Overview</a></td></tr>
+<tr><td></td><td class="printindex-index-entry"><a href="#index-Connection-to-a-broker">Connection to a broker</a></td><td class="printindex-index-section"><a href="#Basic-Usage-Overview">Basic Usage Overview</a></td></tr>
+<tr><td></td><td class="printindex-index-entry"><a href="#index-copyright">copyright</a></td><td class="printindex-index-section"><a href="#Copying">Copying</a></td></tr>
+<tr><td colspan="3"><hr></td></tr>
+<tr><th id="Index_cp_letter-F">F</th></tr>
+<tr><td></td><td class="printindex-index-entry"><a href="#index-flush">flush</a></td><td class="printindex-index-section"><a href="#MQTT-Functions">MQTT Functions</a></td></tr>
+<tr><td></td><td class="printindex-index-entry"><a href="#index-Function-Reference">Function Reference</a></td><td class="printindex-index-section"><a href="#Function-Reference">Function Reference</a></td></tr>
+<tr><td colspan="3"><hr></td></tr>
+<tr><th id="Index_cp_letter-I">I</th></tr>
+<tr><td></td><td class="printindex-index-entry"><a href="#index-Installing-and-loading">Installing and loading</a></td><td class="printindex-index-section"><a href="#Installing-and-loading">Installing and loading</a></td></tr>
+<tr><td colspan="3"><hr></td></tr>
+<tr><th id="Index_cp_letter-L">L</th></tr>
+<tr><td></td><td class="printindex-index-entry"><a href="#index-Loading">Loading</a></td><td class="printindex-index-section"><a href="#Installing-and-loading">Installing and loading</a></td></tr>
+<tr><td colspan="3"><hr></td></tr>
+<tr><th id="Index_cp_letter-M">M</th></tr>
+<tr><td></td><td class="printindex-index-entry"><a href="#index-MQTT-Functions">MQTT Functions</a></td><td class="printindex-index-section"><a href="#MQTT-Functions">MQTT Functions</a></td></tr>
+<tr><td></td><td class="printindex-index-entry"><a href="#index-mqttclient">mqttclient</a></td><td class="printindex-index-section"><a href="#MQTT-Functions">MQTT Functions</a></td></tr>
+<tr><td colspan="3"><hr></td></tr>
+<tr><th id="Index_cp_letter-O">O</th></tr>
+<tr><td></td><td class="printindex-index-entry"><a href="#index-Off_002dline-install">Off-line install</a></td><td class="printindex-index-section"><a href="#Installing-and-loading">Installing and loading</a></td></tr>
+<tr><td></td><td class="printindex-index-entry"><a href="#index-Online-install">Online install</a></td><td class="printindex-index-section"><a href="#Installing-and-loading">Installing and loading</a></td></tr>
+<tr><td colspan="3"><hr></td></tr>
+<tr><th id="Index_cp_letter-P">P</th></tr>
+<tr><td></td><td class="printindex-index-entry"><a href="#index-peek">peek</a></td><td class="printindex-index-section"><a href="#MQTT-Functions">MQTT Functions</a></td></tr>
+<tr><td colspan="3"><hr></td></tr>
+<tr><th id="Index_cp_letter-R">R</th></tr>
+<tr><td></td><td class="printindex-index-entry"><a href="#index-read">read</a></td><td class="printindex-index-section"><a href="#MQTT-Functions">MQTT Functions</a></td></tr>
+<tr><td></td><td class="printindex-index-entry"><a href="#index-Read-from-subscribed-Topics">Read from subscribed Topics</a></td><td class="printindex-index-section"><a href="#Basic-Usage-Overview">Basic Usage Overview</a></td></tr>
+<tr><td colspan="3"><hr></td></tr>
+<tr><th id="Index_cp_letter-S">S</th></tr>
+<tr><td></td><td class="printindex-index-entry"><a href="#index-subscribe">subscribe</a></td><td class="printindex-index-section"><a href="#MQTT-Functions">MQTT Functions</a></td></tr>
+<tr><td></td><td class="printindex-index-entry"><a href="#index-Subscribe-to-a-Topic">Subscribe to a Topic</a></td><td class="printindex-index-section"><a href="#Basic-Usage-Overview">Basic Usage Overview</a></td></tr>
+<tr><td colspan="3"><hr></td></tr>
+<tr><th id="Index_cp_letter-U">U</th></tr>
+<tr><td></td><td class="printindex-index-entry"><a href="#index-unsubscribe">unsubscribe</a></td><td class="printindex-index-section"><a href="#MQTT-Functions">MQTT Functions</a></td></tr>
+<tr><td colspan="3"><hr></td></tr>
+<tr><th id="Index_cp_letter-W">W</th></tr>
+<tr><td></td><td class="printindex-index-entry"><a href="#index-warranty">warranty</a></td><td class="printindex-index-section"><a href="#Copying">Copying</a></td></tr>
+<tr><td></td><td class="printindex-index-entry"><a href="#index-write">write</a></td><td class="printindex-index-section"><a href="#MQTT-Functions">MQTT Functions</a></td></tr>
+<tr><td></td><td class="printindex-index-entry"><a href="#index-Write-to-a-Topic">Write to a Topic</a></td><td class="printindex-index-section"><a href="#Basic-Usage-Overview">Basic Usage Overview</a></td></tr>
+<tr><td colspan="3"><hr></td></tr>
 </table>
 <table class="cp-letters-footer-printindex"><tr><th>Jump to: &nbsp; </th><td><a class="summary-letter-printindex" href="#Index_cp_letter-B"><b>B</b></a>
  &nbsp; 

@@ -125,6 +125,15 @@
                   {%- for nav in page.navigation -%}
                     {% if nav.url %}
 		    <li class="list-group-item p-1"><a href="{{site.url}}{{nav.url}}">{{nav.name}}</a></li>
+                      {%- if nav.subitems -%}
+                        {%- for it in nav.subitems -%}
+                          {% if it.url %}
+                          <li class="list-group-item p-1"><a href="{{site.url}}{{it.url}}">{{it.name}}</a></li>
+                          {% else %}
+			  <li class="list-group-item p-1"><b>{{it.name}}</b></li>
+                          {%- endif -%}
+                        {%- endfor -%}
+                      {%- endif -%}
                     {% else %}
                       <li class="list-group-item p-1"><b>{{nav.name}}</b></li>
                     {%- endif -%}
@@ -149,7 +158,7 @@
 
     <!-- footer -->
     <div class="bg-dark text-light fixed-bottom footer">
-      <div class="pad-left-1 small">&copy; 2022 - {{ site.author | default: "The Octave Forge Community" | xml_escape | textilize }}<div>
+      <div class="pad-left-1 small">&copy; 2022 - 2025 {{ site.author | default: "The Octave Forge Community" | xml_escape | textilize }}<div>
     </div>
 
     <script>

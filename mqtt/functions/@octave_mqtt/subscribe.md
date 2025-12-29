@@ -2,7 +2,7 @@
 layout: "default"
 permalink: "/functions/@octave_mqtt/22_octavemqttsubscribe/"
 pkg_name: "mqtt"
-pkg_version: "0.0.5"
+pkg_version: "0.0.6"
 pkg_description: "Octave implementation of the MQTT toolkit"
 title: "Mqtt Toolkit - @octave_mqtt/subscribe"
 category: "MQTT Functions"
@@ -17,6 +17,7 @@ navigation:
 - id: "14_MQTTFunctions"
   name: "&nbsp;&nbsp;MQTT Functions"
   url: "/functions/#14_MQTTFunctions"
+  subitems:
 - id: "news"
   name: "News"
   url: "/news"
@@ -24,12 +25,12 @@ navigation:
   name: "Manual"
   url: "/manual"
 ---
-<dl class="first-deftypefn">
-<dt class="deftypefn" id="index-subscribe"><span class="category-def">: </span><span><code class="def-type"><var class="var">subs</var> =</code> <strong class="def-name">subscribe</strong> <code class="def-code-arguments">(<var class="var">obj</var>, <var class="var">topic</var>)</code><a class="copiable-link" href='#index-subscribe'></a></span></dt>
-<dt class="deftypefnx def-cmd-deftypefn" id="index-subscribe-1"><span class="category-def">: </span><span><code class="def-type"><var class="var">subs</var> =</code> <strong class="def-name">subscribe</strong> <code class="def-code-arguments">(<var class="var">obj</var>, <var class="var">topic</var>, [<var class="var">propname</var>, <var class="var">propvalue</var> ....])</code><a class="copiable-link" href='#index-subscribe-1'></a></span></dt>
+<dl class="first-deftypefn def-block">
+<dt class="deftypefn def-line" id="index-subscribe"><span class="category-def">: </span><span><code class="def-type"><var class="var">subs</var> =</code> <strong class="def-name">subscribe</strong> <code class="def-code-arguments">(<var class="var">obj</var>, <var class="var">topic</var>)</code><a class="copiable-link" href="#index-subscribe"></a></span></dt>
+<dt class="deftypefnx def-cmd-deftypefn def-line" id="index-subscribe-1"><span class="category-def">: </span><span><code class="def-type"><var class="var">subs</var> =</code> <strong class="def-name">subscribe</strong> <code class="def-code-arguments">(<var class="var">obj</var>, <var class="var">topic</var>, [<var class="var">propname</var>, <var class="var">propvalue</var> ....])</code><a class="copiable-link" href="#index-subscribe-1"></a></span></dt>
 <dd><p>Subscribe to a topic
 </p>
-<h4 class="subsubheading" id="Inputs">Inputs</h4>
+<h4 class="subsubheading" id="Inputs"><span>Inputs<a class="copiable-link" href="#Inputs"></a></span></h4>
 <dl class="table">
 <dt><code class="code">obj</code></dt>
 <dd><p>A previously created octave_mqtt object
@@ -55,14 +56,14 @@ navigation:
  </p></dd>
 </dl>
 
-<h4 class="subsubheading" id="Outputs">Outputs</h4>
+<h4 class="subsubheading" id="Outputs"><span>Outputs<a class="copiable-link" href="#Outputs"></a></span></h4>
 <dl class="table">
 <dt><code class="code">subs</code></dt>
 <dd><p>a list of current subscriptions for this client.
  </p></dd>
 </dl>
 
-<h4 class="subsubheading" id="Examples">Examples</h4>
+<h4 class="subsubheading" id="Examples"><span>Examples<a class="copiable-link" href="#Examples"></a></span></h4>
 <p>Subscribe to topic &rsquo;Test&rsquo;:
  </p><div class="example">
 <pre class="example-preformatted"> <code class="code">
