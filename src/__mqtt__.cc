@@ -528,7 +528,7 @@ Private function.\n \
           error ("Expected flush topic as a string");
           return octave_value (false);
 	}
-      topic - args(1).string_value();
+      topic = args(1).string_value();
     }
 
   octave_mqtt * client = NULL;

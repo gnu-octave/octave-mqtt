@@ -446,7 +446,7 @@ octave_mqtt::flush(const std::string &topic)
         if ((*it).topic == topic)
           {
             msgs.erase(it);
-           }
+          }
       }
 }
 
