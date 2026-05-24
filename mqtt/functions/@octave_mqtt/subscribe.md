@@ -2,7 +2,7 @@
 layout: "default"
 permalink: "/functions/@octave_mqtt/22_octavemqttsubscribe/"
 pkg_name: "mqtt"
-pkg_version: "0.0.6"
+pkg_version: "0.0.7"
 pkg_description: "Octave implementation of the MQTT toolkit"
 title: "Mqtt Toolkit - @octave_mqtt/subscribe"
 category: "MQTT Functions"

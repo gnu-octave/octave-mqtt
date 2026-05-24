@@ -3,7 +3,7 @@ layout: "default"
 permalink: "/news/"
 title: "Mqtt Toolkit - News"
 pkg_name: "mqtt"
-version: "0.0.6"
+version: "0.0.7"
 description: "Octave implementation of the MQTT toolkit"
 navigation:
 - id: "overview"
@@ -19,6 +19,15 @@ navigation:
   url: "/manual"
 ---
 <pre>
+Summary of important user-visible changes for octave-mqtt 0.0.7:
+-------------------------------------------------------------------
+
+  ** minor documentation updates
+
+  ** Octave 12+ compatiblilty updates
+
+  ** Updates to support qt6
+
 Summary of important user-visible changes for octave-mqtt 0.0.6:
 -------------------------------------------------------------------
 

@@ -2,7 +2,7 @@
 layout: "default"
 permalink: "/functions/10_mqttclient/"
 pkg_name: "mqtt"
-pkg_version: "0.0.6"
+pkg_version: "0.0.7"
 pkg_description: "Octave implementation of the MQTT toolkit"
 title: "Mqtt Toolkit - mqttclient"
 category: "MQTT Functions"
@@ -70,31 +70,31 @@ navigation:
 <dd><p>String full file path to a private client key file when using a secure connection
  </p></dd>
 <dt><code class="code">SSLPassword</code></dt>
-<dd><p>String Password to decrypt the client key file
+<dd><p>String password to decrypt the client key file
  </p></dd>
 <dt><code class="code">LastWillTopic</code></dt>
-<dd><p>String Last Will Topic. Must be set to a non empty string to enable LastWill.
+<dd><p>String Last Will Topic. Must be set to a non-empty string to enable LastWill.
  </p></dd>
 <dt><code class="code">LastWillMessage</code></dt>
 <dd><p>String Last Will Message. (Default  &quot;&quot;)
  </p></dd>
 <dt><code class="code">LastWillQOS</code></dt>
-<dd><p>Numeric 0|1|2 Last Will QOS Value (Default 0)
+<dd><p>Numeric 0|1|2 Last Will QoS Value (Default 0)
  </p></dd>
 <dt><code class="code">LastWillRetain</code></dt>
-<dd><p>Logical  0|1 Last Will Retain Value (Default 0)
+<dd><p>Logical 0|1 Last Will Retain Value (Default 0)
  </p></dd>
 </dl>
 
 <h4 class="subsubheading" id="Outputs"><span>Outputs<a class="copiable-link" href="#Outputs"></a></span></h4>
 <dl class="table">
 <dt><code class="code">client</code></dt>
-<dd><p>a octave_mqtt object
+<dd><p>An octave_mqtt object
  </p></dd>
 </dl>
 
 <h4 class="subsubheading" id="Properties"><span>Properties<a class="copiable-link" href="#Properties"></a></span></h4>
-<p>A octave_mqtt object has the following properties:
+<p>An octave_mqtt object has the following properties:
  </p><dl class="table">
 <dt><code class="code">BrokerAddress</code></dt>
 <dd><p>Broker URL
@@ -106,13 +106,13 @@ navigation:
 <dd><p>Numeric timeout value in seconds (default 5)
  </p></dd>
 <dt><code class="code">KeepAliveDuration</code></dt>
-<dd><p>Numeric keep alive value in seconds (default 60)
+<dd><p>Numeric keep-alive value in seconds (default 60)
  </p></dd>
 <dt><code class="code">ClientID</code></dt>
 <dd><p>String client Id 
  </p></dd>
 <dt><code class="code">Connected</code></dt>
-<dd><p>logical 0|1 for connection status
+<dd><p>logical 0|1 value for connection status
  </p></dd>
 <dt><code class="code">Subscriptions</code></dt>
 <dd><p>List of topics currently subscribed to
@@ -120,7 +120,7 @@ navigation:
 </dl>
 
 <h4 class="subsubheading" id="Examples"><span>Examples<a class="copiable-link" href="#Examples"></a></span></h4>
-<p>Create a new mqttclient
+<p>Create a new MQTT Client
  </p><div class="example">
 <pre class="example-preformatted"> <code class="code">
  client = mqttclient(&quot;tcp://127.0.0.1&quot;);
