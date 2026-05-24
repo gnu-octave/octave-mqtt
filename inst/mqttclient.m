@@ -48,25 +48,25 @@
 ## @item ClientKey
 ## String full file path to a private client key file when using a secure connection
 ## @item SSLPassword
-## String Password to decrypt the client key file
+## String password to decrypt the client key file
 ## @item LastWillTopic
-## String Last Will Topic. Must be set to a non empty string to enable LastWill.
+## String Last Will Topic. Must be set to a non-empty string to enable LastWill.
 ## @item LastWillMessage
 ## String Last Will Message. (Default  "")
 ## @item LastWillQOS
-## Numeric 0|1|2 Last Will QOS Value (Default 0)
+## Numeric 0|1|2 Last Will QoS Value (Default 0)
 ## @item LastWillRetain
-## Logical  0|1 Last Will Retain Value (Default 0)
+## Logical 0|1 Last Will Retain Value (Default 0)
 ## @end table
 ##
 ## @subsubheading Outputs
 ## @table @code
 ## @item client
-## a octave_mqtt object
+## An octave_mqtt object
 ## @end table
 ##
 ## @subsubheading Properties
-## A octave_mqtt object has the following properties:
+## An octave_mqtt object has the following properties:
 ## @table @code
 ## @item BrokerAddress
 ## Broker URL
@@ -75,17 +75,17 @@
 ## @item Timeout
 ## Numeric timeout value in seconds (default 5)
 ## @item KeepAliveDuration
-## Numeric keep alive value in seconds (default 60)
+## Numeric keep-alive value in seconds (default 60)
 ## @item ClientID
 ## String client Id 
 ## @item Connected
-## logical 0|1 for connection status
+## logical 0|1 value for connection status
 ## @item Subscriptions
 ## List of topics currently subscribed to
 ## @end table
 ##
 ## @subsubheading Examples
-## Create a new mqttclient
+## Create a new MQTT Client
 ## @example
 ## @code {
 ## client = mqttclient("tcp://127.0.0.1");
