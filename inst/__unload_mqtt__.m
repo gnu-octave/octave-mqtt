@@ -38,3 +38,6 @@ function __unload_mqtt__ ()
     # do nothing
   end_try_catch
 endfunction
+
+%!test
+%! # private function - no test needed

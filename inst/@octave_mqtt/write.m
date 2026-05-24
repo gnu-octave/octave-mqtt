@@ -98,4 +98,8 @@ function write(obj, topic, value, varargin)
  
 endfunction
 
+%!test
+%! client = mqttclient("tcp://broker.hivemq.com");
+%! fail("write(client)");
+%! clear client
 
